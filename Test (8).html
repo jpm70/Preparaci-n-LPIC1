@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen LPIC-1/2 - Práctica 96 Comandos de Red</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .pregunta-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .pregunta-texto {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opciones-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .opciones-lista li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .boton-mostrar {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        .boton-mostrar:hover {
+            background-color: #0056b3;
+        }
+        .respuesta {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e9f7e9;
+            border-left: 5px solid #28a745;
+            border-radius: 5px;
+            display: none; /* ESTO OCULTA LA RESPUESTA POR DEFECTO */
+            color: #28a745;
+        }
+        .respuesta strong {
+            color: #1e7e34;
+            font-size: 1.1em;
+        }
+        code {
+            background-color: #eee; 
+            padding: 2px 4px; 
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Examen de Práctica LPIC-1/2 (Test 96) - Comandos de Red</h1>
+
+    <div class="pregunta-container">
+        <p class="pregunta-texto">1. ¿Qué comando muestra la tabla de enrutamiento del kernel?</p>
+        <ul class="opciones-lista">
+            <li>A) netstat -n</li>
+            <li>B) route -n</li>
+            <li>C) ip addr</li>
+            <li>D) ifconfig</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>route -n</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">2. ¿Qué hace <code>route add default gw 192.168.1.1</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Añade una nueva red local</li>
+            <li>B) Define la puerta de enlace predeterminada del sistema</li>
+            <li>C) Cambia la dirección IP del equipo</li>
+            <li>D) Configura un túnel</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Define la puerta de enlace predeterminada del sistema)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">3. ¿Qué opción de <code>route</code> elimina una ruta específica?</p>
+        <ul class="opciones-lista">
+            <li>A) route del</li>
+            <li>B) route -r</li>
+            <li>C) route rm</li>
+            <li>D) route remove</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>route del</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">4. ¿Qué muestra el comando <code>arp -n</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) El número de paquetes recibidos</li>
+            <li>B) La tabla ARP sin resolver nombres de host</li>
+            <li>C) Direcciones IP activas con nombres DNS</li>
+            <li>D) La tabla de rutas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (La tabla ARP sin resolver nombres de host)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">5. ¿Cómo se elimina manualmente una entrada ARP específica?</p>
+        <ul class="opciones-lista">
+            <li>A) arp -a 192.168.0.5</li>
+            <li>B) arp -d 192.168.0.5</li>
+            <li>C) arp --remove 192.168.0.5</li>
+            <li>D) ip neigh del 192.168.0.5</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>arp -d 192.168.0.5</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">6. ¿Qué hace <code>tcpdump -i eth0 port 80</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Captura tráfico UDP en el puerto 80</li>
+            <li>B) Captura tráfico TCP en el puerto 80</li>
+            <li>C) Captura cualquier tráfico de red en eth0</li>
+            <li>D) Captura tráfico de salida únicamente</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Captura tráfico TCP en el puerto 80)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">7. ¿Qué opción de <code>tcpdump</code> muestra el contenido en formato ASCII?</p>
+        <ul class="opciones-lista">
+            <li>A) -X</li>
+            <li>B) -A</li>
+            <li>C) -v</li>
+            <li>D) -x</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>-A</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">8. ¿Cómo se limita la captura de <code>tcpdump</code> a solo 100 paquetes?</p>
+        <ul class="opciones-lista">
+            <li>A) tcpdump -n 100</li>
+            <li>B) tcpdump -c 100</li>
+            <li>C) tcpdump -p 100</li>
+            <li>D) tcpdump --limit 100</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>tcpdump -c 100</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">9. ¿Qué hace <code>tcpdump -w captura.pcap</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra los paquetes en pantalla</li>
+            <li>B) Guarda los paquetes en un archivo sin mostrarlos</li>
+            <li>C) Filtra paquetes de escritura</li>
+            <li>D) Muestra los encabezados TCP</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Guarda los paquetes en un archivo sin mostrarlos)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">10. El comando <code>whois openai.com</code> obtiene:</p>
+        <ul class="opciones-lista">
+            <li>A) El propietario y datos del dominio</li>
+            <li>B) Los registros DNS del dominio</li>
+            <li>C) El TTL del dominio</li>
+            <li>D) La dirección IP del servidor</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (El propietario y datos del dominio)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">11. ¿Qué campo de <code>whois</code> suele mostrar la organización propietaria del dominio?</p>
+        <ul class="opciones-lista">
+            <li>A) Admin Email</li>
+            <li>B) Registrant Organization</li>
+            <li>C) Owner Name</li>
+            <li>D) NetName</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Registrant Organization)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">12. ¿Qué hace <code>mtr 8.8.8.8</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra los registros DNS</li>
+            <li>B) Hace trazado dinámico con estadísticas de pérdida y latencia</li>
+            <li>C) Lanza pings simultáneos a todos los saltos</li>
+            <li>D) Calcula el tiempo de respuesta promedio</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Hace trazado dinámico con estadísticas de pérdida y latencia)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">13. En <code>mtr</code>, ¿qué tecla muestra la vista “report mode”?</p>
+        <ul class="opciones-lista">
+            <li>A) r</li>
+            <li>B) d</li>
+            <li>C) e</li>
+            <li>D) m</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (r)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">14. <code>vnstat</code> obtiene sus datos de:</p>
+        <ul class="opciones-lista">
+            <li>A) /proc/net/dev</li>
+            <li>B) /etc/network/interfaces</li>
+            <li>C) /var/log/syslog</li>
+            <li>D) /proc/net/tcp</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (/proc/net/dev)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">15. ¿Qué hace <code>vnstat -l</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra estadísticas diarias</li>
+            <li>B) Monitorea tráfico en tiempo real</li>
+            <li>C) Genera un log en segundo plano</li>
+            <li>D) Resetea contadores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Monitorea tráfico en tiempo real)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">16. ¿Qué muestra <code>ifconfig eth0</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Configuración de red global</li>
+            <li>B) Solo la configuración de la interfaz eth0</li>
+            <li>C) Las rutas de red</li>
+            <li>D) Los sockets abiertos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Solo la configuración de la interfaz eth0)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">17. ¿Qué hace <code>ifconfig eth0 down</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Deshabilita la interfaz eth0</li>
+            <li>B) Reinicia la interfaz</li>
+            <li>C) Borra la configuración IP</li>
+            <li>D) Elimina la ruta predeterminada</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Deshabilita la interfaz eth0)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">18. ¿Qué comando reemplaza a <code>ifconfig</code> en sistemas modernos?</p>
+        <ul class="opciones-lista">
+            <li>A) netstat</li>
+            <li>B) ip addr</li>
+            <li>C) ipconfig</li>
+            <li>D) route</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>ip addr</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">19. ¿Qué devuelve <code>hostname -I</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) El nombre del host completo</li>
+            <li>B) Las direcciones IP asignadas al host</li>
+            <li>C) El FQDN del sistema</li>
+            <li>D) El nombre NetBIOS</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Las direcciones IP asignadas al host)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">20. ¿Cómo se cambia el nombre de host temporalmente?</p>
+        <ul class="opciones-lista">
+            <li>A) hostnamectl set-hostname temporal</li>
+            <li>B) hostname temporal</li>
+            <li>C) Editando /etc/hostname</li>
+            <li>D) Reiniciando el servicio network</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>hostname temporal</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">21. ¿Qué protocolo usa <code>ping</code> para probar conectividad?</p>
+        <ul class="opciones-lista">
+            <li>A) UDP</li>
+            <li>B) ICMP</li>
+            <li>C) TCP</li>
+            <li>D) ARP</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (ICMP)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">22. ¿Cómo se limita <code>ping</code> a 5 paquetes enviados?</p>
+        <ul class="opciones-lista">
+            <li>A) ping -l 5</li>
+            <li>B) ping -n 5</li>
+            <li>C) ping -c 5</li>
+            <li>D) ping --limit 5</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (<code>ping -c 5</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">23. ¿Qué comando muestra la ruta seguida por los paquetes hasta un destino?</p>
+        <ul class="opciones-lista">
+            <li>A) ping</li>
+            <li>B) trace</li>
+            <li>C) traceroute</li>
+            <li>D) netstat</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (<code>traceroute</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">24. ¿Qué opción de <code>traceroute</code> usa ICMP en lugar de UDP?</p>
+        <ul class="opciones-lista">
+            <li>A) -I</li>
+            <li>B) -T</li>
+            <li>C) -U</li>
+            <li>D) -i</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>-I</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">25. ¿Qué comando muestra las direcciones IP y máscaras configuradas en todas las interfaces?</p>
+        <ul class="opciones-lista">
+            <li>A) ip route</li>
+            <li>B) ip addr show</li>
+            <li>C) ip link</li>
+            <li>D) ip netns</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>ip addr show</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">26. ¿Cómo se agrega una ruta persistente con el comando <code>ip</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) ip route add 10.0.0.0/24 via 192.168.1.1</li>
+            <li>B) route add 10.0.0.0 mask 255.255.255.0</li>
+            <li>C) ip add route 10.0.0.0/24 dev eth0</li>
+            <li>D) ipconfig route add</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>ip route add 10.0.0.0/24 via 192.168.1.1</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">27. ¿Qué hace <code>ip link set eth0 up</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Reinicia la conexión</li>
+            <li>B) Habilita la interfaz</li>
+            <li>C) Cambia el modo promiscuo</li>
+            <li>D) Cambia la IP</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Habilita la interfaz)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">28. ¿Qué comando muestra las conexiones TCP abiertas?</p>
+        <ul class="opciones-lista">
+            <li>A) netstat -t</li>
+            <li>B) netstat -u</li>
+            <li>C) netstat -a</li>
+            <li>D) netstat -n</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>netstat -t</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">29. ¿Qué opción de <code>netstat</code> muestra los procesos asociados a los puertos?</p>
+        <ul class="opciones-lista">
+            <li>A) -n</li>
+            <li>B) -p</li>
+            <li>C) -l</li>
+            <li>D) -s</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>-p</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">30. ¿Qué hace <code>ss -lntp</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra conexiones UDP activas</li>
+            <li>B) Muestra sockets TCP en escucha con PIDs</li>
+            <li>C) Lista interfaces activas</li>
+            <li>D) Muestra uso de memoria por conexión</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Muestra sockets TCP en escucha con PIDs)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">31. ¿Qué diferencia hay entre <code>ss</code> y <code>netstat</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) ss es más moderno y rápido que netstat</li>
+            <li>B) netstat soporta IPv6 y ss no</li>
+            <li>C) ss no muestra PIDs</li>
+            <li>D) netstat usa sockets UDP únicamente</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>ss</code> es más moderno y rápido que <code>netstat</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">32. ¿Qué comando se usa para resolver nombres a direcciones IP de forma interactiva?</p>
+        <ul class="opciones-lista">
+            <li>A) dig</li>
+            <li>B) nslookup</li>
+            <li>C) whois</li>
+            <li>D) traceroute</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>nslookup</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">33. ¿Qué hace <code>nslookup -type=MX gmail.com</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra los registros de correo (MX) del dominio</li>
+            <li>B) Muestra el TTL</li>
+            <li>C) Muestra los servidores DNS</li>
+            <li>D) Devuelve solo la IP principal</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra los registros de correo (MX) del dominio)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">34. ¿Qué comando de <code>dig</code> devuelve solo la IP de un dominio?</p>
+        <ul class="opciones-lista">
+            <li>A) dig +short dominio.com</li>
+            <li>B) dig -ip dominio.com</li>
+            <li>C) dig -a dominio.com</li>
+            <li>D) dig +only dominio.com</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>dig +short dominio.com</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">35. ¿Cómo se consulta el servidor DNS 1.1.1.1 con <code>dig</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) dig dominio.com @1.1.1.1</li>
+            <li>B) dig -s 1.1.1.1 dominio.com</li>
+            <li>C) dig -d 1.1.1.1 dominio.com</li>
+            <li>D) dig 1.1.1.1 dominio.com</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>dig dominio.com @1.1.1.1</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">36. ¿Qué hace <code>wget -r https://sitio.com</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Descarga solo el índice</li>
+            <li>B) Descarga recursivamente todo el sitio</li>
+            <li>C) Descarga con límite de velocidad</li>
+            <li>D) Muestra el contenido</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Descarga recursivamente todo el sitio)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">37. ¿Qué hace <code>wget -c archivo.iso</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Cierra la conexión al terminar</li>
+            <li>B) Continúa una descarga interrumpida</li>
+            <li>C) Comprime la descarga</li>
+            <li>D) Calcula el hash del archivo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Continúa una descarga interrumpida)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">38. ¿Qué opción de <code>wget</code> evita seguir redirecciones HTTP?</p>
+        <ul class="opciones-lista">
+            <li>A) --no-check-certificate</li>
+            <li>B) --max-redirect=0</li>
+            <li>C) --no-follow</li>
+            <li>D) --no-dns-cache</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>--max-redirect=0</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">39. ¿Qué hace <code>curl -I https://example.com</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra solo las cabeceras HTTP de la respuesta</li>
+            <li>B) Descarga el contenido en modo silencioso</li>
+            <li>C) Muestra información SSL</li>
+            <li>D) Envía una petición POST</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra solo las cabeceras HTTP de la respuesta)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">40. ¿Qué hace <code>curl -O https://servidor/archivo.zip</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra la salida en pantalla</li>
+            <li>B) Descarga el archivo con el mismo nombre remoto</li>
+            <li>C) Guarda el archivo como output.zip</li>
+            <li>D) Requiere -L</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Descarga el archivo con el mismo nombre remoto)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">41. ¿Qué opción de <code>curl</code> permite seguir redirecciones automáticamente?</p>
+        <ul class="opciones-lista">
+            <li>A) -L</li>
+            <li>B) -r</li>
+            <li>C) --auto</li>
+            <li>D) -F</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>-L</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">42. ¿Qué diferencia hay entre <code>curl -d</code> y <code>curl -F</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) -d envía datos como JSON, -F como formulario multipart</li>
+            <li>B) -F es solo para GET</li>
+            <li>C) -d envía cabeceras, -F contenido binario</li>
+            <li>D) Ambas son equivalentes</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-d envía datos como JSON o texto, -F como formulario multipart)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">43. ¿Qué opción de <code>curl</code> permite definir una cabecera HTTP personalizada?</p>
+        <ul class="opciones-lista">
+            <li>A) -H</li>
+            <li>B) -C</li>
+            <li>C) -D</li>
+            <li>D) --header-set</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>-H</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">44. ¿Cómo se prueba una solicitud POST con datos JSON usando <code>curl</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) curl -d '{"key":"value"}' https://api --header 'Content-Type: application/json'</li>
+            <li>B) curl --post '{"key":"value"}' https://api</li>
+            <li>C) curl -F '{"key":"value"}'</li>
+            <li>D) curl -json '{"key":"value"}'</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>curl -d '{"key":"value"}' https://api --header 'Content-Type: application/json'</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">45. ¿Qué hace <code>ip neigh show</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra la tabla de enrutamiento</li>
+            <li>B) Muestra la tabla ARP/NDP</li>
+            <li>C) Muestra las interfaces activas</li>
+            <li>D) Muestra direcciones IPv6</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Muestra la tabla ARP/NDP)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">46. Para borrar una entrada ARP con <code>ip</code>, se usa:</p>
+        <ul class="opciones-lista">
+            <li>A) ip neigh del 192.168.1.10 dev eth0</li>
+            <li>B) ip arp del 192.168.1.10</li>
+            <li>C) ip del neigh 192.168.1.10</li>
+            <li>D) arp -d</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>ip neigh del 192.168.1.10 dev eth0</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">47. ¿Qué hace <code>netstat -s</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra estadísticas de protocolos</li>
+            <li>B) Muestra sockets abiertos</li>
+            <li>C) Muestra interfaces activas</li>
+            <li>D) Lista conexiones persistentes</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra estadísticas de protocolos)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">48. ¿Qué muestra <code>ss -uap</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Conexiones TCP activas</li>
+            <li>B) Conexiones UDP con procesos asociados</li>
+            <li>C) Interfaces activas</li>
+            <li>D) Estadísticas de tráfico</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Conexiones UDP con procesos asociados)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">49. En <code>dig</code>, ¿qué hace <code>+trace</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra todos los servidores DNS consultados hasta llegar al autoritativo</li>
+            <li>B) Realiza una consulta inversa</li>
+            <li>C) Aumenta el TTL</li>
+            <li>D) Consulta múltiples dominios</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra todos los servidores DNS consultados)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">50. ¿Qué hace <code>dig -x 8.8.8.8</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra los registros A</li>
+            <li>B) Realiza una consulta inversa (PTR)</li>
+            <li>C) Traza la ruta</li>
+            <li>D) Muestra registros MX</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Realiza una consulta inversa (PTR))
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">51. ¿Qué hace <code>tcpdump host 8.8.8.8</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Captura tráfico hacia o desde 8.8.8.8</li>
+            <li>B) Captura solo tráfico saliente</li>
+            <li>C) Muestra tráfico ICMP</li>
+            <li>D) Captura solo paquetes TCP</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Captura tráfico hacia o desde 8.8.8.8)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">52. ¿Qué hace <code>tcpdump -vvv</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Nivel de detalle máximo en la salida</li>
+            <li>B) Muestra solo cabeceras TCP</li>
+            <li>C) Guarda la captura en un archivo</li>
+            <li>D) Silencia la salida</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Nivel de detalle máximo en la salida)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">53. ¿Cómo se muestra el tráfico de un puerto con <code>tcpdump</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) tcpdump port 22</li>
+            <li>B) tcpdump -p 22</li>
+            <li>C) tcpdump -t 22</li>
+            <li>D) tcpdump -n 22</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>tcpdump port 22</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">54. ¿Qué hace <code>ifconfig eth0 promisc</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Activa el modo promiscuo</li>
+            <li>B) Desactiva el modo promiscuo</li>
+            <li>C) Cambia la IP de eth0</li>
+            <li>D) Activa el modo monitor</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Activa el modo promiscuo)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">55. ¿Cómo se muestra el nombre FQDN completo del sistema?</p>
+        <ul class="opciones-lista">
+            <li>A) hostname -f</li>
+            <li>B) hostname -I</li>
+            <li>C) dnsdomainname</li>
+            <li>D) hostnamectl</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>hostname -f</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">56. ¿Qué hace <code>ping -f 8.8.8.8</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Ping en modo flood (enviar paquetes lo más rápido posible)</li>
+            <li>B) Ping con tamaño fijo</li>
+            <li>C) Ping con formato extendido</li>
+            <li>D) Ping fragmentado</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Ping en modo flood)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">57. ¿Cómo se limita el ancho de banda en <code>wget</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) --limit-rate=500k</li>
+            <li>B) --speed=500k</li>
+            <li>C) --bw=500k</li>
+            <li>D) --rate=500k</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>--limit-rate=500k</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">58. ¿Qué hace <code>curl -u user:pass https://servidor</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Envía autenticación HTTP básica</li>
+            <li>B) Usa cookies</li>
+            <li>C) Usa proxy</li>
+            <li>D) Realiza autenticación NTLM</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Envía autenticación HTTP básica)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">59. ¿Qué comando de <code>ip</code> muestra las estadísticas de transmisión y errores por interfaz?</p>
+        <ul class="opciones-lista">
+            <li>A) ip -s link</li>
+            <li>B) ip show stats</li>
+            <li>C) ip addr stats</li>
+            <li>D) ip link list</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>ip -s link</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">60. ¿Qué comando obtiene el tiempo de resolución DNS en <code>dig</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) dig +stats dominio.com</li>
+            <li>B) dig +time dominio.com</li>
+            <li>C) dig --show-time dominio.com</li>
+            <li>D) dig -t dominio.com</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>dig +stats dominio.com</code>)
+        </div>
+    </div>
+
+    <script>
+        function toggleRespuesta(button) {
+            // Busca el div de respuesta que sigue inmediatamente al botón
+            var respuestaDiv = button.nextElementSibling;
+            
+            // Alterna la visibilidad
+            if (respuestaDiv.style.display === 'none' || respuestaDiv.style.display === '') {
+                respuestaDiv.style.display = 'block';
+                button.textContent = 'Ocultar Respuesta';
+                button.style.backgroundColor = '#dc3545'; // Rojo para "Ocultar"
+            } else {
+                respuestaDiv.style.display = 'none';
+                button.textContent = 'Mostrar Respuesta';
+                button.style.backgroundColor = '#007bff'; // Azul para "Mostrar"
+            }
+        }
+    </script>
+
+</body>
+</html>

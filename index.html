@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPIC Practice: Exámenes</title>
+    <style>
+        /* CSS RESET MÍNIMO */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /* Colores inspirados en terminales retro */
+            --color-bg: #1c1c1c; /* Fondo oscuro */
+            --color-text: #e0e0e0; /* Texto principal (gris claro) */
+            --color-accent: #00ff00; /* Verde brillante (prompt/comando) */
+            --color-link-hover: #00ffff; /* Cian brillante (hover) */
+            --color-border: #333333; /* Borde oscuro */
+        }
+
+        body {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            padding: 30px;
+            border: 2px solid var(--color-accent); /* Borde verde "comando" */
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.4); /* Sombra de neón */
+            background-color: #2a2a2a; /* Ligeramente más claro que el fondo */
+            border-radius: 8px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--color-border);
+        }
+
+        header img {
+            width: 80px;
+            height: auto;
+            border-radius: 50%; /* Opcional, para un toque moderno */
+            border: 2px solid var(--color-text);
+            transition: transform 0.3s ease;
+        }
+        
+        header img:hover {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        h1 {
+            color: var(--color-accent);
+            font-size: 2em;
+            text-shadow: 0 0 5px var(--color-accent);
+        }
+
+        .prompt {
+            color: var(--color-accent);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .prompt::before {
+            content: "user@lpic-box:~$ "; /* Simulación de prompt */
+            color: var(--color-link-hover);
+        }
+
+        .file-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .file-list li {
+            background-color: #3e3e3e;
+            border: 1px solid var(--color-border);
+            border-left: 5px solid var(--color-accent);
+            transition: all 0.2s;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .file-list li:hover {
+            border-left-color: var(--color-link-hover);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .file-list a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .file-list a:hover {
+            color: var(--color-link-hover);
+            background-color: #4a4a4a;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #888;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LPIC Practice Tests Directory 🐧</h1>
+            <img src="tux.png" alt="Tux, el pingüino de Linux">
+            </header>
+
+        <p class="prompt">ls *.html | grep "Test"</p>
+
+        <ul class="file-list">
+            <li><a href="Test (1).html">Test 01</a></li>
+            <li><a href="Test (2).html">Test 02</a></li>
+            <li><a href="Test (3).html">Test 03</a></li>
+            <li><a href="Test (4).html">Test 04</a></li>
+            <li><a href="Test (5).html">Test 05</a></li>
+            <li><a href="Test (6).html">Test 06</a></li>
+            <li><a href="Test (7).html">Test 07</a></li>
+            <li><a href="Test (8).html">Test 08</a></li>
+            <li><a href="Test (9).html">Test 09</a></li>
+            <li><a href="Test (10).html">Test 10</a></li>
+            <li><a href="Test (11).html">Test 11</a></li>
+            <li><a href="Test (12).html">Test 12</a></li>
+            <li><a href="Test (13).html">Test 13</a></li>
+        </ul>
+
+        <footer>
+            <p>Preparación LPIC - Preguntas en español</p>
+        </footer>
+    </div>
+</body>
+</html>

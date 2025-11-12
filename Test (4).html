@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen LPIC-1 - Práctica 92 Test4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .pregunta-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .pregunta-texto {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opciones-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .opciones-lista li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .boton-mostrar {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        .boton-mostrar:hover {
+            background-color: #0056b3;
+        }
+        .respuesta {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e9f7e9;
+            border-left: 5px solid #28a745;
+            border-radius: 5px;
+            display: none; /* ESTO OCULTA LA RESPUESTA POR DEFECTO */
+            color: #28a745;
+        }
+        .respuesta strong {
+            color: #1e7e34;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Examen de Práctica LPIC-1 (Test 92)</h1>
+
+    <div class="pregunta-container">
+        <p class="pregunta-texto">1. ¿Cuál es el comando correcto para buscar el archivo hosts dentro del directorio /etc/?</p>
+        <ul class="opciones-lista">
+            <li>a) find /etc/ -name hosts</li>
+            <li>b) grep /etc/ hosts</li>
+            <li>c) locate hosts</li>
+            <li>d) which hosts</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">2. ¿Qué comando usarías para ver el uso de disco de un directorio específico (por ejemplo, /var/log) de forma recursiva y con un resumen total legible para humanos?</p>
+        <ul class="opciones-lista">
+            <li>a) df -h /var/log</li>
+            <li>b) du -sh /var/log</li>
+            <li>c) ls -lR /var/log</li>
+            <li>d) fdisk -l /var/log</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">3. ¿Qué comando se utiliza para crear un archivo vacío llamado readme.txt sin abrir un editor de texto?</p>
+        <ul class="opciones-lista">
+            <li>a) echo > readme.txt</li>
+            <li>b) mkdir readme.txt</li>
+            <li>c) touch readme.txt</li>
+            <li>d) cat > readme.txt</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">4. ¿Cuál es la función principal del comando tar con las opciones czvf?</p>
+        <ul class="opciones-lista">
+            <li>a) Descomprimir un archivo .tar.gz.</li>
+            <li>b) Crear un nuevo archivo .tar.gz de forma comprimida, mostrando el proceso detallado.</li>
+            <li>c) Listar el contenido de un archivo .tar.gz.</li>
+            <li>d) Crear un archivo .tar.bz2 usando compresión.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">5. ¿Qué carácter especial en globbing (expansión de nombres de archivo) coincide con cualquier secuencia de cero o más caracteres?</p>
+        <ul class="opciones-lista">
+            <li>a) $</li>
+            <li>b) ?</li>
+            <li>c) *</li>
+            <li>d) ^</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">6. ¿Qué comando se utiliza para crear un enlace duro (hard link) a un archivo existente llamado original.txt, con el nombre enlace.txt?</p>
+        <ul class="opciones-lista">
+            <li>a) cp -l original.txt enlace.txt</li>
+            <li>b) ln original.txt enlace.txt</li>
+            <li>c) ln -s original.txt enlace.txt</li>
+            <li>d) link original.txt enlace.txt</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">7. ¿Cuál es el permiso octal que representa 'lectura, escritura y ejecución' para el propietario, y solo 'lectura' para el grupo y otros?</p>
+        <ul class="opciones-lista">
+            <li>a) 744</li>
+            <li>b) 777</li>
+            <li>c) 644</li>
+            <li>d) 447</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">8. ¿Qué comando se utiliza para cambiar el propietario de un archivo llamado datos.log al usuario administrador y al grupo sysadmins simultáneamente?</p>
+        <ul class="opciones-lista">
+            <li>a) chmod administrador:sysadmins datos.log</li>
+            <li>b) chown administrador datos.log ; chgrp sysadmins datos.log</li>
+            <li>c) chown administrador:sysadmins datos.log</li>
+            <li>d) chgrp administrador:sysadmins datos.log</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">9. Se requiere que un archivo tenga el permiso SUID (Set User ID). ¿Cuál es el valor octal que debe anteponerse al permiso base (por ejemplo, 755)?</p>
+        <ul class="opciones-lista">
+            <li>a) 4</li>
+            <li>b) 2</li>
+            <li>c) 1</li>
+            <li>d) 8</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">10. ¿Cuál es la opción del comando ls que muestra todos los archivos, incluyendo los archivos ocultos (los que comienzan con un punto '.')?</p>
+        <ul class="opciones-lista">
+            <li>a) ls -l</li>
+            <li>b) ls -h</li>
+            <li>c) ls -a</li>
+            <li>d) ls -R</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">11. ¿Qué archivo contiene la información de las cuentas de usuario (nombre de usuario, ID, directorio home) pero no las contraseñas?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/shadow</li>
+            <li>b) /etc/passwd</li>
+            <li>c) /etc/group</li>
+            <li>d) /etc/gshadow</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">12. ¿Qué utilidad se utiliza para agregar un nuevo grupo llamado desarrolladores al sistema?</p>
+        <ul class="opciones-lista">
+            <li>a) groupmod</li>
+            <li>b) useradd</li>
+            <li>c) groupadd</li>
+            <li>d) newgrp</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">13. ¿Cuál es el comando correcto para agregar un nuevo usuario llamado 'desarrollo' con el shell /bin/zsh y crear su directorio home automáticamente?</p>
+        <ul class="opciones-lista">
+            <li>a) useradd -m -s /bin/zsh desarrollo</li>
+            <li>b) adduser -d /home/desarrollo -s /bin/zsh desarrollo</li>
+            <li>c) usermod -n /bin/zsh desarrollo</li>
+            <li>d) newuser desarrollo /bin/zsh</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">14. ¿Cuál es el comando que cambia el shell de inicio predeterminado para un usuario existente llamado jorge a /bin/csh?</p>
+        <ul class="opciones-lista">
+            <li>a) chsh -s /bin/csh jorge</li>
+            <li>b) usermod -n /bin/csh jorge</li>
+            <li>c) userdel -s /bin/csh jorge</li>
+            <li>d) passwd jorge -s /bin/csh</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">15. ¿Qué comando se utiliza para ver el ID de usuario real (UID), el ID de usuario efectivo (EUID) y los grupos a los que pertenece el usuario actual?</p>
+        <ul class="opciones-lista">
+            <li>a) whoami</li>
+            <li>b) w</li>
+            <li>c) id</li>
+            <li>d) finger</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">16. ¿Cuál es la sintaxis correcta para editar el archivo sudoers de manera segura, evitando errores de sintaxis que podrían bloquear el acceso root?</p>
+        <ul class="opciones-lista">
+            <li>a) vi /etc/sudoers</li>
+            <li>b) visudo</li>
+            <li>c) nano /etc/sudoers</li>
+            <li>d) sudoers -edit</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">17. ¿Qué comando permite al usuario jorge cambiar su grupo primario a un grupo secundario llamado jefes en su sesión actual?</p>
+        <ul class="opciones-lista">
+            <li>a) gpasswd -a jorge jefes</li>
+            <li>b) chgrp jefes /home/jorge</li>
+            <li>c) newgrp jefes</li>
+            <li>d) usermod -g jefes jorge</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">18. ¿Qué comando usarías para cambiar la prioridad de un proceso que ya se está ejecutando, haciéndolo menos prioritario (un valor 'nice' más alto)?</p>
+        <ul class="opciones-lista">
+            <li>a) nice -n 10 pid</li>
+            <li>b) renice 10 -p pid</li>
+            <li>c) kill -10 pid</li>
+            <li>d) top -p pid</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">19. ¿Qué comando es más adecuado para ver solo las últimas 10 líneas del archivo de registro del sistema /var/log/syslog en tiempo real, mientras se siguen agregando nuevas entradas?</p>
+        <ul class="opciones-lista">
+            <li>a) cat /var/log/syslog | grep -n 10</li>
+            <li>b) less +G /var/log/syslog</li>
+            <li>c) tail -n 10 -f /var/log/syslog</li>
+            <li>d) head -n 10 /var/log/syslog</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">20. ¿Cuál es el comando que finaliza un proceso con el PID 1234 enviando la señal de terminación SIGTERM (la señal predeterminada)?</p>
+        <ul class="opciones-lista">
+            <li>a) kill -9 1234</li>
+            <li>b) kill -1 1234</li>
+            <li>c) kill 1234</li>
+            <li>d) pkill -f 1234</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">21. ¿Qué comando usarías para ver el uso de la memoria RAM del sistema, incluyendo la memoria total, usada, libre y la memoria swap?</p>
+        <ul class="opciones-lista">
+            <li>a) ps aux</li>
+            <li>b) iostat</li>
+            <li>c) free -h</li>
+            <li>d) top</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">22. ¿Qué archivo de registro es el destino predeterminado para mensajes de inicio de sesión de usuario, autenticación y errores relacionados con la seguridad?</p>
+        <ul class="opciones-lista">
+            <li>a) /var/log/messages</li>
+            <li>b) /var/log/dmesg</li>
+            <li>c) /var/log/secure (o /var/log/auth.log)</li>
+            <li>d) /var/log/httpd/access.log</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">23. ¿Cuál es la función principal del shell script #!/bin/bash en la primera línea de un archivo?</p>
+        <ul class="opciones-lista">
+            <li>a) Indicar que el script debe ejecutarse con privilegios de root.</li>
+            <li>b) Definir el intérprete que debe ejecutar el script.</li>
+            <li>c) Comentar la primera línea del script, siendo puramente informativo.</li>
+            <li>d) Establecer la variable de entorno PATH para el script.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">24. ¿Cuál es la variable de entorno que define la lista de directorios donde el shell busca comandos ejecutables?</p>
+        <ul class="opciones-lista">
+            <li>a) HOME</li>
+            <li>b) SHELL</li>
+            <li>c) PATH</li>
+            <li>d) PWD</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">25. ¿Qué comando usarías para ver todas las variables de entorno definidas en tu shell actual?</p>
+        <ul class="opciones-lista">
+            <li>a) echo $PATH</li>
+            <li>b) env</li>
+            <li>c) set</li>
+            <li>d) alias</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">26. ¿Cómo se redirige la salida estándar (stdout) y la salida de error estándar (stderr) de un comando a un único archivo llamado salida.log?</p>
+        <ul class="opciones-lista">
+            <li>a) comando > salida.log 2>&1</li>
+            <li>b) comando > salida.log | 2> salida.log</li>
+            <li>c) comando > salida.log</li>
+            <li>d) comando &> salida.log</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">27. ¿Cuál es la sintaxis correcta para exportar una variable de shell llamada MI_VAR con el valor prueba para que esté disponible para procesos hijo?</p>
+        <ul class="opciones-lista">
+            <li>a) MI_VAR=prueba; export MI_VAR</li>
+            <li>b) set MI_VAR=prueba</li>
+            <li>c) export MI_VAR=prueba</li>
+            <li>d) export -p MI_VAR=prueba</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">28. ¿Qué comando se utiliza para buscar archivos binarios (ejecutables) en el path del sistema (como /usr/bin, /bin, etc.)?</p>
+        <ul class="opciones-lista">
+            <li>a) locate comando</li>
+            <li>b) whereis comando</li>
+            <li>c) which comando</li>
+            <li>d) find / -name comando</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">29. ¿Qué comando es más apropiado para enviar un mensaje a todos los usuarios que han iniciado sesión en el sistema?</p>
+        <ul class="opciones-lista">
+            <li>a) mail -a</li>
+            <li>b) write usuario tty</li>
+            <li>c) wall</li>
+            <li>d) echo "mensaje" > /dev/pts/0</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">30. ¿Cuál es la función principal del comando awk?</p>
+        <ul class="opciones-lista">
+            <li>a) Buscar y reemplazar texto en archivos de forma interactiva.</li>
+            <li>b) Procesar archivos de texto por líneas, con énfasis en el procesamiento de campos (columnas).</li>
+            <li>c) Imprimir archivos de texto en una impresora de línea.</li>
+            <li>d) Encontrar la diferencia entre dos archivos de texto.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">31. ¿Qué filtro de expresiones regulares (regex) coincide solo con líneas que comienzan con la palabra 'Error'?</p>
+        <ul class="opciones-lista">
+            <li>a) ^Error</li>
+            <li>b) Error$</li>
+            <li>c) [^Error]</li>
+            <li>d) \bError\b</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">32. ¿Qué archivo de configuración se utiliza para controlar qué sistemas de archivos se montan automáticamente durante el arranque del sistema?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/fstab</li>
+            <li>b) /etc/mtab</li>
+            <li>c) /proc/mounts</li>
+            <li>d) /etc/exports</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">33. ¿Qué comando usarías para ver el espacio libre en disco en un formato legible para humanos?</p>
+        <ul class="opciones-lista">
+            <li>a) df -i</li>
+            <li>b) du -h</li>
+            <li>c) df -h</li>
+            <li>d) fdisk -l</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">34. ¿Qué utilidad de línea de comandos se utiliza para crear, redimensionar, verificar y copiar particiones en un sistema de disco que usa la tabla de particiones GPT (GUID Partition Table)?</p>
+        <ul class="opciones-lista">
+            <li>a) fdisk</li>
+            <li>b) parted</li>
+            <li>c) cfdisk</li>
+            <li>d) mkfs</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">35. ¿Qué utilidad del sistema de archivos se usa para reparar un sistema de archivos ext4 que ha sido desmontado de forma incorrecta?</p>
+        <ul class="opciones-lista">
+            <li>a) fsck</li>
+            <li>b) dumpe2fs</li>
+            <li>c) mke2fs</li>
+            <li>d) mount</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">36. ¿Qué comando se utiliza para crear un nuevo volumen lógico (LV) en LVM (Logical Volume Management)?</p>
+        <ul class="opciones-lista">
+            <li>a) pvcreate</li>
+            <li>b) vgcreate</li>
+            <li>c) lvcreate</li>
+            <li>d) lvextend</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">37. ¿Cuál es el comando que se utiliza para crear un archivo de paginación (swap file) de 1 GB?</p>
+        <ul class="opciones-lista">
+            <li>a) mkswap /swapfile 1G</li>
+            <li>b) dd if=/dev/zero of=/swapfile bs=1M count=1024</li>
+            <li>c) fallocate -l 1G /swapfile</li>
+            <li>d) swapoff /swapfile</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">38. ¿Cuál de los siguientes directorios contiene los archivos del kernel de Linux?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc</li>
+            <li>b) /var</li>
+            <li>c) /boot</li>
+            <li>d) /usr</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">39. Se desea que un script se ejecute automáticamente a las 3:00 AM todos los domingos. ¿Cuál es la entrada cron más adecuada para el archivo /etc/crontab?</p>
+        <ul class="opciones-lista">
+            <li>a) 0 3 * * 7 /ruta/a/script.sh</li>
+            <li>b) 3 0 * * 0 /ruta/a/script.sh</li>
+            <li>c) * 3 * * 7 /ruta/a/script.sh</li>
+            <li>d) 0 3 7 * * /ruta/a/script.sh</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">40. ¿Qué comando se utiliza para mostrar todas las interfaces de red activas en un sistema moderno de Linux, incluyendo sus direcciones IP?</p>
+        <ul class="opciones-lista">
+            <li>a) ifconfig -a</li>
+            <li>b) ip link show</li>
+            <li>c) netstat -r</li>
+            <li>d) ip addr show</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>d</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">41. ¿Qué comando de Linux se utiliza para listar las conexiones de red activas, incluyendo las conexiones TCP, UDP y los sockets de escucha?</p>
+        <ul class="opciones-lista">
+            <li>a) ping</li>
+            <li>b) ss -antp</li>
+            <li>c) ip link show</li>
+            <li>d) route -n</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">42. ¿Qué archivo de configuración del sistema controla la configuración de red persistente (como la dirección IP estática) en sistemas basados en Debian/Ubuntu?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/sysconfig/network-scripts/ifcfg-eth0</li>
+            <li>b) /etc/network/interfaces</li>
+            <li>c) /etc/resolv.conf</li>
+            <li>d) /etc/hosts</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">43. ¿Qué comando es el preferido para ver la tabla de enrutamiento IP del kernel en sistemas Linux modernos?</p>
+        <ul class="opciones-lista">
+            <li>a) netstat -l</li>
+            <li>b) ip route show</li>
+            <li>c) ifconfig</li>
+            <li>d) ss</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">44. ¿Qué archivo es el principal archivo de configuración para el servidor DNS BIND (Berkeley Internet Name Domain)?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/hosts</li>
+            <li>b) /etc/named.conf</li>
+            <li>c) /etc/network/interfaces</li>
+            <li>d) /etc/dhcpd.conf</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">45. ¿Qué comando usarías para ver el nombre de host (hostname) completo del sistema (FQDN)?</p>
+        <ul class="opciones-lista">
+            <li>a) cat /etc/hostname</li>
+            <li>b) hostname -f</li>
+            <li>c) uname -a</li>
+            <li>d) dnsquery</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">46. ¿Cuál es el comando que deshabilitará el inicio automático de un servicio llamado httpd y lo detendrá si está en ejecución (en sistemas con systemd)?</p>
+        <ul class="opciones-lista">
+            <li>a) systemctl mask httpd && systemctl stop httpd</li>
+            <li>b) systemctl stop httpd && systemctl disable httpd</li>
+            <li>c) service httpd stop && chkconfig httpd off</li>
+            <li>d) systemctl kill httpd && systemctl remove httpd</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">47. ¿Qué utilidad se utiliza para establecer la fecha y hora del sistema, incluyendo la hora del hardware (CMOS)?</p>
+        <ul class="opciones-lista">
+            <li>a) date</li>
+            <li>b) hwclock</li>
+            <li>c) timedatectl</li>
+            <li>d) cal</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">48. ¿Qué utilidad se utiliza para establecer la configuración regional (locale) de forma persistente, incluyendo el idioma y el formato de hora?</p>
+        <ul class="opciones-lista">
+            <li>a) echo $LANG</li>
+            <li>b) locale -a</li>
+            <li>c) dpkg-reconfigure locales (o localectl)</li>
+            <li>d) setenv LANG=es_ES.UTF-8</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">49. ¿Qué archivo contiene la información de los mensajes del kernel de Linux (buffer del anillo) que se muestran al arrancar el sistema?</p>
+        <ul class="opciones-lista">
+            <li>a) /var/log/syslog</li>
+            <li>b) /var/log/dmesg</li>
+            <li>c) /etc/logrotate.conf</li>
+            <li>d) /var/log/boot.log</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">50. ¿Qué comando se utiliza para buscar y mostrar las páginas del manual de una función de biblioteca C (sección 3) llamada printf?</p>
+        <ul class="opciones-lista">
+            <li>a) man printf</li>
+            <li>b) man -k printf</li>
+            <li>c) man 3 printf</li>
+            <li>d) info printf</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+
+    <script>
+        function toggleRespuesta(button) {
+            // Busca el div de respuesta que sigue inmediatamente al botón
+            var respuestaDiv = button.nextElementSibling;
+            
+            // Alterna la visibilidad
+            if (respuestaDiv.style.display === 'none' || respuestaDiv.style.display === '') {
+                respuestaDiv.style.display = 'block';
+                button.textContent = 'Ocultar Respuesta';
+                button.style.backgroundColor = '#dc3545'; // Rojo para "Ocultar"
+            } else {
+                respuestaDiv.style.display = 'none';
+                button.textContent = 'Mostrar Respuesta';
+                button.style.backgroundColor = '#007bff'; // Azul para "Mostrar"
+            }
+        }
+    </script>
+
+</body>
+</html>

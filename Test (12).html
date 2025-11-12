@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen LPIC-1/2 - Práctica 100 Final</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #1a73e8; /* Color azul */
+            border-bottom: 2px solid #5b9ff7;
+            padding-bottom: 10px;
+        }
+        .pregunta-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .pregunta-texto {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opciones-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .opciones-lista li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .boton-mostrar {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #1a73e8; /* Color azul para el botón */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        .boton-mostrar:hover {
+            background-color: #0d47a1;
+        }
+        .respuesta {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e6f0ff; /* Fondo más claro para la respuesta */
+            border-left: 5px solid #1a73e8;
+            border-radius: 5px;
+            display: none; /* ESTO OCULTA LA RESPUESTA POR DEFECTO */
+            color: #1a73e8;
+        }
+        .respuesta strong {
+            color: #0d47a1;
+            font-size: 1.1em;
+        }
+        code {
+            background-color: #eee; 
+            padding: 2px 4px; 
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Examen de Práctica LPIC-1/2 (Test 100) - Final</h1>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">1. ¿Qué comando permite establecer la fecha de expiración de una cuenta de usuario en Linux?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>usermod -e</code></li>
+            <li>B) <code>passwd -x</code></li>
+            <li>C) <code>chage -E</code></li>
+            <li>D) <code>expire -d</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C) <code>chage -E</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">2. ¿Cuál es el archivo de configuración principal del servidor OpenSSH?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/ssh/sshd.conf</code></li>
+            <li>B) <code>/etc/ssh/ssh_config</code></li>
+            <li>C) <code>/etc/sshd/sshd_config</code></li>
+            <li>D) <code>/etc/ssh/sshd_config</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D) <code>/etc/ssh/sshd_config</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">3. ¿Qué comando permite montar un directorio en otro punto del sistema de archivos?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>mount --link</code></li>
+            <li>B) <code>mount --bind</code></li>
+            <li>C) <code>bindmount</code></li>
+            <li>D) <code>ln -s</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B) <code>mount --bind</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">4. ¿Qué valor de <code>umask</code> garantiza permisos 750 para nuevos directorios?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>0027</code></li>
+            <li>B) <code>0750</code></li>
+            <li>C) <code>0270</code></li>
+            <li>D) <code>0075</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>0027</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">5. ¿Qué comando actualiza la base de datos usada por <code>locate</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>updatedb</code></li>
+            <li>B) <code>locate --update</code></li>
+            <li>C) <code>refreshloc</code></li>
+            <li>D) <code>finddb</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>updatedb</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">6. ¿Qué comando permite suspender una impresora en CUPS mostrando un mensaje?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>cupsdisable -r</code></li>
+            <li>B) <code>cupsdisable -c -r</code></li>
+            <li>C) <code>cupspause -m</code></li>
+            <li>D) <code>cupsctl --disable</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B) <code>cupsdisable -c -r</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">7. ¿Qué archivo controla el acceso de usuarios al sistema de programación <code>cron</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/cron.conf</code></li>
+            <li>B) <code>/etc/cron.allow</code></li>
+            <li>C) <code>/etc/crontab</code></li>
+            <li>D) <code>/etc/cron.deny</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B) <code>/etc/cron.allow</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">8. ¿Qué comando permite cambiar la shell de acceso de un usuario?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>chsh</code></li>
+            <li>B) <code>usermod -s</code></li>
+            <li>C) <code>passwd -s</code></li>
+            <li>D) <code>shellmod</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>chsh</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">9. ¿Qué comando permite establecer el número de días entre chequeos automáticos de un sistema de archivos <code>ext3</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>tune2fs -d</code></li>
+            <li>B) <code>tune2fs -i</code></li>
+            <li>C) <code>fsck -t</code></li>
+            <li>D) <code>mkfs.ext3 -c</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B) <code>tune2fs -i</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">10. ¿Qué porcentaje de espacio reservado para root tiene por defecto <code>ext4</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) 10%</li>
+            <li>B) 5%</li>
+            <li>C) 3%</li>
+            <li>D) 0%</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B) 5%</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">11. ¿Qué comando permite que los archivos creados en un directorio pertenezcan al grupo del directorio?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>chmod g+s</code></li>
+            <li>B) <code>chgrp -p</code></li>
+            <li>C) <code>chmod 2775</code></li>
+            <li>D) <code>setpol -R</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>chmod g+s</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">12. ¿Qué archivo contiene la configuración del servidor Xorg?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/X11/xorg.conf</code></li>
+            <li>B) <code>/etc/xorg/xorg.conf</code></li>
+            <li>C) <code>/etc/X11/x.conf</code></li>
+            <li>D) <code>/etc/xorg.conf</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>/etc/X11/xorg.conf</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">13. ¿Qué comando permite ver los sockets abiertos por procesos?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>netstat -p</code></li>
+            <li>B) <code>lsof</code></li>
+            <li>C) <code>sockstat</code></li>
+            <li>D) <code>ps -s</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B) <code>lsof</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">14. ¿Qué archivo define el nombre del host en sistemas Linux?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/hostname</code></li>
+            <li>B) <code>/etc/hosts</code></li>
+            <li>C) <code>/etc/nsswitch.conf</code></li>
+            <li>D) <code>/etc/resolv.conf</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>/etc/hostname</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">15. ¿Qué comando permite generar claves públicas y privadas para SSH?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>ssh-keygen</code></li>
+            <li>B) <code>ssh-agent</code></li>
+            <li>C) <code>ssh-add</code></li>
+            <li>D) <code>ssh-config</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>ssh-keygen</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">16. ¿Qué opción de <code>grub-mkconfig</code> fuerza la regeneración del archivo de configuración de GRUB en sistemas modernos?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>-o /boot/grub/grub.cfg</code></li>
+            <li>B) <code>--update</code></li>
+            <li>C) <code>--rebuild</code></li>
+            <li>D) <code>-c /etc/grub.conf</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>-o /boot/grub/grub.cfg</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">17. En un sistema con <code>systemd</code>, ¿qué comando muestra todas las dependencias de una unidad de servicio específica?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>systemctl list-dependencies</code></li>
+            <li>B) <code>systemctl show-deps</code></li>
+            <li>C) <code>systemctl tree</code></li>
+            <li>D) <code>systemctl graph</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>systemctl list-dependencies</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">18. ¿Qué archivo controla la asignación de prioridades de procesos en PAM usando <code>limits.conf</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/security/limits.conf</code></li>
+            <li>B) <code>/etc/pam.d/limits.conf</code></li>
+            <li>C) <code>/etc/pam.conf</code></li>
+            <li>D) <code>/etc/security/pam_limits.conf</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>/etc/security/limits.conf</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">19. ¿Qué comando permite verificar la firma de un paquete RPM antes de instalarlo?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>rpm --checksig paquete.rpm</code></li>
+            <li>B) <code>rpm -K paquete.rpm</code></li>
+            <li>C) <code>rpm --verify paquete.rpm</code></li>
+            <li>D) <code>rpm -V paquete.rpm</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B) <code>rpm -K paquete.rpm</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">20. ¿Qué opción de <code>mount</code> permite montar un sistema de archivos en modo sólo lectura incluso si está marcado como sucio?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>-r</code></li>
+            <li>B) <code>-o ro,force</code></li>
+            <li>C) <code>--readonly</code></li>
+            <li>D) <code>-o ro,dirty</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B) <code>-o ro,force</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">21. ¿Qué comando muestra las reglas activas de SELinux en tiempo real?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>semanage list</code></li>
+            <li>B) <code>sestatus -r</code></li>
+            <li>C) <code>seinfo</code></li>
+            <li>D) <code>sesearch</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D) <code>sesearch</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">22. ¿Qué opción de <code>tar</code> preserva las ACL y atributos extendidos al crear un archivo?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>--xattrs --acls</code></li>
+            <li>B) <code>--preserve</code></li>
+            <li>C) <code>--secure</code></li>
+            <li>D) <code>--metadata</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>--xattrs --acls</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">23. ¿Qué comando permite regenerar la base de datos de dependencias de librerías compartidas en Linux?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>ldconfig</code></li>
+            <li>B) <code>depmod</code></li>
+            <li>C) <code>modprobe --update</code></li>
+            <li>D) <code>libupdate</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>ldconfig</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">24. ¿Qué archivo define la política de AppArmor para un binario específico?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/apparmor.d/&lt;programa&gt;</code></li>
+            <li>B) <code>/etc/security/apparmor.conf</code></li>
+            <li>C) <code>/etc/apparmor.conf</code></li>
+            <li>D) <code>/etc/apparmor/&lt;programa&gt;.policy</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>/etc/apparmor.d/&lt;programa&gt;</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">25. ¿Qué comando permite listar los módulos del kernel que están actualmente cargados?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>lsmod</code></li>
+            <li>B) <code>modinfo</code></li>
+            <li>C) <code>modprobe -l</code></li>
+            <li>D) <code>insmod --list</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>lsmod</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">26. ¿Qué opción de <code>find</code> permite ejecutar un comando sobre cada archivo encontrado, reemplazando <code>{}</code> por el nombre del archivo?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>-exec</code></li>
+            <li>B) <code>-run</code></li>
+            <li>C) <code>-do</code></li>
+            <li>D) <code>-cmd</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>-exec</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">27. ¿Qué archivo controla la configuración de prioridades de arranque en <code>systemd</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/systemd/system.conf</code></li>
+            <li>B) <code>/etc/systemd/boot.conf</code></li>
+            <li>C) <code>/etc/systemd/default.target</code></li>
+            <li>D) <code>/etc/systemd/boot.target</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C) <code>/etc/systemd/default.target</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">28. ¿Qué comando permite verificar la integridad de un sistema de archivos Btrfs?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>btrfs check</code></li>
+            <li>B) <code>btrfs scrub</code></li>
+            <li>C) <code>btrfs verify</code></li>
+            <li>D) <code>btrfs fsck</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>btrfs check</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">29. ¿Qué opción de <code>rsync</code> asegura que los permisos, propietarios y tiempos de modificación se preserven?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>-a</code></li>
+            <li>B) <code>-p</code></li>
+            <li>C) <code>-m</code></li>
+            <li>D) <code>-P</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>-a</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">30. ¿Qué archivo define la configuración de <code>journald</code> en sistemas con <code>systemd</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/systemd/journald.conf</code></li>
+            <li>B) <code>/etc/journal.conf</code></li>
+            <li>C) <code>/etc/system/journald.conf</code></li>
+            <li>D) <code>/etc/systemd/journal.conf</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>/etc/systemd/journald.conf</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">31. En <code>iptables</code>, ¿qué tabla se utiliza para el filtrado de paquetes estándar (INPUT, OUTPUT, FORWARD)?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>nat</code></li>
+            <li>B) <code>filter</code></li>
+            <li>C) <code>mangle</code></li>
+            <li>D) <code>raw</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B) <code>filter</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">32. ¿Qué comando en <code>nftables</code> permite listar todas las reglas activas en formato legible?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>nft list ruleset</code></li>
+            <li>B) <code>nft show</code></li>
+            <li>C) <code>nft dump</code></li>
+            <li>D) <code>nft get rules</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>nft list ruleset</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">33. En IPv6, ¿qué campo reemplaza al TTL de IPv4?</p>
+        <ul class="opciones-lista">
+            <li>A) **Hop Limit**</li>
+            <li>B) **Next Header**</li>
+            <li>C) **Flow Label**</li>
+            <li>D) **Traffic Class**</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) Hop Limit</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">34. ¿Qué archivo define la configuración de zonas en BIND9?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/named.conf</code></li>
+            <li>B) <code>/etc/bind/named.conf.local</code></li>
+            <li>C) <code>/etc/bind/zones.conf</code></li>
+            <li>D) <code>/etc/dns/zones.conf</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B) <code>/etc/bind/named.conf.local</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">35. ¿Qué comando permite verificar la validez de un archivo de zona DNS en BIND?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>named-checkzone</code></li>
+            <li>B) <code>dnsverify</code></li>
+            <li>C) <code>zonecheck</code></li>
+            <li>D) <code>dig -z</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>named-checkzone</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">36. ¿Qué opción de Postfix define el archivo de configuración principal?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/postfix/main.cf</code></li>
+            <li>B) <code>/etc/postfix/postfix.conf</code></li>
+            <li>C) <code>/etc/postfix/master.cf</code></li>
+            <li>D) <code>/etc/postfix/config.cf</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>/etc/postfix/main.cf</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">37. ¿Qué comando permite regenerar los mapas de alias de correo en Postfix?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>newaliases</code></li>
+            <li>B) <code>postalias</code></li>
+            <li>C) <code>postmap</code></li>
+            <li>D) <code>makemap</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>newaliases</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">38. ¿Qué protocolo se utiliza en IPv6 para la autoconfiguración de direcciones sin servidor DHCP?</p>
+        <ul class="opciones-lista">
+            <li>A) **SLAAC**</li>
+            <li>B) **RARP**</li>
+            <li>C) **ICMPv6-DHCP**</li>
+            <li>D) **NDCP**</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) SLAAC</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">39. ¿Qué comando muestra las tablas de enrutamiento IPv6 en Linux?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>ip -6 route show</code></li>
+            <li>B) <code>route -6</code></li>
+            <li>C) <code>netstat -6r</code></li>
+            <li>D) <code>ss -6 route</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>ip -6 route show</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">40. ¿Qué opción de <code>tcpdump</code> permite capturar solo tráfico en el puerto 53 (DNS)?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>tcpdump port 53</code></li>
+            <li>B) <code>tcpdump -p 53</code></li>
+            <li>C) <code>tcpdump -f 53</code></li>
+            <li>D) <code>tcpdump dst 53</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>tcpdump port 53</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">41. ¿Qué archivo controla la resolución de nombres en Linux antes de consultar DNS?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/hosts</code></li>
+            <li>B) <code>/etc/resolv.conf</code></li>
+            <li>C) <code>/etc/nsswitch.conf</code></li>
+            <li>D) <code>/etc/hostname</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>/etc/hosts</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">42. ¿Qué comando permite comprobar la configuración de Postfix sin reiniciar el servicio?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>postfix check</code></li>
+            <li>B) <code>postfix verify</code></li>
+            <li>C) <code>postfix test</code></li>
+            <li>D) <code>postfix validate</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>postfix check</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">43. ¿Qué opción de <code>ss</code> muestra sockets TCP en estado de escucha?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>ss -ltn</code></li>
+            <li>B) <code>ss -t</code></li>
+            <li>C) <code>ss -s</code></li>
+            <li>D) <code>ss -lt</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>ss -ltn</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">44. ¿Qué comando permite añadir una regla en <code>iptables</code> para bloquear todo tráfico entrante en el puerto 22?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>iptables -A INPUT -p tcp --dport 22 -j DROP</code></li>
+            <li>B) <code>iptables -I INPUT -p tcp --port 22 -j REJECT</code></li>
+            <li>C) <code>iptables -A OUTPUT -p tcp --dport 22 -j DROP</code></li>
+            <li>D) <code>iptables -D INPUT -p tcp --dport 22 -j DROP</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>iptables -A INPUT -p tcp --dport 22 -j DROP</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">45. ¿Qué comando permite comprobar si un servidor SMTP remoto acepta conexiones en el puerto 25?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>telnet &lt;host&gt; 25</code></li>
+            <li>B) <code>nc &lt;host&gt; 25</code></li>
+            <li>C) <code>openssl s_client -connect &lt;host&gt;:25</code></li>
+            <li>D) Todas las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D) Todas las anteriores</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">46. ¿Qué comando permite configurar las opciones del kernel antes de compilarlo desde el código fuente?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>make config</code></li>
+            <li>B) <code>make menuconfig</code></li>
+            <li>C) <code>make kernelconfig</code></li>
+            <li>D) <code>make setup</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B) <code>make menuconfig</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">47. ¿Qué archivo contiene la configuración resultante de la compilación del kernel?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>.kernelconf</code></li>
+            <li>B) <code>.config</code></li>
+            <li>C) <code>Kconfig</code></li>
+            <li>D) <code>kernel.conf</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B) <code>.config</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">48. ¿Qué comando instala los módulos compilados del kernel en el sistema?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>make modules_install</code></li>
+            <li>B) <code>make install_modules</code></li>
+            <li>C) <code>modprobe --install</code></li>
+            <li>D) <code>insmod --all</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>make modules_install</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">49. ¿Qué directorio contiene los módulos del kernel cargables en Linux?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/lib/modules/&lt;versión&gt;</code></li>
+            <li>B) <code>/usr/lib/kernel/modules</code></li>
+            <li>C) <code>/etc/modules</code></li>
+            <li>D) <code>/boot/modules</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>/lib/modules/&lt;versión&gt;</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">50. ¿Qué comando muestra la configuración actual del kernel en ejecución?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>zcat /proc/config.gz</code></li>
+            <li>B) <code>cat /etc/kernel.conf</code></li>
+            <li>C) <code>sysctl -k</code></li>
+            <li>D) <code>uname -c</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>zcat /proc/config.gz</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">51. ¿Qué herramienta permite automatizar compilaciones y pruebas en Linux usando un archivo <code>Makefile</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>make</code></li>
+            <li>B) <code>cmake</code></li>
+            <li>C) <code>autoconf</code></li>
+            <li>D) <code>automake</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>make</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">52. ¿Qué comando genera un archivo <code>configure</code> a partir de <code>configure.ac</code> en proyectos GNU?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>autoconf</code></li>
+            <li>B) <code>automake</code></li>
+            <li>C) <code>cmake</code></li>
+            <li>D) <code>makeconf</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>autoconf</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">53. ¿Qué comando permite crear un contenedor ligero con LXC?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>lxc-create</code></li>
+            <li>B) <code>lxc-init</code></li>
+            <li>C) <code>lxcontainer</code></li>
+            <li>D) <code>lxc-new</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>lxc-create</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">54. ¿Qué archivo define la configuración de un contenedor LXC específico?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/var/lib/lxc/&lt;nombre&gt;/config</code></li>
+            <li>B) <code>/etc/lxc/&lt;nombre&gt;.conf</code></li>
+            <li>C) <code>/etc/lxc/config.d/&lt;nombre&gt;</code></li>
+            <li>D) <code>/usr/lib/lxc/&lt;nombre&gt;.cfg</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>/var/lib/lxc/&lt;nombre&gt;/config</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">55. ¿Qué comando muestra los contenedores LXC en ejecución?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>lxc-ls --fancy</code></li>
+            <li>B) <code>lxc-info</code></li>
+            <li>C) <code>lxc-ps</code></li>
+            <li>D) <code>lxc-status</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>lxc-ls --fancy</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">56. ¿Qué comando permite ejecutar un contenedor aislado con <code>systemd-nspawn</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>systemd-nspawn -D &lt;directorio&gt;</code></li>
+            <li>B) <code>systemd-nspawn --root &lt;directorio&gt;</code></li>
+            <li>C) <code>systemd-run --container &lt;directorio&gt;</code></li>
+            <li>D) <code>nspawn -d &lt;directorio&gt;</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>systemd-nspawn -D &lt;directorio&gt;</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">57. ¿Qué archivo controla la configuración de <code>docker daemon</code> en sistemas modernos?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/docker/daemon.json</code></li>
+            <li>B) <code>/etc/docker/docker.conf</code></li>
+            <li>C) <code>/etc/systemd/docker.conf</code></li>
+            <li>D) <code>/usr/lib/docker/config.json</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>/etc/docker/daemon.json</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">58. ¿Qué comando permite exportar un contenedor Docker a un archivo <code>tar</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>docker export</code></li>
+            <li>B) <code>docker save</code></li>
+            <li>C) <code>docker commit</code></li>
+            <li>D) <code>docker pack</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>docker export</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">59. ¿Qué comando permite crear una imagen Docker a partir de un contenedor existente?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>docker commit</code></li>
+            <li>B) <code>docker build</code></li>
+            <li>C) <code>docker save</code></li>
+            <li>D) <code>docker snapshot</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>docker commit</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">60. ¿Qué comando permite ejecutar un contenedor Docker en segundo plano con un nombre específico?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>docker run -d --name &lt;nombre&gt;</code></li>
+            <li>B) <code>docker start -b &lt;nombre&gt;</code></li>
+            <li>C) <code>docker exec -d &lt;nombre&gt;</code></li>
+            <li>D) <code>docker launch -n &lt;nombre&gt;</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A) <code>docker run -d --name &lt;nombre&gt;</code></strong>
+        </div>
+    </div>
+
+    <script>
+        function toggleRespuesta(button) {
+            // Busca el div de respuesta que sigue inmediatamente al botón
+            var respuestaDiv = button.nextElementSibling;
+            
+            // Alterna la visibilidad
+            if (respuestaDiv.style.display === 'none' || respuestaDiv.style.display === '') {
+                respuestaDiv.style.display = 'block';
+                button.textContent = 'Ocultar Respuesta';
+                button.style.backgroundColor = '#0d47a1'; // Azul oscuro para "Ocultar"
+            } else {
+                respuestaDiv.style.display = 'none';
+                button.textContent = 'Mostrar Respuesta';
+                button.style.backgroundColor = '#1a73e8'; // Azul original para "Mostrar"
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen LPIC-1 - Práctica 93 Archivos, Compresión y Navegación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .pregunta-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .pregunta-texto {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opciones-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .opciones-lista li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .boton-mostrar {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        .boton-mostrar:hover {
+            background-color: #0056b3;
+        }
+        .respuesta {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e9f7e9;
+            border-left: 5px solid #28a745;
+            border-radius: 5px;
+            display: none; /* ESTO OCULTA LA RESPUESTA POR DEFECTO */
+            color: #28a745;
+        }
+        .respuesta strong {
+            color: #1e7e34;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Examen de Práctica LPIC-1 (Test 93) - Archivos, Compresión y Navegación</h1>
+
+    <div class="pregunta-container">
+        <p class="pregunta-texto">1. ¿Qué comando crea un archivo tar llamado backup.tar con los contenidos del directorio /home/user?</p>
+        <ul class="opciones-lista">
+            <li>A) tar -cvf backup.tar /home/user</li>
+            <li>B) tar -czf backup.tar /home/user</li>
+            <li>C) tar -cf /home/user backup.tar</li>
+            <li>D) tar -cv /home/user backup.tar</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (c: crear, v: detallado, f: nombre de archivo)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">2. En tar, ¿qué opción permite comprimir usando gzip directamente?</p>
+        <ul class="opciones-lista">
+            <li>A) -z</li>
+            <li>B) -j</li>
+            <li>C) -J</li>
+            <li>D) -Z</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (La opción -z usa gzip para crear un .tar.gz)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">3. ¿Qué opción de tar permite verificar la integridad de un archivo .tar sin extraerlo?</p>
+        <ul class="opciones-lista">
+            <li>A) -tvf</li>
+            <li>B) -tf</li>
+            <li>C) -Wf</li>
+            <li>D) --verify</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">4. ¿Cómo se extrae un archivo backup.tar.gz en un solo paso?</p>
+        <ul class="opciones-lista">
+            <li>A) tar -xvf backup.tar.gz</li>
+            <li>B) tar -zxvf backup.tar.gz</li>
+            <li>C) gzip -d backup.tar.gz</li>
+            <li>D) tar -zcvf backup.tar.gz</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (x: extraer, z: gzip, v: detallado, f: archivo)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">5. ¿Qué hace la opción -t en tar?</p>
+        <ul class="opciones-lista">
+            <li>A) Testea el archivo</li>
+            <li>B) Lista el contenido del tar</li>
+            <li>C) Trunca el archivo</li>
+            <li>D) Transfiere a otro directorio</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">6. ¿Qué opción de tar se utiliza para excluir archivos durante la creación del tar?</p>
+        <ul class="opciones-lista">
+            <li>A) --skip</li>
+            <li>B) --exclude</li>
+            <li>C) -X</li>
+            <li>D) --omit</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">7. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">bzip2 -d archivo.bz2</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Comprime el archivo con bzip2</li>
+            <li>B) Descomprime el archivo con bzip2</li>
+            <li>C) Muestra el contenido comprimido</li>
+            <li>D) Borra el archivo original</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-d es la opción de descompresión o decompress)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">8. ¿Qué comando se usa para comprimir archivos con compresión bzip2 en tar?</p>
+        <ul class="opciones-lista">
+            <li>A) -z</li>
+            <li>B) -j</li>
+            <li>C) -J</li>
+            <li>D) -Z</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">9. ¿Cuál es el comando para comprimir un archivo con el máximo nivel de compresión usando gzip?</p>
+        <ul class="opciones-lista">
+            <li>A) gzip -best archivo</li>
+            <li>B) gzip -9 archivo</li>
+            <li>C) gzip -max archivo</li>
+            <li>D) gzip -v archivo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (El nivel 9 es el máximo en gzip)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">10. ¿Qué comando se utiliza para listar el contenido de un archivo .zip sin extraerlo?</p>
+        <ul class="opciones-lista">
+            <li>A) zip -l archivo.zip</li>
+            <li>B) unzip -l archivo.zip</li>
+            <li>C) tar -tf archivo.zip</li>
+            <li>D) cat archivo.zip</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">11. ¿Cuál es el comando para cambiar el directorio actual al directorio home del usuario?</p>
+        <ul class="opciones-lista">
+            <li>A) cd ~</li>
+            <li>B) cd $HOME</li>
+            <li>C) cd</li>
+            <li>D) Todos los anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (cd por sí solo, cd ~ y cd $HOME tienen el mismo efecto)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">12. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">cd -</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Regresa al directorio raíz</li>
+            <li>B) Regresa al directorio home</li>
+            <li>C) Regresa al directorio anterior</li>
+            <li>D) Muestra la lista de directorios recientes</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">13. ¿Qué variable de entorno almacena la ruta del directorio anterior?</p>
+        <ul class="opciones-lista">
+            <li>A) $PWD</li>
+            <li>B) $OLDPWD</li>
+            <li>C) $CDPATH</li>
+            <li>D) $HOME</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">14. ¿Qué comando muestra la lista de directorios apilados (pushd/popd)?</p>
+        <ul class="opciones-lista">
+            <li>A) dirs</li>
+            <li>B) cd -l</li>
+            <li>C) showdirs</li>
+            <li>D) lsdirs</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">15. ¿Qué comando agrega el directorio /etc a la pila de directorios?</p>
+        <ul class="opciones-lista">
+            <li>A) pushd /etc</li>
+            <li>B) dirs -a /etc</li>
+            <li>C) cdstack /etc</li>
+            <li>D) push /etc</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">16. ¿Qué comando elimina el directorio actual de la pila y cambia al directorio anterior?</p>
+        <ul class="opciones-lista">
+            <li>A) popd</li>
+            <li>B) dirs -r</li>
+            <li>C) cd -</li>
+            <li>D) popstack</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">17. ¿Qué comando usarías para ver todos los archivos en un directorio (incluidos los ocultos) en formato de lista larga y legible para humanos?</p>
+        <ul class="opciones-lista">
+            <li>A) ls -al</li>
+            <li>B) ls -alh</li>
+            <li>C) ls -aR</li>
+            <li>D) ls -lH</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-a: todos, -l: lista larga, -h: legible para humanos)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">18. ¿Qué opción de cp sobrescribe los archivos de destino solo si son más antiguos que el archivo de origen?</p>
+        <ul class="opciones-lista">
+            <li>A) -i</li>
+            <li>B) -n</li>
+            <li>C) -u</li>
+            <li>D) -f</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (-u o --update)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">19. ¿Qué opción de rm elimina directorios y su contenido de forma recursiva?</p>
+        <ul class="opciones-lista">
+            <li>A) -d</li>
+            <li>B) -r</li>
+            <li>C) -R</li>
+            <li>D) B y C son correctas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (-r y -R son sinónimos para recursivo)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">20. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">mv archivo1 archivo2</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Mueve archivo1 al directorio archivo2</li>
+            <li>B) Copia archivo1 a archivo2</li>
+            <li>C) Renombra archivo1 a archivo2</li>
+            <li>D) Copia y renombra archivo1 a archivo2</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (Si el destino es un archivo, lo renombra)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">21. ¿Qué comando se utiliza para crear un enlace simbólico (soft link) a /etc/hosts llamado myhosts en el directorio actual?</p>
+        <ul class="opciones-lista">
+            <li>A) ln /etc/hosts myhosts</li>
+            <li>B) ln -s /etc/hosts myhosts</li>
+            <li>C) link -s /etc/hosts myhosts</li>
+            <li>D) ln -h /etc/hosts myhosts</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-s es para enlace simbólico)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">22. ¿Qué sucede si el archivo de origen de un enlace duro se elimina?</p>
+        <ul class="opciones-lista">
+            <li>A) El enlace duro se rompe</li>
+            <li>B) El archivo en el disco permanece accesible a través del enlace duro</li>
+            <li>C) El enlace duro se convierte en un enlace simbólico</li>
+            <li>D) El sistema operativo avisa de un error</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Solo cuando el contador de enlaces llega a cero, el archivo se elimina)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">23. ¿Qué opción del comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">ls</code> muestra el inodo de un archivo?</p>
+        <ul class="opciones-lista">
+            <li>A) -l</li>
+            <li>B) -i</li>
+            <li>C) -n</li>
+            <li>D) -a</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">24. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">mkdir -p a/b/c</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Crea el directorio a/b/c, pero solo si a y b ya existen</li>
+            <li>B) Crea el directorio a/b/c y cualquier directorio padre que no exista</li>
+            <li>C) Crea los directorios a, b y c en paralelo</li>
+            <li>D) Muestra un error si a/b/c ya existe</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-p o --parents)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">25. ¿Qué comando se utiliza para crear un archivo vacío con una marca de tiempo específica?</p>
+        <ul class="opciones-lista">
+            <li>A) touch -t AAMMDDhhmm archivo</li>
+            <li>B) touch -d "fecha" archivo</li>
+            <li>C) settime archivo</li>
+            <li>D) A y B son correctas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">26. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">file archivo.bin</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Abre el archivo en un editor de texto</li>
+            <li>B) Muestra el contenido del archivo</li>
+            <li>C) Muestra el tipo de archivo (ej. ASCII text, JPEG image, etc.)</li>
+            <li>D) Muestra los permisos del archivo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">27. ¿Qué comando se utiliza para mostrar el uso de disco del directorio actual, legible para humanos y con un resumen total?</p>
+        <ul class="opciones-lista">
+            <li>A) df -h</li>
+            <li>B) du -sh</li>
+            <li>C) ls -lh</li>
+            <li>D) du -ah</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (du para uso de disco, -s para resumen, -h para formato legible)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">28. ¿Qué opción de du evita cruzar los límites del sistema de archivos al calcular el uso de disco?</p>
+        <ul class="opciones-lista">
+            <li>A) -x</li>
+            <li>B) -l</li>
+            <li>C) -a</li>
+            <li>D) -s</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-x o --one-file-system)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">29. ¿Qué comando se utiliza para buscar el archivo de la página man para el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">tar</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) locate tar</li>
+            <li>B) whereis tar</li>
+            <li>C) which tar</li>
+            <li>D) find / -name tar</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (whereis localiza binarios, fuentes y páginas man)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">30. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">updatedb</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Actualiza los paquetes del sistema</li>
+            <li>B) Actualiza la base de datos de man pages</li>
+            <li>C) Actualiza la base de datos de <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">locate</code></li>
+            <li>D) Actualiza la tabla de enrutamiento</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">31. ¿Qué comando se utiliza para buscar archivos modificados hace más de 30 días en el directorio actual?</p>
+        <ul class="opciones-lista">
+            <li>A) find . -mtime +30</li>
+            <li>B) find . -ctime +30</li>
+            <li>C) find . -atime +30</li>
+            <li>D) find . -mmin +30</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">32. ¿Qué opción del comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">find</code> se utiliza para buscar solo directorios?</p>
+        <ul class="opciones-lista">
+            <li>A) -type f</li>
+            <li>B) -type d</li>
+            <li>C) -dir</li>
+            <li>D) -type l</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-type d)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">33. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">find /home -user juan</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Busca archivos y directorios con el nombre "juan"</li>
+            <li>B) Busca archivos y directorios propiedad del usuario "juan"</li>
+            <li>C) Busca archivos y directorios que contengan el texto "juan"</li>
+            <li>D) Busca archivos modificados por "juan"</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">34. ¿Qué comando ejecuta <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">rm -f {}</code> en cada archivo encontrado por <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">find</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) find ... | exec rm -f</li>
+            <li>B) find ... -exec rm -f {} \;</li>
+            <li>C) find ... -xargs rm -f</li>
+            <li>D) B y C son correctas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">35. ¿Qué comando se utiliza para mostrar solo los archivos binarios que se encuentran en el PATH del sistema?</p>
+        <ul class="opciones-lista">
+            <li>A) whereis -b</li>
+            <li>B) which -b</li>
+            <li>C) type -a</li>
+            <li>D) ls -F | grep *</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (which es específico para ejecutables en el PATH)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">36. ¿Qué hace <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">find . -type f -size +1M</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Busca archivos que tienen exactamente 1MB</li>
+            <li>B) Busca archivos que tienen más de 1MB</li>
+            <li>C) Busca directorios que tienen más de 1MB</li>
+            <li>D) Busca archivos que tienen menos de 1MB</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (+1M indica "más grande que 1 Megabyte")
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">37. ¿Qué opción de <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">gzip</code> evita que el comando borre el archivo original después de comprimir?</p>
+        <ul class="opciones-lista">
+            <li>A) -c</li>
+            <li>B) -k</li>
+            <li>C) -v</li>
+            <li>D) -f</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-k o --keep)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">38. ¿Qué comando se utiliza para buscar todas las líneas que contienen la palabra "error" en todos los archivos .log dentro del directorio /var/log de forma recursiva?</p>
+        <ul class="opciones-lista">
+            <li>A) grep error /var/log/*.log</li>
+            <li>B) grep -r error /var/log/</li>
+            <li>C) find /var/log/ -name "*.log" | grep error</li>
+            <li>D) locate error /var/log/</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-r para recursivo)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">39. ¿Qué comando se utiliza para mostrar los permisos octales de un archivo?</p>
+        <ul class="opciones-lista">
+            <li>A) ls -l</li>
+            <li>B) stat -c %a archivo</li>
+            <li>C) stat -c %p archivo</li>
+            <li>D) chmod -n archivo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">40. ¿Cuál es el significado del octal 0777 para un archivo?</p>
+        <ul class="opciones-lista">
+            <li>A) Solo lectura para todos</li>
+            <li>B) Lectura, escritura, ejecución para propietario, grupo y otros</li>
+            <li>C) Solo el propietario tiene todos los permisos</li>
+            <li>D) Solo el grupo tiene todos los permisos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">41. ¿Cuál es el valor predeterminado de umask en la mayoría de los sistemas Linux?</p>
+        <ul class="opciones-lista">
+            <li>A) 0000</li>
+            <li>B) 0022</li>
+            <li>C) 0777</li>
+            <li>D) 0002</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">42. Si umask es 027, ¿cuáles serán los permisos de un nuevo archivo creado?</p>
+        <ul class="opciones-lista">
+            <li>A) 640</li>
+            <li>B) 750</li>
+            <li>C) 660</li>
+            <li>D) 770</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Permisos base para archivo 666 - 027 = 640)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">43. ¿Qué comando se utiliza para cambiar el grupo propietario de un archivo?</p>
+        <ul class="opciones-lista">
+            <li>A) chown</li>
+            <li>B) chgrp</li>
+            <li>C) chmod</li>
+            <li>D) groupmod</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">44. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">chown -R user:group /dir</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Cambia el propietario y grupo de /dir y su contenido recursivamente</li>
+            <li>B) Cambia solo el propietario de /dir y su contenido</li>
+            <li>C) Cambia solo el grupo de /dir y su contenido</li>
+            <li>D) Mueve /dir a /dir/user:group</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">45. ¿Cuál es la ruta absoluta del directorio que contiene los archivos de configuración de systemd?</p>
+        <ul class="opciones-lista">
+            <li>A) /etc/init.d/</li>
+            <li>B) /etc/systemd/system/</li>
+            <li>C) /etc/sysconfig/</li>
+            <li>D) /var/run/systemd/</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">46. ¿Qué hace la opción <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">-mtime -7</code> en <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">find</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Archivos modificados hace más de 7 días</li>
+            <li>B) Archivos modificados hace exactamente 7 días</li>
+            <li>C) Archivos modificados en los últimos 7 días (menos de 7)</li>
+            <li>D) Archivos a los que se accedió en los últimos 7 días</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">47. ¿Qué hace la opción <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">-perm /2000</code> en <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">find</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Busca archivos con el bit SUID establecido</li>
+            <li>B) Busca archivos con el bit SGID establecido</li>
+            <li>C) Busca archivos con el bit Sticky establecido</li>
+            <li>D) Busca archivos con el permiso de ejecución para grupo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (2000 es el valor octal para SGID)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">48. ¿Cuál es el significado del permiso 1000 (Sticky Bit) en un directorio?</p>
+        <ul class="opciones-lista">
+            <li>A) Solo el propietario puede eliminar o renombrar sus archivos</li>
+            <li>B) Los archivos creados heredan el grupo del padre</li>
+            <li>C) Los ejecutables se ejecutan con los permisos del propietario</li>
+            <li>D) Nadie puede eliminar archivos en ese directorio</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Comúnmente usado en /tmp)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">49. El comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">find . -type f -size +100k -and -size -1M</code> muestra:</p>
+        <ul class="opciones-lista">
+            <li>A) Archivos entre 100 KB y 1 MB</li>
+            <li>B) Archivos menores de 100 KB</li>
+            <li>C) Archivos mayores de 1 MB</li>
+            <li>D) Directorios vacíos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">50. ¿Cómo limitar <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">find</code> a solo 3 niveles de profundidad?</p>
+        <ul class="opciones-lista">
+            <li>A) find . -maxdepth 3</li>
+            <li>B) find . -depth 3</li>
+            <li>C) find . --depth=3</li>
+            <li>D) find . -level 3</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">51. <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">stat -c %n archivo</code> muestra:</p>
+        <ul class="opciones-lista">
+            <li>A) Nombre del archivo</li>
+            <li>B) Tamaño</li>
+            <li>C) Permisos</li>
+            <li>D) Inodo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">52. ¿Cuál de los siguientes comandos de <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">find</code> encuentra todos los archivos con permisos SUID establecidos en el sistema y muestra su ruta absoluta?</p>
+        <ul class="opciones-lista">
+            <li>A) find / -perm -2000 -type f -exec realpath {} \;</li>
+            <li>B) find / -perm /4000 -type f -print</li>
+            <li>C) find / -perm -4000 -type f -exec readlink {} \;</li>
+            <li>D) find / -perm 4000 -type f -print</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">53. ¿Qué diferencia existe entre <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">which</code> y <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">type</code> al localizar un comando en Linux?</p>
+        <ul class="opciones-lista">
+            <li>A) which analiza también los alias y funciones, mientras que type solo busca binarios.</li>
+            <li>B) type puede mostrar si el comando es una función o alias, mientras que which solo busca en el PATH.</li>
+            <li>C) Ambos son equivalentes, pero type es más rápido.</li>
+            <li>D) which busca en PATH y muestra información de compilación.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+
+
+    <script>
+        function toggleRespuesta(button) {
+            // Busca el div de respuesta que sigue inmediatamente al botón
+            var respuestaDiv = button.nextElementSibling;
+            
+            // Alterna la visibilidad
+            if (respuestaDiv.style.display === 'none' || respuestaDiv.style.display === '') {
+                respuestaDiv.style.display = 'block';
+                button.textContent = 'Ocultar Respuesta';
+                button.style.backgroundColor = '#dc3545'; // Rojo para "Ocultar"
+            } else {
+                respuestaDiv.style.display = 'none';
+                button.textContent = 'Mostrar Respuesta';
+                button.style.backgroundColor = '#007bff'; // Azul para "Mostrar"
+            }
+        }
+    </script>
+
+</body>
+</html>

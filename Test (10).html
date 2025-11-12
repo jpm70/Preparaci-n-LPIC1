@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen LPIC-1/2 - Práctica 98 Hardware y Gestión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .pregunta-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .pregunta-texto {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opciones-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .opciones-lista li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .boton-mostrar {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        .boton-mostrar:hover {
+            background-color: #0056b3;
+        }
+        .respuesta {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e9f7e9;
+            border-left: 5px solid #28a745;
+            border-radius: 5px;
+            display: none; /* ESTO OCULTA LA RESPUESTA POR DEFECTO */
+            color: #28a745;
+        }
+        .respuesta strong {
+            color: #1e7e34;
+            font-size: 1.1em;
+        }
+        code {
+            background-color: #eee; 
+            padding: 2px 4px; 
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Examen de Práctica LPIC-1/2 (Test 98) - Comandos de Hardware y Gestión del Sistema</h1>
+
+    <div class="pregunta-container">
+        <p class="pregunta-texto">1. ¿Qué hace el comando <code>dos2unix archivo.txt</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Convierte el archivo de formato Unix a DOS</li>
+            <li>B) Convierte el archivo de formato DOS a Unix</li>
+            <li>C) Elimina caracteres nulos</li>
+            <li>D) Sustituye tabs por espacios</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Convierte el archivo de formato DOS a Unix)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">2. ¿Qué diferencia principal hay entre <code>dos2unix</code> y <code>unix2dos</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) dos2unix convierte saltos de línea CRLF a LF, unix2dos hace lo contrario</li>
+            <li>B) dos2unix elimina espacios, unix2dos los añade</li>
+            <li>C) unix2dos corrige encoding UTF-8</li>
+            <li>D) No hay diferencia</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (dos2unix convierte saltos de línea CRLF a LF, unix2dos hace lo contrario)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">3. ¿Qué opción de <code>dos2unix</code> permite convertir un archivo en su lugar sin crear copia?</p>
+        <ul class="opciones-lista">
+            <li>A) -n</li>
+            <li>B) -f</li>
+            <li>C) -o</li>
+            <li>D) --replace</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (<code>-o</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">4. ¿Qué hace <code>unix2dos -k archivo.txt</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Mantiene la fecha original del archivo convertido</li>
+            <li>B) Convierte solo si es UTF-8</li>
+            <li>C) Fuerza recodificación</li>
+            <li>D) Cambia permisos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Mantiene la fecha original del archivo convertido)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">5. ¿Qué comando puede convertir la codificación de ISO-8859-1 a UTF-8 en un archivo?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>recode ISO-8859-1..UTF-8 archivo.txt</code></li>
+            <li>B) <code>iconv -f ISO-8859-1 -t UTF-8 archivo.txt</code></li>
+            <li>C) <code>dos2unix archivo.txt</code></li>
+            <li>D) <code>tr -cd UTF-8 archivo.txt</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>recode ISO-8859-1..UTF-8 archivo.txt</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">6. ¿Qué opción de <code>recode</code> muestra todos los conjuntos de caracteres soportados?</p>
+        <ul class="opciones-lista">
+            <li>A) -l</li>
+            <li>B) -v</li>
+            <li>C) --list</li>
+            <li>D) --show</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>-l</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">7. ¿Qué comando muestra la arquitectura de hardware actual (por ejemplo, x86_64)?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>uname -m</code></li>
+            <li>B) <code>arch</code></li>
+            <li>C) Ambas A y B</li>
+            <li>D) <code>lscpu</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (Ambas A y B)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">8. ¿Qué muestra <code>uname -r</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Versión del kernel</li>
+            <li>B) Versión del sistema operativo</li>
+            <li>C) Arquitectura del hardware</li>
+            <li>D) Nombre del host</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Versión del kernel)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">9. ¿Qué salida produce <code>uname -a</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Solo la versión del kernel</li>
+            <li>B) Toda la información del sistema: kernel, host, versión, arquitectura</li>
+            <li>C) Solo la arquitectura</li>
+            <li>D) Solo el sistema operativo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Toda la información del sistema: kernel, host, versión, arquitectura)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">10. ¿Qué hace el comando <code>od -t x1 archivo.bin</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra el contenido en hexadecimal por byte</li>
+            <li>B) Muestra el contenido en ASCII</li>
+            <li>C) Convierte a decimal</li>
+            <li>D) Desensambla binarios</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra el contenido en hexadecimal por byte)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">11. ¿Qué opción de <code>od</code> permite mostrar caracteres ASCII junto al valor hexadecimal?</p>
+        <ul class="opciones-lista">
+            <li>A) -c</li>
+            <li>B) -x</li>
+            <li>C) -A</li>
+            <li>D) -t a</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>-c</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">12. ¿Qué hace <code>od -An -tx4 archivo.bin</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra solo los datos, sin dirección, en formato hexadecimal de 4 bytes</li>
+            <li>B) Muestra con direcciones</li>
+            <li>C) Muestra el offset</li>
+            <li>D) Corta a 4 líneas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra solo los datos, sin dirección, en formato hexadecimal de 4 bytes)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">13. ¿Qué muestra <code>dmidecode -t memory</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Información detallada de los módulos de RAM</li>
+            <li>B) Información de la CPU</li>
+            <li>C) Tabla de particiones</li>
+            <li>D) Información de red</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Información detallada de los módulos de RAM)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">14. ¿Qué hace <code>dmidecode -t 1</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra información del fabricante y modelo del sistema</li>
+            <li>B) Muestra la BIOS</li>
+            <li>C) Muestra la RAM</li>
+            <li>D) Muestra la CPU</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra información del fabricante y modelo del sistema)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">15. ¿Qué comando muestra el número de serie del equipo si está disponible?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>dmidecode -s system-serial-number</code></li>
+            <li>B) <code>uname -s</code></li>
+            <li>C) <code>lscpu</code></li>
+            <li>D) <code>arch</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>dmidecode -s system-serial-number</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">16. ¿Qué muestra <code>lspci</code> sin parámetros?</p>
+        <ul class="opciones-lista">
+            <li>A) Todos los dispositivos PCI conectados</li>
+            <li>B) Solo los USB</li>
+            <li>C) Discos duros SATA</li>
+            <li>D) Controladores SCSI</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Todos los dispositivos PCI conectados)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">17. ¿Qué hace <code>lspci -k</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra los controladores del kernel asociados a cada dispositivo PCI</li>
+            <li>B) Muestra los dispositivos USB</li>
+            <li>C) Desactiva un controlador</li>
+            <li>D) Ordena por IRQ</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra los controladores del kernel asociados a cada dispositivo PCI)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">18. ¿Qué comando lista los dispositivos USB conectados al sistema?</p>
+        <ul class="opciones-lista">
+            <li>A) lsusb</li>
+            <li>B) lspci</li>
+            <li>C) usb-devices</li>
+            <li>D) hwinfo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>lsusb</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">19. ¿Qué muestra <code>lsusb -v</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Información detallada de cada dispositivo USB</li>
+            <li>B) Solo IDs de fabricante</li>
+            <li>C) Solo controladores activos</li>
+            <li>D) Solo dispositivos de almacenamiento</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Información detallada de cada dispositivo USB)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">20. ¿Qué hace <code>hdparm -tT /dev/sda</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Mide la velocidad de lectura del disco</li>
+            <li>B) Muestra el tamaño del disco</li>
+            <li>C) Desmonta el disco</li>
+            <li>D) Elimina particiones</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Mide la velocidad de lectura del disco)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">21. ¿Qué hace <code>hdparm -I /dev/sda</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra información detallada del dispositivo ATA</li>
+            <li>B) Repara sectores</li>
+            <li>C) Inicia un test SMART</li>
+            <li>D) Borra el disco</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra información detallada del dispositivo ATA)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">22. ¿Qué opción de <code>hdparm</code> puede activar la caché de escritura en un disco?</p>
+        <ul class="opciones-lista">
+            <li>A) -W1</li>
+            <li>B) --cache=on</li>
+            <li>C) -A</li>
+            <li>D) --enable-cache</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>-W1</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">23. ¿Qué hace <code>hdparm -y /dev/sda</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Coloca el disco en modo de suspensión</li>
+            <li>B) Desmonta el disco</li>
+            <li>C) Reinicia el disco</li>
+            <li>D) Limpia el buffer</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Coloca el disco en modo de suspensión)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">24. ¿Qué diferencia hay entre <code>halt</code> y <code>poweroff</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) poweroff apaga el sistema, halt detiene la CPU pero puede no cortar energía</li>
+            <li>B) halt reinicia el sistema</li>
+            <li>C) Son idénticos en todos los casos</li>
+            <li>D) poweroff reinicia</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (poweroff apaga el sistema, halt detiene la CPU pero puede no cortar energía)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">25. ¿Qué hace <code>shutdown -h now</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Detiene el sistema inmediatamente</li>
+            <li>B) Reinicia</li>
+            <li>C) Suspende</li>
+            <li>D) Cambia de runlevel</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Detiene el sistema inmediatamente)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">26. ¿Qué hace <code>shutdown -r +5</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Reinicia el sistema en 5 minutos</li>
+            <li>B) Apaga en 5 minutos</li>
+            <li>C) Muestra notificación</li>
+            <li>D) Cancela apagado</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Reinicia el sistema en 5 minutos)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">27. ¿Qué comando cancela un apagado programado?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>shutdown -c</code></li>
+            <li>B) <code>telinit c</code></li>
+            <li>C) <code>init 0</code></li>
+            <li>D) <code>halt -c</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>shutdown -c</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">28. ¿Qué hace <code>init 0</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Cambia al nivel de ejecución de apagado</li>
+            <li>B) Reinicia</li>
+            <li>C) Cambia a multiusuario</li>
+            <li>D) Suspende el sistema</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Cambia al nivel de ejecución de apagado)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">29. ¿Qué hace <code>init 6</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Reinicia el sistema</li>
+            <li>B) Suspende</li>
+            <li>C) Cambia al modo texto</li>
+            <li>D) Cambia permisos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Reinicia el sistema)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">30. ¿Qué comando es equivalente a <code>telinit 1</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Cambiar al modo monousuario</li>
+            <li>B) Apagar el sistema</li>
+            <li>C) Reiniciar</li>
+            <li>D) Reconfigurar runlevels</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Cambiar al modo monousuario)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">31. ¿Qué diferencia hay entre <code>init</code> y <code>telinit</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) telinit comunica con el proceso init en ejecución para cambiar el runlevel</li>
+            <li>B) init es un alias de telinit</li>
+            <li>C) telinit detiene el sistema</li>
+            <li>D) telinit cambia servicios</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (telinit comunica con el proceso init en ejecución para cambiar el runlevel)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">32. ¿Qué hace <code>reboot -f</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Fuerza el reinicio inmediato sin ejecutar scripts de apagado</li>
+            <li>B) Apaga limpiamente</li>
+            <li>C) Reconfigura la BIOS</li>
+            <li>D) Sincroniza discos antes de reiniciar</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Fuerza el reinicio inmediato sin ejecutar scripts de apagado)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">33. ¿Qué hace <code>reboot -p</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Apaga el sistema después del reinicio</li>
+            <li>B) Solo funciona si el hardware soporta ACPI</li>
+            <li>C) Equivale a halt</li>
+            <li>D) Cierra servicios pero no reinicia</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Solo funciona si el hardware soporta ACPI)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">34. ¿Qué hace <code>shutdown -P now</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Apaga completamente el sistema (poweroff)</li>
+            <li>B) Solo detiene la CPU</li>
+            <li>C) Suspende</li>
+            <li>D) Reinicia</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Apaga completamente el sistema (poweroff))
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">35. ¿Qué hace <code>od -A d -t o1 archivo.bin</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra el archivo en octal con direcciones decimales</li>
+            <li>B) Muestra ASCII</li>
+            <li>C) Muestra hexadecimal</li>
+            <li>D) Convierte bytes</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra el archivo en octal con direcciones decimales)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">36. ¿Qué hace <code>dmidecode -t bios</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra información sobre la BIOS</li>
+            <li>B) Muestra CPU</li>
+            <li>C) Muestra RAM</li>
+            <li>D) Muestra discos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra información sobre la BIOS)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">37. ¿Qué muestra <code>lsusb -s 001:002</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra información específica de un dispositivo USB</li>
+            <li>B) Muestra todos los dispositivos</li>
+            <li>C) Desconecta un USB</li>
+            <li>D) Filtra por fabricante</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra información específica de un dispositivo USB)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">38. ¿Qué hace <code>recode utf8..latin1 archivo.txt</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Convierte el archivo de UTF-8 a ISO-8859-1</li>
+            <li>B) Elimina caracteres no imprimibles</li>
+            <li>C) Invierte los saltos de línea</li>
+            <li>D) Cambia CR a LF</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Convierte el archivo de UTF-8 a ISO-8859-1)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">39. ¿Qué hace <code>arch</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra la arquitectura de la máquina</li>
+            <li>B) Muestra el kernel</li>
+            <li>C) Cambia de modo</li>
+            <li>D) Inicia BIOS</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra la arquitectura de la máquina)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">40. ¿Qué hace <code>hdparm -r1 /dev/sdb</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Establece el disco en modo solo lectura</li>
+            <li>B) Restablece sectores</li>
+            <li>C) Formatea el disco</li>
+            <li>D) Cambia el modo DMA</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Establece el disco en modo solo lectura)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">41. ¿Qué salida produce <code>uname -o</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Nombre del sistema operativo</li>
+            <li>B) Nombre del host</li>
+            <li>C) Arquitectura</li>
+            <li>D) Kernel</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Nombre del sistema operativo)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">42. ¿Qué hace <code>dmidecode -t processor</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra detalles del CPU: fabricante, velocidad, núcleos</li>
+            <li>B) Muestra uso del CPU</li>
+            <li>C) Modifica configuración</li>
+            <li>D) Activa turbo boost</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra detalles del CPU: fabricante, velocidad, núcleos)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">43. ¿Qué hace <code>lspci -nn</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra IDs numéricos de fabricante y dispositivo</li>
+            <li>B) Oculta IDs</li>
+            <li>C) Muestra solo hardware gráfico</li>
+            <li>D) Agrupa por clase</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra IDs numéricos de fabricante y dispositivo)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">44. ¿Qué hace <code>hdparm -B 255 /dev/sda</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Desactiva ahorro de energía del disco</li>
+            <li>B) Activa standby inmediato</li>
+            <li>C) Limpia la caché</li>
+            <li>D) Mide temperatura</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Desactiva ahorro de energía del disco)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">45. ¿Qué hace <code>shutdown -H now</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Detiene el sistema pero no apaga físicamente</li>
+            <li>B) Reinicia</li>
+            <li>C) Suspende</li>
+            <li>D) Apaga completamente</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Detiene el sistema pero no apaga físicamente)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">46. ¿Qué muestra <code>dmidecode -s bios-version</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Versión exacta de la BIOS</li>
+            <li>B) Versión del kernel</li>
+            <li>C) UUID del sistema</li>
+            <li>D) Fecha de instalación</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Versión exacta de la BIOS)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">47. ¿Qué hace <code>od -j 4 -N 16 archivo.bin</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra 16 bytes del archivo, empezando en el byte 4</li>
+            <li>B) Muestra todos los bytes</li>
+            <li>C) Convierte a texto</li>
+            <li>D) Ignora bytes nulos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra 16 bytes del archivo, empezando en el byte 4)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">48. ¿Qué hace <code>reboot --force --force</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Reinicia el sistema sin ejecutar ningún cierre de proceso</li>
+            <li>B) Reinicia de forma segura</li>
+            <li>C) Apaga sin reboot</li>
+            <li>D) Solo notifica</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Reinicia el sistema sin ejecutar ningún cierre de proceso)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">49. ¿Qué hace <code>shutdown -k +10</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Envía aviso de apagado sin apagar realmente el sistema</li>
+            <li>B) Apaga en 10 minutos</li>
+            <li>C) Cierra sesión</li>
+            <li>D) Mata procesos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Envía aviso de apagado sin apagar realmente el sistema)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">50. ¿Qué hace <code>unix2dos archivo1 archivo2</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Convierte archivo1 a formato DOS y guarda en archivo2</li>
+            <li>B) Convierte ambos</li>
+            <li>C) Une archivos</li>
+            <li>D) Sobrescribe archivo1</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Convierte archivo1 a formato DOS y guarda en archivo2)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">51. ¿Qué hace <code>hdparm -C /dev/sda</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra el estado actual de energía del disco (activo, standby, etc.)</li>
+            <li>B) Cambia la velocidad de rotación</li>
+            <li>C) Mide temperatura</li>
+            <li>D) Cambia modo de transferencia</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra el estado actual de energía del disco)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">52. ¿Qué hace <code>telinit q</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Hace que init relea su configuración (/etc/inittab)</li>
+            <li>B) Cambia a modo texto</li>
+            <li>C) Reinicia servicios</li>
+            <li>D) Cambia a runlevel 0</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Hace que init relea su configuración (/etc/inittab))
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">53. ¿Qué hace <code>reboot -n</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) No sincroniza sistemas de archivos antes del reinicio</li>
+            <li>B) No apaga</li>
+            <li>C) Reinicia con logs</li>
+            <li>D) Reintenta</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (No sincroniza sistemas de archivos antes del reinicio)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">54. ¿Qué hace <code>halt -p</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Apaga completamente el sistema (equivalente a poweroff)</li>
+            <li>B) Suspende</li>
+            <li>C) Solo detiene procesos</li>
+            <li>D) Cambia runlevel</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Apaga completamente el sistema (equivalente a poweroff))
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">55. ¿Qué hace <code>dmidecode -t chassis</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra información del chasis físico del sistema</li>
+            <li>B) Muestra BIOS</li>
+            <li>C) Muestra discos</li>
+            <li>D) Muestra RAM</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Muestra información del chasis físico del sistema)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">56. ¿Qué salida muestra <code>arch</code> en un sistema ARM?</p>
+        <ul class="opciones-lista">
+            <li>A) armv7l o aarch64</li>
+            <li>B) x86_64</li>
+            <li>C) ppc64le</li>
+            <li>D) i386</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (armv7l o aarch64)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">57. ¿Qué muestra el comando <code>dmidecode -s baseboard-product-name</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) El nombre del producto de la placa base</li>
+            <li>B) El número de serie del sistema</li>
+            <li>C) El modelo del procesador</li>
+            <li>D) La versión del BIOS</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (El nombre del producto de la placa base)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">58. ¿Cuál es la diferencia entre <code>init 0</code> y <code>shutdown -h now</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Ambos detienen el sistema, pero shutdown -h now notifica a los usuarios y init 0 no</li>
+            <li>B) init 0 reinicia el sistema mientras que shutdown -h now lo apaga</li>
+            <li>C) init 0 requiere permisos de usuario normal</li>
+            <li>D) No existe diferencia alguna entre ellos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Ambos detienen el sistema, pero shutdown -h now notifica a los usuarios y init 0 no)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">59. ¿Qué efecto tiene el comando <code>hdparm -S 12 /dev/sda</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Establece que el disco /dev/sda entre en modo de suspensión tras 1 minuto de inactividad</li>
+            <li>B) Muestra el estado SMART del disco</li>
+            <li>C) Activa el modo seguro de borrado</li>
+            <li>D) Establece la velocidad de transferencia</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Establece que el disco /dev/sda entre en modo de suspensión tras 1 minuto de inactividad)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">60. ¿Qué hace exactamente el comando <code>reboot -f</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Reinicia el sistema inmediatamente sin ejecutar scripts de apagado</li>
+            <li>B) Fuerza la recarga de controladores</li>
+            <li>C) Reinicia solo el entorno gráfico</li>
+            <li>D) Finaliza todas las sesiones antes de reiniciar</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Reinicia el sistema inmediatamente sin ejecutar scripts de apagado)
+        </div>
+    </div>
+
+    <script>
+        function toggleRespuesta(button) {
+            // Busca el div de respuesta que sigue inmediatamente al botón
+            var respuestaDiv = button.nextElementSibling;
+            
+            // Alterna la visibilidad
+            if (respuestaDiv.style.display === 'none' || respuestaDiv.style.display === '') {
+                respuestaDiv.style.display = 'block';
+                button.textContent = 'Ocultar Respuesta';
+                button.style.backgroundColor = '#dc3545'; // Rojo para "Ocultar"
+            } else {
+                respuestaDiv.style.display = 'none';
+                button.textContent = 'Mostrar Respuesta';
+                button.style.backgroundColor = '#007bff'; // Azul para "Mostrar"
+            }
+        }
+    </script>
+
+</body>
+</html>

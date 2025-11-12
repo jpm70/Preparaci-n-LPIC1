@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen LPIC-1 - Práctica 95 Procesos y Gestión del Sistema</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .pregunta-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .pregunta-texto {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opciones-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .opciones-lista li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .boton-mostrar {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        .boton-mostrar:hover {
+            background-color: #0056b3;
+        }
+        .respuesta {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e9f7e9;
+            border-left: 5px solid #28a745;
+            border-radius: 5px;
+            display: none; /* ESTO OCULTA LA RESPUESTA POR DEFECTO */
+            color: #28a745;
+        }
+        .respuesta strong {
+            color: #1e7e34;
+            font-size: 1.1em;
+        }
+        code {
+            background-color: #eee; 
+            padding: 2px 4px; 
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Examen de Práctica LPIC-1 (Test 95) - Procesos y Gestión del Sistema</h1>
+
+    <div class="pregunta-container">
+        <p class="pregunta-texto">1. ¿Qué opción de <code>mount</code> permite montar un sistema de archivos solo en modo lectura?</p>
+        <ul class="opciones-lista">
+            <li>A) -a</li>
+            <li>B) -o rw</li>
+            <li>C) -o ro</li>
+            <li>D) --readonly</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (<code>-o ro</code> u <code>-o readonly</code>).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">2. ¿Qué hace el comando <code>mount -a</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Monta todos los sistemas listados en <code>/etc/fstab</code></li>
+            <li>B) Desmonta todas las particiones montadas</li>
+            <li>C) Muestra todos los sistemas montados</li>
+            <li>D) Sincroniza todos los sistemas de archivos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Monta todos los sistemas de archivos con la opción **auto**).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">3. ¿Qué opción de <code>mount</code> permite especificar manualmente el tipo de sistema de archivos?</p>
+        <ul class="opciones-lista">
+            <li>A) -F</li>
+            <li>B) -t</li>
+            <li>C) --fs-type</li>
+            <li>D) -f</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>-t</code> o <code>--types</code>).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">4. ¿Qué hace <code>umount -l /mnt/data</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Desmonta el sistema inmediatamente</li>
+            <li>B) Desmonta de forma forzada</li>
+            <li>C) Desmonta de forma perezosa (lazy), posponiendo hasta que no esté en uso</li>
+            <li>D) Desmonta y borra el punto de montaje</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">5. El comando <code>df -h</code> muestra:</p>
+        <ul class="opciones-lista">
+            <li>A) Uso de CPU y RAM en formato legible</li>
+            <li>B) Uso de disco en bloques de 512 bytes</li>
+            <li>C) Espacio en disco en formato legible por humanos</li>
+            <li>D) Solo los sistemas de archivos montados manualmente</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (<code>df</code> es para Disk Free, y <code>-h</code> es para formato legible por humanos).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">6. ¿Qué hace <code>df -i</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra información de inodos usados y disponibles</li>
+            <li>B) Muestra tamaños en bytes</li>
+            <li>C) Muestra los discos conectados</li>
+            <li>D) Muestra el uso de disco del directorio actual</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">7. ¿Cuál es el significado del estado de un proceso <code>R</code> en <code>ps</code> o <code>top</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Dormido (Sleeping)</li>
+            <li>B) Detenido (Stopped)</li>
+            <li>C) Ejecutándose (Running) o en cola para ejecución</li>
+            <li>D) Proceso zombie</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">8. ¿Qué significa el estado <code>Z</code> en un proceso?</p>
+        <ul class="opciones-lista">
+            <li>A) Bloqueado (Waiting)</li>
+            <li>B) Detenido por señal (Stopped)</li>
+            <li>C) Proceso zombie (Terminado, pero su entrada en la tabla de procesos aún existe)</li>
+            <li>D) Proceso de suspensión (Sleeping)</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">9. El comando <code>ps aux</code> muestra:</p>
+        <ul class="opciones-lista">
+            <li>A) Todos los procesos con formato de BSD (incluyendo usuarios de otros terminales)</li>
+            <li>B) Procesos con formato de System V</li>
+            <li>C) Solo procesos del usuario actual</li>
+            <li>D) Solo procesos que están ejecutándose</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (a: todos los procesos de todos los usuarios, u: muestra el proceso del usuario que lo invoca, x: incluye procesos sin terminal de control).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">10. ¿Qué opción de <code>ps</code> muestra el árbol de procesos?</p>
+        <ul class="opciones-lista">
+            <li>A) -A</li>
+            <li>B) -e</li>
+            <li>C) -f</li>
+            <li>D) -H</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (<code>-H</code> o <code>--forest</code>; también se puede usar <code>pstree</code>).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">11. ¿Cuál es el PID (Process ID) de **init** (el primer proceso del sistema)?</p>
+        <ul class="opciones-lista">
+            <li>A) 0</li>
+            <li>B) 1</li>
+            <li>C) El PID varía</li>
+            <li>D) El PID es siempre 1000</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (El primer proceso que arranca el kernel es el proceso **init** o **systemd** con PID 1).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">12. En <code>ps</code>, ¿qué opción se utiliza para mostrar el identificador del padre del proceso (PPID)?</p>
+        <ul class="opciones-lista">
+            <li>A) -f (formato completo)</li>
+            <li>B) -j (formato jobs)</li>
+            <li>C) -o ppid</li>
+            <li>D) Todas las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (<code>-f</code> incluye PPID, <code>-j</code> incluye PPID, y <code>-o ppid</code> lo selecciona explícitamente).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">13. ¿Qué comando se utiliza para mostrar continuamente el consumo de recursos de los procesos en tiempo real?</p>
+        <ul class="opciones-lista">
+            <li>A) ps aux</li>
+            <li>B) top</li>
+            <li>C) htop</li>
+            <li>D) B y C son correctas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">14. Dentro de <code>top</code>, ¿qué tecla se utiliza para cambiar el criterio de ordenación (ej. de CPU a Memoria)?</p>
+        <ul class="opciones-lista">
+            <li>A) s</li>
+            <li>B) P</li>
+            <li>C) O</li>
+            <li>D) k</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>O</strong>. (<code>O</code> para seleccionar el campo, <code>P</code> para ordenar por CPU, <code>M</code> para ordenar por memoria, <code>k</code> para matar un proceso).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">15. En <code>top</code>, ¿qué tecla te permite matar un proceso?</p>
+        <ul class="opciones-lista">
+            <li>A) q</li>
+            <li>B) k</li>
+            <li>C) x</li>
+            <li>D) r</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">16. ¿Qué comando se utiliza para enviar un proceso al segundo plano?</p>
+        <ul class="opciones-lista">
+            <li>A) bg</li>
+            <li>B) fg</li>
+            <li>C) jobs</li>
+            <li>D) nice</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>bg</code> para background; se usa en procesos suspendidos con Ctrl+Z).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">17. ¿Qué comando se utiliza para traer un proceso en segundo plano al primer plano?</p>
+        <ul class="opciones-lista">
+            <li>A) bg</li>
+            <li>B) fg</li>
+            <li>C) jobs</li>
+            <li>D) &</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>fg</code> para foreground).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">18. ¿Cómo se ejecuta un comando directamente en segundo plano?</p>
+        <ul class="opciones-lista">
+            <li>A) comando &</li>
+            <li>B) bg comando</li>
+            <li>C) comando -b</li>
+            <li>D) comando -d</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Se añade el símbolo ampersand **&** al final).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">19. ¿Qué comando se utiliza para listar los trabajos (jobs) que se están ejecutando en segundo plano en el shell actual?</p>
+        <ul class="opciones-lista">
+            <li>A) ps aux</li>
+            <li>B) jobs</li>
+            <li>C) bg -l</li>
+            <li>D) fg -l</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">20. ¿Qué hace el comando <code>fg %2</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Ejecuta el trabajo 2 en segundo plano</li>
+            <li>B) Trae el trabajo 2 al primer plano</li>
+            <li>C) Muestra información del trabajo 2</li>
+            <li>D) Envía el trabajo actual al segundo plano</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>%N</code> hace referencia al número de trabajo listado por <code>jobs</code>).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">21. ¿Qué valor de **niceness** tiene la prioridad más alta (más favorable)?</p>
+        <ul class="opciones-lista">
+            <li>A) 20</li>
+            <li>B) 0</li>
+            <li>C) -20</li>
+            <li>D) 10</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (El rango va de -20 a 19. Un valor más bajo significa mayor prioridad).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">22. ¿Cuál es el valor por defecto de **niceness** para un proceso iniciado por un usuario normal?</p>
+        <ul class="opciones-lista">
+            <li>A) 0</li>
+            <li>B) 10</li>
+            <li>C) 19</li>
+            <li>D) -10</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">23. ¿Qué comando se utiliza para ejecutar un programa con una prioridad de niceness de 15?</p>
+        <ul class="opciones-lista">
+            <li>A) renice 15 comando</li>
+            <li>B) nice -n 15 comando</li>
+            <li>C) nice +15 comando</li>
+            <li>D) B y C son correctas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>nice</code> se usa para iniciar procesos con una prioridad, <code>-n</code> especifica el valor).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">24. ¿Qué comando se utiliza para cambiar la prioridad de niceness de un proceso que ya está en ejecución?</p>
+        <ul class="opciones-lista">
+            <li>A) nice</li>
+            <li>B) renice</li>
+            <li>C) priority</li>
+            <li>D) kill -PRIO</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">25. ¿Qué señal de <code>kill</code> indica una terminación elegante (solicitud de terminación) que permite al proceso guardar su trabajo?</p>
+        <ul class="opciones-lista">
+            <li>A) SIGKILL (9)</li>
+            <li>B) SIGSTOP (19)</li>
+            <li>C) SIGTERM (15)</li>
+            <li>D) SIGHUP (1)</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">26. ¿Qué señal de <code>kill</code> no puede ser interceptada o ignorada por un proceso, asegurando su terminación inmediata?</p>
+        <ul class="opciones-lista">
+            <li>A) SIGTERM (15)</li>
+            <li>B) SIGHUP (1)</li>
+            <li>C) SIGKILL (9)</li>
+            <li>D) SIGINT (2)</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">27. ¿Cómo se mata un proceso usando su PID (1234) de la manera más agresiva?</p>
+        <ul class="opciones-lista">
+            <li>A) kill 1234</li>
+            <li>B) kill -9 1234</li>
+            <li>C) kill -SIGTERM 1234</li>
+            <li>D) kill -QUIT 1234</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>-9</code> es el número de la señal SIGKILL).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">28. ¿Qué señal se utiliza comúnmente para indicarle a un demonio que recargue sus archivos de configuración sin terminar el proceso?</p>
+        <ul class="opciones-lista">
+            <li>A) SIGTERM (15)</li>
+            <li>B) SIGHUP (1)</li>
+            <li>C) SIGKILL (9)</li>
+            <li>D) SIGINT (2)</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (SIGHUP, o Hang Up, es la señal estándar para recargar configuración).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">29. ¿Qué comando se utiliza para encontrar el PID de un proceso por su nombre?</p>
+        <ul class="opciones-lista">
+            <li>A) pidof</li>
+            <li>B) pgrep</li>
+            <li>C) ps -C</li>
+            <li>D) Todos los anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (<code>pidof</code>, <code>pgrep</code> y <code>ps -C</code> son formas válidas).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">30. ¿Cómo se termina un proceso por su nombre (ej. **httpd**) en lugar de por su PID?</p>
+        <ul class="opciones-lista">
+            <li>A) killall httpd</li>
+            <li>B) pkill httpd</li>
+            <li>C) kill $(pidof httpd)</li>
+            <li>D) Todos los anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">31. ¿Cuál es el comando correcto para apagar el sistema inmediatamente sin retraso?</p>
+        <ul class="opciones-lista">
+            <li>A) shutdown now</li>
+            <li>B) init 0</li>
+            <li>C) halt</li>
+            <li>D) Todos los anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (<code>shutdown now</code>, <code>init 0</code>, <code>systemctl poweroff</code>, y <code>halt</code> logran un apagado inmediato).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">32. ¿Qué comando se utiliza para reiniciar el sistema en 5 minutos y enviar un mensaje a los usuarios?</p>
+        <ul class="opciones-lista">
+            <li>A) reboot 5 "Mensaje"</li>
+            <li>B) shutdown -r +5 "Mensaje"</li>
+            <li>C) init 6 +5 "Mensaje"</li>
+            <li>D) systemctl restart +5 "Mensaje"</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>-r</code> es para reiniciar, <code>+N</code> es el retraso en minutos).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">33. ¿Qué hace el comando <code>shutdown -c</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Reinicia la computadora</li>
+            <li>B) Cancela un apagado o reinicio programado</li>
+            <li>C) Apaga de forma forzada</li>
+            <li>D) Muestra una cuenta regresiva</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>-c</code> para cancel).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">34. ¿Cuál es el nivel de ejecución (runlevel) que corresponde al apagado del sistema?</p>
+        <ul class="opciones-lista">
+            <li>A) 6</li>
+            <li>B) 1</li>
+            <li>C) 0</li>
+            <li>D) 3</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">35. ¿Cuál es el nivel de ejecución (runlevel) que corresponde al reinicio del sistema?</p>
+        <ul class="opciones-lista">
+            <li>A) 6</li>
+            <li>B) 0</li>
+            <li>C) 5</li>
+            <li>D) 3</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">36. ¿Qué comando se utiliza para cambiar al runlevel 3 (multi-user sin X) en SysV-init?</p>
+        <ul class="opciones-lista">
+            <li>A) systemctl isolate multi-user.target</li>
+            <li>B) telinit 3</li>
+            <li>C) runlevel 3</li>
+            <li>D) init -r 3</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>telinit</code> es el comando usado para cambiar el runlevel; en systemd es <code>systemctl isolate</code>).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">37. ¿Qué comando te permite ver el runlevel anterior y el actual?</p>
+        <ul class="opciones-lista">
+            <li>A) runlevel</li>
+            <li>B) who -r</li>
+            <li>C) systemctl get-default</li>
+            <li>D) A y B son correctas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">38. ¿Cuál es el comando de **systemd** equivalente a <code>init 6</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) systemctl isolate reboot.target</li>
+            <li>B) systemctl reboot</li>
+            <li>C) systemctl start reboot</li>
+            <li>D) B y C son correctas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">39. ¿Qué comando se utiliza para mostrar la información del kernel (nombre, versión, arquitectura)?</p>
+        <ul class="opciones-lista">
+            <li>A) uname -a</li>
+            <li>B) kernelctl info</li>
+            <li>C) dmesg | grep kernel</li>
+            <li>D) cat /proc/version</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">40. ¿Qué opción de <code>uname</code> muestra la arquitectura del hardware?</p>
+        <ul class="opciones-lista">
+            <li>A) -a</li>
+            <li>B) -r</li>
+            <li>C) -m</li>
+            <li>D) -n</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (<code>-m</code> o <code>--machine</code>).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">41. ¿Qué archivo se utiliza para ver la información de la memoria RAM del sistema?</p>
+        <ul class="opciones-lista">
+            <li>A) /proc/meminfo</li>
+            <li>B) /proc/cpuinfo</li>
+            <li>C) /etc/sysconfig/memory</li>
+            <li>D) /var/log/mem.log</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (También se puede usar <code>free -h</code>).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">42. ¿Qué comando se utiliza para mostrar el uso de swap y memoria RAM en formato legible?</p>
+        <ul class="opciones-lista">
+            <li>A) df -h</li>
+            <li>B) du -h</li>
+            <li>C) free -h</li>
+            <li>D) top -m</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">43. ¿Qué archivo contiene la información de la CPU (velocidad, cache, número de núcleos)?</p>
+        <ul class="opciones-lista">
+            <li>A) /proc/meminfo</li>
+            <li>B) /proc/cpuinfo</li>
+            <li>C) /sys/devices/cpu/</li>
+            <li>D) /etc/default/cpu</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">44. ¿Qué comando se utiliza para mostrar los mensajes de arranque del kernel (Ring Buffer)?</p>
+        <ul class="opciones-lista">
+            <li>A) journalctl -k</li>
+            <li>B) dmesg</li>
+            <li>C) A y B son correctas</li>
+            <li>D) cat /var/log/boot.log</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">45. ¿Qué comando se utiliza para mostrar la hora del sistema y ajustar la hora del hardware?</p>
+        <ul class="opciones-lista">
+            <li>A) date</li>
+            <li>B) hwclock</li>
+            <li>C) timedatectl</li>
+            <li>D) B y C son correctas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (<code>hwclock</code> es más granular; <code>timedatectl</code> es la herramienta de <code>systemd</code> más moderna).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">46. ¿Qué hace <code>timedatectl set-timezone Europe/Madrid</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra la zona horaria actual</li>
+            <li>B) Muestra la lista de zonas horarias</li>
+            <li>C) Establece la zona horaria del sistema de forma persistente</li>
+            <li>D) Sincroniza la hora con un servidor NTP</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">47. ¿Qué comando se utiliza para montar un archivo ISO llamado **disk.iso** en **<code>/mnt/cdrom</code>**?</p>
+        <ul class="opciones-lista">
+            <li>A) mount /dev/cdrom /mnt/cdrom</li>
+            <li>B) mount -o loop disk.iso /mnt/cdrom</li>
+            <li>C) mount -t iso9660 disk.iso /mnt/cdrom</li>
+            <li>D) B y C son correctas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>-o loop</code> es necesario para tratar un archivo como un dispositivo de bloques).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">48. En el comando <code>ps aux</code>, ¿qué campo representa la prioridad del proceso?</p>
+        <ul class="opciones-lista">
+            <li>A) PID</li>
+            <li>B) NI (Niceness)</li>
+            <li>C) STAT</li>
+            <li>D) TTY</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>NI</code> es Niceness, que se usa para calcular la prioridad).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">49. ¿Qué comando se utiliza para mostrar el estado de los servicios de un usuario (no del sistema)?</p>
+        <ul class="opciones-lista">
+            <li>A) systemctl --user status</li>
+            <li>B) systemctl status</li>
+            <li>C) service --user</li>
+            <li>D) systemctl --runtime</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">50. ¿Qué hace <code>systemctl get-default</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra el runlevel por defecto (default target)</li>
+            <li>B) Inicia el servicio por defecto</li>
+            <li>C) Muestra todos los servicios activos</li>
+            <li>D) Configura el runlevel por defecto</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">51. ¿Cuál es el significado del bit **Sticky** (valor 1000) en un directorio, como <code>/tmp</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) El directorio no se puede borrar</li>
+            <li>B) Solo el propietario o root pueden eliminar archivos en ese directorio</li>
+            <li>C) Todos los archivos creados heredan el grupo</li>
+            <li>D) El directorio se mantiene en caché</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">52. Si un proceso llamado **sleep** se está ejecutando en segundo plano, ¿con qué comando usarías para matarlo?</p>
+        <ul class="opciones-lista">
+            <li>A) killall sleep</li>
+            <li>B) pkill sleep</li>
+            <li>C) kill %1</li>
+            <li>D) Cualquiera de las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (Siempre que <code>%1</code> sea el ID de trabajo correcto. <code>killall</code> y <code>pkill</code> terminan procesos por nombre).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">53. ¿Qué hace <code>kill -HUP 1234</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Termina el proceso inmediatamente</li>
+            <li>B) Reinicia el proceso (HangUp)</li>
+            <li>C) Lo suspende</li>
+            <li>D) Cambia su prioridad</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Dependiendo del proceso, SIGHUP puede recargar o reiniciar).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">54. ¿Qué comando muestra los procesos con su prioridad y uso de CPU ordenados descendente por uso?</p>
+        <ul class="opciones-lista">
+            <li>A) ps aux --sort=-%cpu</li>
+            <li>B) ps aux --sort=%cpu</li>
+            <li>C) top -a</li>
+            <li>D) ps -eo cpu,pri,pid</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>-</code> indica orden descendente).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">55. ¿Cuál comando cambia la prioridad de un proceso en ejecución a valor 10 de niceness?</p>
+        <ul class="opciones-lista">
+            <li>A) renice 10 -p PID</li>
+            <li>B) nice -n 10 PID</li>
+            <li>C) renice -n PID 10</li>
+            <li>D) nice PID 10</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>renice</code> requiere el valor primero, luego <code>-p PID</code> o <code>-u user</code>).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">56. ¿Qué hace <code>renice +5 -u usuario</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Aumenta la prioridad de todos los procesos del usuario</li>
+            <li>B) Reduce la prioridad de todos los procesos del usuario</li>
+            <li>C) Mata los procesos del usuario</li>
+            <li>D) Suspende los procesos del usuario</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Aumentar el valor de niceness (ej. de 0 a 5) **reduce** la prioridad real).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">57. ¿Qué ocurre si ejecutas <code>nice -n -5 comando</code> sin ser root?</p>
+        <ul class="opciones-lista">
+            <li>A) Se ejecuta con prioridad más alta</li>
+            <li>B) El comando falla</li>
+            <li>C) Se ignora el valor negativo y se usa el por defecto</li>
+            <li>D) Se ejecuta con prioridad más baja</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (Solo root puede usar valores negativos de niceness).
+        </div>
+    </div>
+
+    <script>
+        function toggleRespuesta(button) {
+            // Busca el div de respuesta que sigue inmediatamente al botón
+            var respuestaDiv = button.nextElementSibling;
+            
+            // Alterna la visibilidad
+            if (respuestaDiv.style.display === 'none' || respuestaDiv.style.display === '') {
+                respuestaDiv.style.display = 'block';
+                button.textContent = 'Ocultar Respuesta';
+                button.style.backgroundColor = '#dc3545'; // Rojo para "Ocultar"
+            } else {
+                respuestaDiv.style.display = 'none';
+                button.textContent = 'Mostrar Respuesta';
+                button.style.backgroundColor = '#007bff'; // Azul para "Mostrar"
+            }
+        }
+    </script>
+
+</body>
+</html>

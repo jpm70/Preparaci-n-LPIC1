@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen LPIC-1/2 - Práctica 99 Conceptos Avanzados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #8c00b3; /* Color púrpura */
+            border-bottom: 2px solid #a233c7;
+            padding-bottom: 10px;
+        }
+        .pregunta-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .pregunta-texto {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opciones-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .opciones-lista li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .boton-mostrar {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #a233c7; /* Color púrpura para el botón */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        .boton-mostrar:hover {
+            background-color: #6a008c;
+        }
+        .respuesta {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f5e9f7; /* Fondo más claro para la respuesta */
+            border-left: 5px solid #a233c7;
+            border-radius: 5px;
+            display: none; /* ESTO OCULTA LA RESPUESTA POR DEFECTO */
+            color: #a233c7;
+        }
+        .respuesta strong {
+            color: #6a008c;
+            font-size: 1.1em;
+        }
+        code {
+            background-color: #eee; 
+            padding: 2px 4px; 
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Examen de Práctica LPIC-1/2 (Test 99) - Conceptos Avanzados y Gestión del Sistema</h1>
+
+    <div class="pregunta-container">
+        <p class="pregunta-texto">1. Durante el arranque de un sistema Linux, ¿en qué etapa se monta el sistema de archivos raíz en modo sólo lectura antes de ejecutar init o systemd?</p>
+        <ul class="opciones-lista">
+            <li>A) BIOS/UEFI</li>
+            <li>B) Bootloader (GRUB)</li>
+            <li>C) Kernel initialization</li>
+            <li>D) User-space initialization</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (Kernel initialization)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">2. ¿Cuál de los siguientes directorios se monta típicamente como <code>tmpfs</code> para mejorar el rendimiento en sistemas modernos?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc</code></li>
+            <li>B) <code>/var/log</code></li>
+            <li>C) <code>/run</code></li>
+            <li>D) <code>/usr/local</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (<code>/run</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">3. El archivo <code>/etc/fstab</code> contiene una entrada con la opción <code>nofail</code>. ¿Qué efecto tiene esta opción durante el arranque?</p>
+        <ul class="opciones-lista">
+            <li>A) El sistema ignora errores de escritura en ese sistema de archivos.</li>
+            <li>B) El sistema continúa arrancando incluso si el montaje de ese sistema de archivos falla.</li>
+            <li>C) El sistema intenta montar nuevamente después de 30 segundos.</li>
+            <li>D) El montaje se retrasa hasta después de <code>multi-user.target</code>.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (El sistema continúa arrancando incluso si el montaje de ese sistema de archivos falla.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">4. ¿Qué protocolo usa el cliente DHCP para renovar su concesión antes de que expire?</p>
+        <ul class="opciones-lista">
+            <li>A) ARP</li>
+            <li>B) ICMP</li>
+            <li>C) UDP broadcast al puerto 68</li>
+            <li>D) Comunicación unicast con el servidor DHCP original</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (Comunicación unicast con el servidor DHCP original)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">5. En un sistema con <code>systemd</code>, ¿qué unidad se ejecuta inmediatamente antes de <code>multi-user.target</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>graphical.target</code></li>
+            <li>B) <code>basic.target</code></li>
+            <li>C) <code>network.target</code></li>
+            <li>D) <code>local-fs.target</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (<code>network.target</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">6. En la jerarquía del sistema de archivos FHS, ¿cuál de los siguientes directorios está destinado a contener datos de solo lectura que se comparten entre arquitecturas diferentes?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/usr/lib</code></li>
+            <li>B) <code>/usr/share</code></li>
+            <li>C) <code>/opt</code></li>
+            <li>D) <code>/srv</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>/usr/share</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">7. ¿Cuál de los siguientes mecanismos garantiza que un script en <code>/etc/rc.d/</code> se ejecute solo una vez en cada arranque, incluso si el servicio se reinicia?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>chkconfig</code></li>
+            <li>B) <code>update-rc.d</code></li>
+            <li>C) Uso del archivo de bloqueo en <code>/var/lock/subsys/</code></li>
+            <li>D) Dependencias declaradas en <code>/etc/inittab</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (Uso del archivo de bloqueo en <code>/var/lock/subsys/</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">8. El demonio <code>udevd</code> recibe información sobre nuevos dispositivos desde:</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/proc/devices</code></li>
+            <li>B) El subsistema del kernel <code>netlink</code></li>
+            <li>C) <code>sysfs</code> en <code>/sys</code></li>
+            <li>D) El archivo <code>/etc/udev/rules.d/99-default.rules</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (El subsistema del kernel <code>netlink</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">9. En un entorno con <code>systemd</code>, ¿cuál es el propósito de las unidades tipo <code>.slice</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Controlar grupos de servicios basados en prioridades y recursos.</li>
+            <li>B) Iniciar servicios secuenciales antes de un objetivo.</li>
+            <li>C) Definir montajes de sistema de archivos.</li>
+            <li>D) Administrar sockets de red para demonios.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Controlar grupos de servicios basados en prioridades y recursos.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">10. ¿Qué sucede si un sistema de archivos <code>ext4</code> experimenta un apagado inesperado y <code>fsck</code> detecta inconsistencias severas?</p>
+        <ul class="opciones-lista">
+            <li>A) El sistema repara automáticamente sin intervención.</li>
+            <li>B) El kernel monta el sistema en modo solo lectura.</li>
+            <li>C) El sistema entra en modo de emergencia.</li>
+            <li>D) Se pierde el journal y se requiere reformateo.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (El sistema entra en modo de emergencia.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">11. En el modelo SysV init, ¿qué determina el orden de ejecución de scripts dentro de <code>/etc/rc3.d/</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) La secuencia numérica del prefijo en el nombre de archivo.</li>
+            <li>B) La fecha de modificación.</li>
+            <li>C) Las dependencias declaradas en <code>/etc/inittab</code>.</li>
+            <li>D) El tamaño del script.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (La secuencia numérica del prefijo en el nombre de archivo.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">12. El campo <code>umask</code> en un proceso afecta:</p>
+        <ul class="opciones-lista">
+            <li>A) Los permisos predeterminados de los archivos creados.</li>
+            <li>B) Los permisos de montaje de los sistemas de archivos.</li>
+            <li>C) Las ACLs heredadas de los directorios.</li>
+            <li>D) El permiso de ejecución de binarios en <code>/bin</code>.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Los permisos predeterminados de los archivos creados.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">13. El archivo <code>/etc/nsswitch.conf</code> controla:</p>
+        <ul class="opciones-lista">
+            <li>A) Qué módulos PAM se cargan.</li>
+            <li>B) El orden de resolución de nombres y otros servicios.</li>
+            <li>C) La configuración de servicios de red.</li>
+            <li>D) La sincronización de tiempo del sistema.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (El orden de resolución de nombres y otros servicios.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">14. En un sistema con <code>journald</code>, ¿dónde se almacenan los registros persistentes si se desea conservarlos entre reinicios?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/run/log/journal/</code></li>
+            <li>B) <code>/var/log/journal/</code></li>
+            <li>C) <code>/etc/systemd/journal.conf</code></li>
+            <li>D) <code>/tmp/journal/</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>/var/log/journal/</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">15. ¿Qué ocurre si se elimina accidentalmente el enlace simbólico <code>/sbin/init</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) El sistema arrancará en modo monousuario.</li>
+            <li>B) El kernel entrará en modo pánico.</li>
+            <li>C) El sistema no podrá invocar el proceso PID 1 y fallará el arranque.</li>
+            <li>D) Se lanzará automáticamente <code>/bin/sh</code>.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (El sistema no podrá invocar el proceso PID 1 y fallará el arranque.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">16. El demonio <code>dbus</code> sirve principalmente para:</p>
+        <ul class="opciones-lista">
+            <li>A) Enviar mensajes entre procesos de usuario y del sistema.</li>
+            <li>B) Reenviar paquetes IP entre interfaces.</li>
+            <li>C) Gestionar la resolución de nombres locales.</li>
+            <li>D) Controlar permisos de archivos.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Enviar mensajes entre procesos de usuario y del sistema.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">17. En un sistema con LVM, el término **Physical Extent (PE)** se refiere a:</p>
+        <ul class="opciones-lista">
+            <li>A) La unidad mínima de almacenamiento asignable en un Volume Group.</li>
+            <li>B) El tamaño máximo de un Logical Volume.</li>
+            <li>C) La partición física sin formato.</li>
+            <li>D) El tamaño del bloque del sistema de archivos.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (La unidad mínima de almacenamiento asignable en un Volume Group.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">18. El archivo <code>/proc/sys/net/ipv4/ip_forward</code> controla:</p>
+        <ul class="opciones-lista">
+            <li>A) El reenvío de paquetes entre interfaces.</li>
+            <li>B) La fragmentación de datagramas IP.</li>
+            <li>C) La traducción NAT.</li>
+            <li>D) La política de firewall predeterminada.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (El reenvío de paquetes entre interfaces.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">19. En el arranque con GRUB2, ¿qué variable determina la línea de comandos del kernel?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>kernel_cmdline</code></li>
+            <li>B) <code>linux</code></li>
+            <li>C) <code>GRUB_CMDLINE_LINUX</code></li>
+            <li>D) <code>bootopt</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (<code>GRUB_CMDLINE_LINUX</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">20. El archivo <code>/etc/ld.so.cache</code> contiene:</p>
+        <ul class="opciones-lista">
+            <li>A) Bibliotecas estáticas del sistema.</li>
+            <li>B) Un índice de rutas de bibliotecas dinámicas previamente escaneadas.</li>
+            <li>C) Variables de entorno de carga dinámica.</li>
+            <li>D) Dependencias RPM.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Un índice de rutas de bibliotecas dinámicas previamente escaneadas.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">21. Si un servicio en <code>systemd</code> tiene configurado <code>Restart=on-failure</code>, ¿qué evento **no** provoca su reinicio?</p>
+        <ul class="opciones-lista">
+            <li>A) Código de salida distinto de cero.</li>
+            <li>B) Señal <code>SIGSEGV</code>.</li>
+            <li>C) Parada manual con <code>systemctl stop</code>.</li>
+            <li>D) Terminación inesperada por OOM.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (Parada manual con <code>systemctl stop</code>.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">22. En <code>/etc/shadow</code>, el campo de la contraseña que empieza por <code>!</code> indica:</p>
+        <ul class="opciones-lista">
+            <li>A) Contraseña vacía.</li>
+            <li>B) Cuenta bloqueada.</li>
+            <li>C) Contraseña caducada.</li>
+            <li>D) Hash inválido.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Cuenta bloqueada.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">23. El identificador UID 0 tiene privilegios especiales porque:</p>
+        <ul class="opciones-lista">
+            <li>A) Está asociado al proceso init.</li>
+            <li>B) El kernel ignora verificaciones de permisos para ese UID.</li>
+            <li>C) Posee capacidades POSIX ampliadas.</li>
+            <li>D) Tiene acceso directo al hardware.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (El kernel ignora verificaciones de permisos para ese UID.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">24. La opción <code>noexec</code> en una entrada de <code>/etc/fstab</code> impide:</p>
+        <ul class="opciones-lista">
+            <li>A) La ejecución de binarios en ese sistema de archivos.</li>
+            <li>B) La ejecución de scripts Bash.</li>
+            <li>C) La lectura de metadatos ejecutables ELF.</li>
+            <li>D) El montaje de sistemas NFS.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (La ejecución de binarios en ese sistema de archivos.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">25. En un entorno con <code>cron</code>, ¿qué efecto tiene colocar un archivo vacío en <code>/etc/cron.deny</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Impide que cron se ejecute.</li>
+            <li>B) Permite que todos los usuarios usen cron.</li>
+            <li>C) Deniega cron a todos los usuarios.</li>
+            <li>D) Habilita at y cron simultáneamente.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Permite que todos los usuarios usen cron.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">26. El comando <code>runlevel</code> obtiene su información desde:</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/var/run/utmp</code></li>
+            <li>B) <code>/etc/inittab</code></li>
+            <li>C) <code>/proc/runlevel</code></li>
+            <li>D) <code>/sys/runlevel</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>/var/run/utmp</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">27. En el modelo PAM, el tipo de control **account** sirve para:</p>
+        <ul class="opciones-lista">
+            <li>A) Autenticar contraseñas.</li>
+            <li>B) Verificar restricciones de acceso como tiempo o expiración.</li>
+            <li>C) Registrar accesos.</li>
+            <li>D) Iniciar el entorno de sesión.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Verificar restricciones de acceso como tiempo o expiración.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">28. Si un sistema tiene una entrada duplicada en <code>/etc/hosts</code>, ¿cuál se usa?</p>
+        <ul class="opciones-lista">
+            <li>A) La primera.</li>
+            <li>B) La última.</li>
+            <li>C) La que coincida con la interfaz activa.</li>
+            <li>D) Se alternan por round-robin.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (La primera.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">29. En un sistema DNS local, el archivo <code>/etc/resolv.conf</code> es generado dinámicamente por:</p>
+        <ul class="opciones-lista">
+            <li>A) <code>systemd-resolved</code> o <code>NetworkManager</code></li>
+            <li>B) <code>/etc/nsswitch.conf</code></li>
+            <li>C) <code>dnsmasq</code> siempre</li>
+            <li>D) <code>/etc/hosts</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>systemd-resolved</code> o <code>NetworkManager</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">30. En la gestión de procesos, el estado “D” indica:</p>
+        <ul class="opciones-lista">
+            <li>A) Zombie.</li>
+            <li>B) Interrumpible.</li>
+            <li>C) Espera ininterrumpible de I/O.</li>
+            <li>D) En ejecución.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (Espera ininterrumpible de I/O.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">31. La variable de entorno <code>LD_PRELOAD</code> se usa para:</p>
+        <ul class="opciones-lista">
+            <li>A) Sobrescribir bibliotecas dinámicas antes de cargarlas.</li>
+            <li>B) Cargar variables de entorno del sistema.</li>
+            <li>C) Reemplazar el linker dinámico.</li>
+            <li>D) Priorizar ejecutables en <code>/usr/local/bin</code>.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Sobrescribir bibliotecas dinámicas antes de cargarlas.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">32. Si el kernel no puede encontrar <code>init</code> ni <code>systemd</code>, ejecuta:</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/bin/bash</code></li>
+            <li>B) <code>/bin/sh</code></li>
+            <li>C) <code>/sbin/recovery</code></li>
+            <li>D) Un **kernel panic**</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (Un **kernel panic**)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">33. El valor de retorno **127** en un script indica típicamente:</p>
+        <ul class="opciones-lista">
+            <li>A) Error de permisos.</li>
+            <li>B) Comando no encontrado.</li>
+            <li>C) Archivo inexistente.</li>
+            <li>D) División por cero.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Comando no encontrado.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">34. ¿Qué protocolo utiliza <code>rsyslog</code> para enviar logs a un servidor remoto?</p>
+        <ul class="opciones-lista">
+            <li>A) TCP/UDP 514</li>
+            <li>B) SSH</li>
+            <li>C) HTTP</li>
+            <li>D) ICMP</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (TCP/UDP 514)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">35. En un sistema de ficheros con journaling, el **“ordered mode”** de <code>ext4</code> asegura que:</p>
+        <ul class="opciones-lista">
+            <li>A) Los metadatos se escriban antes que los datos.</li>
+            <li>B) Los datos se escriban antes que los metadatos.</li>
+            <li>C) Ambos se escriban simultáneamente.</li>
+            <li>D) El journaling sea deshabilitado temporalmente.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Los datos se escriban antes que los metadatos.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">36. El kernel maneja señales a procesos en espacio de usuario mediante:</p>
+        <ul class="opciones-lista">
+            <li>A) System calls.</li>
+            <li>B) Excepciones del CPU.</li>
+            <li>C) Interrupciones de software.</li>
+            <li>D) Syscalls asíncronas.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (Interrupciones de software.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">37. El valor en <code>/proc/sys/vm/swappiness</code> controla:</p>
+        <ul class="opciones-lista">
+            <li>A) Cuánto prefiere el kernel usar swap frente a RAM.</li>
+            <li>B) Cuánto espacio de swap se reserva.</li>
+            <li>C) Qué procesos pueden usar swap.</li>
+            <li>D) Si la swap está cifrada.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Cuánto prefiere el kernel usar swap frente a RAM.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">38. El demonio <code>atd</code> difiere de <code>cron</code> porque:</p>
+        <ul class="opciones-lista">
+            <li>A) Ejecuta tareas una sola vez.</li>
+            <li>B) Usa <code>/etc/at.allow</code> en lugar de <code>/etc/cron.allow</code>.</li>
+            <li>C) Requiere permisos root.</li>
+            <li>D) No puede ejecutar scripts.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Ejecuta tareas una sola vez.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">39. El proceso con PID 1 es especial porque:</p>
+        <ul class="opciones-lista">
+            <li>A) Hereda procesos huérfanos.</li>
+            <li>B) No puede ser terminado con <code>SIGKILL</code>.</li>
+            <li>C) Está en modo kernel.</li>
+            <li>D) No tiene padre ni grupo.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Hereda procesos huérfanos.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">40. En LVM, el comando <code>vgextend</code> sirve para:</p>
+        <ul class="opciones-lista">
+            <li>A) Añadir un Physical Volume a un Volume Group existente.</li>
+            <li>B) Aumentar el tamaño de un Logical Volume.</li>
+            <li>C) Redimensionar la partición física.</li>
+            <li>D) Fusionar dos grupos de volúmenes.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Añadir un Physical Volume a un Volume Group existente.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">41. El archivo <code>/etc/magic</code> se usa por:</p>
+        <ul class="opciones-lista">
+            <li>A) <code>file</code></li>
+            <li>B) <code>ldd</code></li>
+            <li>C) <code>tar</code></li>
+            <li>D) <code>lsblk</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>file</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">42. En la gestión de arranque EFI, las entradas persistentes se almacenan en:</p>
+        <ul class="opciones-lista">
+            <li>A) <code>/etc/grub.d/</code></li>
+            <li>B) <code>/boot/efi/EFI/</code></li>
+            <li>C) NVRAM del firmware</li>
+            <li>D) <code>/var/lib/efibootmgr/</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (NVRAM del firmware)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">43. El comando <code>sync</code> garantiza:</p>
+        <ul class="opciones-lista">
+            <li>A) Que todos los buffers de disco se escriban físicamente.</li>
+            <li>B) Que se cierre la sesión actual.</li>
+            <li>C) Que los inodos se liberen.</li>
+            <li>D) Que el journal se desactive.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Que todos los buffers de disco se escriban físicamente.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">44. Si el reloj del sistema se sincroniza con NTP, ¿qué servicio suele encargarse en sistemas modernos con <code>systemd</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) <code>ntpd</code></li>
+            <li>B) <code>chronyd</code></li>
+            <li>C) <code>systemd-timesyncd</code></li>
+            <li>D) <code>hwclockd</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (<code>systemd-timesyncd</code>)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">45. El identificador de grupo efectivo (EGID) se usa principalmente para:</p>
+        <ul class="opciones-lista">
+            <li>A) Determinar los permisos de escritura y lectura efectivos.</li>
+            <li>B) Determinar los grupos secundarios.</li>
+            <li>C) Ejecutar scripts con permisos SUID.</li>
+            <li>D) Controlar el acceso a sockets.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Determinar los permisos de escritura y lectura efectivos.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">46. La directiva <code>PASS_MAX_DAYS</code> en <code>/etc/login.defs</code> define:</p>
+        <ul class="opciones-lista">
+            <li>A) El número máximo de días antes de cambiar la contraseña.</li>
+            <li>B) El número de intentos de inicio de sesión fallidos.</li>
+            <li>C) La longitud máxima de contraseña.</li>
+            <li>D) El número de días que una cuenta puede estar inactiva.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (El número máximo de días antes de cambiar la contraseña.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">47. En un sistema con SELinux, el modo **“permissive”** implica:</p>
+        <ul class="opciones-lista">
+            <li>A) Se registran las violaciones pero no se aplican.</li>
+            <li>B) Se bloquean los accesos no permitidos.</li>
+            <li>C) SELinux está completamente deshabilitado.</li>
+            <li>D) Solo usuarios root están controlados.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Se registran las violaciones pero no se aplican.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">48. El archivo <code>/proc/cpuinfo</code> obtiene sus datos:</p>
+        <ul class="opciones-lista">
+            <li>A) Directamente del hardware a través del kernel.</li>
+            <li>B) Desde BIOS.</li>
+            <li>C) Desde <code>/sys/devices/system/cpu/</code>.</li>
+            <li>D) Desde ACPI.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Directamente del hardware a través del kernel.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">49. En <code>systemd</code>, una dependencia <code>After=</code> sin <code>Requires=</code> implica:</p>
+        <ul class="opciones-lista">
+            <li>A) Orden de inicio sin dependencia fuerte.</li>
+            <li>B) Que el servicio depende totalmente del otro.</li>
+            <li>C) Que se reinician juntos.</li>
+            <li>D) Que comparten sockets.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Orden de inicio sin dependencia fuerte.)
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">50. Si el kernel se inicia con el parámetro <code>init=/bin/bash</code>, ¿qué ocurre?</p>
+        <ul class="opciones-lista">
+            <li>A) El sistema arranca directamente en <code>bash</code> como PID 1.</li>
+            <li>B) Se ejecuta <code>bash</code> como usuario normal.</li>
+            <li>C) Se lanza <code>bash</code> dentro del runlevel 3.</li>
+            <li>D) El arranque falla.</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (El sistema arranca directamente en <code>bash</code> como PID 1.)
+        </div>
+    </div>
+
+    <script>
+        function toggleRespuesta(button) {
+            // Busca el div de respuesta que sigue inmediatamente al botón
+            var respuestaDiv = button.nextElementSibling;
+            
+            // Alterna la visibilidad
+            if (respuestaDiv.style.display === 'none' || respuestaDiv.style.display === '') {
+                respuestaDiv.style.display = 'block';
+                button.textContent = 'Ocultar Respuesta';
+                button.style.backgroundColor = '#6a008c'; // Púrpura oscuro para "Ocultar"
+            } else {
+                respuestaDiv.style.display = 'none';
+                button.textContent = 'Mostrar Respuesta';
+                button.style.backgroundColor = '#a233c7'; // Púrpura original para "Mostrar"
+            }
+        }
+    </script>
+
+</body>
+</html>

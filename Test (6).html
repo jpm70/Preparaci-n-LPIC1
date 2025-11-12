@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen LPIC-1 - Práctica 94 Procesamiento de Texto y Flujos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .pregunta-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .pregunta-texto {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opciones-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .opciones-lista li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .boton-mostrar {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        .boton-mostrar:hover {
+            background-color: #0056b3;
+        }
+        .respuesta {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e9f7e9;
+            border-left: 5px solid #28a745;
+            border-radius: 5px;
+            display: none; /* ESTO OCULTA LA RESPUESTA POR DEFECTO */
+            color: #28a745;
+        }
+        .respuesta strong {
+            color: #1e7e34;
+            font-size: 1.1em;
+        }
+        code {
+            background-color: #eee; 
+            padding: 2px 4px; 
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Examen de Práctica LPIC-1 (Test 94) - Procesamiento de Texto y Flujos</h1>
+
+    <div class="pregunta-container">
+        <p class="pregunta-texto">1. ¿Qué opción de <code>cat</code> permite numerar solo las líneas que no están en blanco?</p>
+        <ul class="opciones-lista">
+            <li>A) -n</li>
+            <li>B) -b</li>
+            <li>C) --number</li>
+            <li>D) --show-nonblank</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-b es para numerar las líneas de salida no vacías. -n numera todas las líneas).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">2. ¿Cuál de las siguientes combinaciones muestra el contenido de un archivo con <code>cat</code> y marca el final de cada línea con el símbolo $?</p>
+        <ul class="opciones-lista">
+            <li>A) cat -e archivo.txt</li>
+            <li>B) cat -E archivo.txt</li>
+            <li>C) cat -A archivo.txt</li>
+            <li>D) cat -v archivo.txt</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Aunque -e a veces funciona como alias de -vE, -E es la opción explícita para mostrar los finales de línea).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">3. ¿Qué comando permite visualizar un archivo de texto con paginación y búsqueda hacia atrás utilizando la tecla ??</p>
+        <ul class="opciones-lista">
+            <li>A) more</li>
+            <li>B) less</li>
+            <li>C) cat</li>
+            <li>D) tail -f</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">4. En <code>less</code>, ¿qué tecla se usa para ir directamente al final del archivo?</p>
+        <ul class="opciones-lista">
+            <li>A) E</li>
+            <li>B) :</li>
+            <li>C) G</li>
+            <li>D) $</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (g va al inicio, G al final).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">5. ¿Qué comando muestra las primeras 20 líneas de un archivo sin modificar su contenido?</p>
+        <ul class="opciones-lista">
+            <li>A) head archivo.txt</li>
+            <li>B) head -n 20 archivo.txt</li>
+            <li>C) head -20 archivo.txt</li>
+            <li>D) Todas las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (La opción -n 20 y -20 son formas válidas, si se omite -n el valor por defecto es 10 líneas, por lo que A no es correcta para 20 líneas, pero el texto incluye -n 20 y -20 que son correctas, por lo que D es la mejor respuesta ya que A no está completa) **Corrección del documento original**: En LPIC, se considera que **B** y **C** son correctas. **A** es incorrecta ya que el valor predeterminado es 10 líneas. Asumiendo que el test acepta atajos, la respuesta es **D**.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">6. ¿Qué opción de <code>tail</code> muestra el archivo en tiempo real, actualizándose cuando se agregan nuevas líneas?</p>
+        <ul class="opciones-lista">
+            <li>A) -r</li>
+            <li>B) -n</li>
+            <li>C) -f</li>
+            <li>D) --append</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (-f o --follow).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">7. Para mostrar las últimas 50 líneas de un archivo y seguir añadiendo en tiempo real, ¿cuál sería el comando correcto?</p>
+        <ul class="opciones-lista">
+            <li>A) tail -f -n 50 archivo.log</li>
+            <li>B) tail -f50 archivo.log</li>
+            <li>C) tail -50f archivo.log</li>
+            <li>D) tail -fn50 archivo.log</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (La combinación de opciones cortas a veces permite omitir el espacio y el guion, aunque **A** también es completamente válida).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">8. ¿Qué opción de <code>cut</code> permite definir el delimitador de campos?</p>
+        <ul class="opciones-lista">
+            <li>A) -f</li>
+            <li>B) -d</li>
+            <li>C) -c</li>
+            <li>D) --delimiter</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-d o --delimiter).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">9. Si tienes un archivo CSV y deseas mostrar solo el segundo campo, ¿cuál comando es correcto?</p>
+        <ul class="opciones-lista">
+            <li>A) cut -f2 archivo.csv</li>
+            <li>B) cut -d',' -f2 archivo.csv</li>
+            <li>C) cut -c2 archivo.csv</li>
+            <li>D) awk '{print $2}' archivo.csv</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Se debe especificar la coma como delimitador con -d, y luego el campo con -f).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">10. ¿Qué hace el comando <code>cut -c5-10 archivo.txt</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Extrae las columnas 5 a 10 de cada campo delimitado</li>
+            <li>B) Muestra los caracteres 5 a 10 de cada línea</li>
+            <li>C) Elimina los caracteres 5 a 10</li>
+            <li>D) Corta líneas con más de 10 caracteres</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-c corta por carácter, -f corta por campo).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">11. ¿Qué opción de <code>sort</code> realiza la ordenación numérica correctamente?</p>
+        <ul class="opciones-lista">
+            <li>A) -n</li>
+            <li>B) -r</li>
+            <li>C) -u</li>
+            <li>D) -t</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">12. ¿Cómo se ordena un archivo CSV por el tercer campo, usando <code>;</code> como delimitador?</p>
+        <ul class="opciones-lista">
+            <li>A) sort -t';' -k3 archivo.csv</li>
+            <li>B) sort -d';' -f3 archivo.csv</li>
+            <li>C) sort -k3 archivo.csv</li>
+            <li>D) sort -s -t';' -c3 archivo.csv</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-t define el delimitador y -k define la clave/campo para ordenar).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">13. ¿Qué hace <code>sort -u archivo.txt</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra solo líneas únicas sin ordenar</li>
+            <li>B) Ordena y elimina duplicados consecutivos</li>
+            <li>C) Ordena y elimina todas las líneas duplicadas</li>
+            <li>D) Solo muestra duplicados</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (-u es equivalente a <code>sort | uniq</code>).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">14. En <code>uniq</code>, ¿qué opción muestra solo las líneas duplicadas?</p>
+        <ul class="opciones-lista">
+            <li>A) -d</li>
+            <li>B) -u</li>
+            <li>C) -D</li>
+            <li>D) --only-duplicates</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-d muestra las líneas que están duplicadas, solo una vez. -D muestra todas las apariciones de las líneas duplicadas).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">15. ¿Qué comando cuenta cuántas veces se repite cada línea en un archivo y las muestra ordenadas por frecuencia?</p>
+        <ul class="opciones-lista">
+            <li>A) uniq -c archivo.txt | sort -n</li>
+            <li>B) wc -l archivo.txt | sort</li>
+            <li>C) sort archivo.txt | uniq -c | sort -n</li>
+            <li>D) uniq archivo.txt | wc -l</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (Se debe **sort** primero, luego **uniq -c** para contar, y finalmente **sort -n** para ordenar por la columna de conteo).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">16. <code>wc -m archivo.txt</code> devuelve:</p>
+        <ul class="opciones-lista">
+            <li>A) Número de líneas</li>
+            <li>B) Número de palabras</li>
+            <li>C) Número de caracteres</li>
+            <li>D) Número de bytes</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (-c para bytes, -m para caracteres).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">17. ¿Cuál comando muestra el número total de líneas, palabras y bytes de un archivo?</p>
+        <ul class="opciones-lista">
+            <li>A) wc -c archivo.txt</li>
+            <li>B) wc archivo.txt</li>
+            <li>C) wc -l archivo.txt</li>
+            <li>D) wc -w archivo.txt</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>wc</code> sin opciones muestra los tres).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">18. El comando <code>tee</code> se usa principalmente para:</p>
+        <ul class="opciones-lista">
+            <li>A) Redirigir la salida estándar a múltiples archivos</li>
+            <li>B) Filtrar texto</li>
+            <li>C) Contar líneas</li>
+            <li>D) Copiar archivos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Permite duplicar el flujo de datos: uno a la salida estándar y otro a uno o más archivos).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">19. ¿Qué hace <code>echo "test" | tee a.txt b.txt</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Guarda "test" en el primer archivo únicamente</li>
+            <li>B) Muestra "test" por pantalla y lo escribe en ambos archivos</li>
+            <li>C) Escribe solo en el segundo archivo</li>
+            <li>D) Da error por múltiples archivos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Esa es la función principal de tee: pasar el dato y guardarlo).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">20. ¿Qué opción de <code>grep</code> muestra solo las líneas que **no** coinciden con el patrón?</p>
+        <ul class="opciones-lista">
+            <li>A) -r</li>
+            <li>B) -v</li>
+            <li>C) -i</li>
+            <li>D) -n</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-v o --invert-match).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">21. ¿Qué opción de <code>grep</code> permite ignorar mayúsculas y minúsculas al buscar coincidencias?</p>
+        <ul class="opciones-lista">
+            <li>A) -r</li>
+            <li>B) -i</li>
+            <li>C) -v</li>
+            <li>D) -n</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-i o --ignore-case).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">22. ¿Cuál comando muestra el número de línea junto al texto coincidente en <code>grep</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) grep -l</li>
+            <li>B) grep -c</li>
+            <li>C) grep -n</li>
+            <li>D) grep -H</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (-n o --line-number).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">23. El comando <code>grep -E 'foo|bar' archivo.txt</code> busca:</p>
+        <ul class="opciones-lista">
+            <li>A) Solo “foo”</li>
+            <li>B) Solo “bar”</li>
+            <li>C) “foo” o “bar”</li>
+            <li>D) “foo” seguido de “bar”</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (-E activa las expresiones regulares extendidas, permitiendo el operador OR '|').
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">24. ¿Qué diferencia existe entre <code>grep -E</code> y <code>grep -F</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) -E usa expresiones regulares extendidas, -F busca texto literal</li>
+            <li>B) -F usa regex extendidas, -E busca texto literal</li>
+            <li>C) -E busca palabras exactas, -F ignora comillas</li>
+            <li>D) No hay diferencia práctica</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-F o fixed-strings es para texto literal, ignorando los metacaracteres de regex).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">25. Para buscar recursivamente una cadena dentro de todos los archivos de un directorio, ¿cuál es el comando correcto?</p>
+        <ul class="opciones-lista">
+            <li>A) grep -r "cadena" /ruta</li>
+            <li>B) grep -R "cadena" /ruta</li>
+            <li>C) Ambas son válidas</li>
+            <li>D) Ninguna de las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (-r y -R suelen ser sinónimos o casi idénticos en la mayoría de las implementaciones de <code>grep</code>).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">26. ¿Cómo se muestra solo el nombre de los archivos que **contienen** una coincidencia?</p>
+        <ul class="opciones-lista">
+            <li>A) grep -n</li>
+            <li>B) grep -l</li>
+            <li>C) grep -L</li>
+            <li>D) grep -o</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-l o --files-with-matches).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">27. ¿Cuál opción de <code>grep</code> muestra solo las coincidencias encontradas, no toda la línea?</p>
+        <ul class="opciones-lista">
+            <li>A) -o</li>
+            <li>B) -v</li>
+            <li>C) -m</li>
+            <li>D) -n</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-o o --only-matching).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">28. <code>grep -A 3 "error" archivo.log</code> muestra:</p>
+        <ul class="opciones-lista">
+            <li>A) Solo las líneas que contienen “error”</li>
+            <li>B) 3 líneas **antes** de la coincidencia</li>
+            <li>C) 3 líneas **después** de cada coincidencia</li>
+            <li>D) 3 líneas antes y después</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>C</strong>. (-A o --after-context).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">29. <code>grep -B 2 "fail" archivo.log</code> muestra:</p>
+        <ul class="opciones-lista">
+            <li>A) Coincidencias con 2 líneas anteriores</li>
+            <li>B) Coincidencias con 2 líneas posteriores</li>
+            <li>C) Solo las líneas que no coinciden</li>
+            <li>D) Coincidencias agrupadas por bloque</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-B o --before-context).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">30. <code>grep -C 2 "fail" archivo.log</code> mostrará:</p>
+        <ul class="opciones-lista">
+            <li>A) 2 líneas antes y 2 después de cada coincidencia</li>
+            <li>B) Solo la línea coincidente</li>
+            <li>C) Coincidencias con formato de contexto</li>
+            <li>D) Ninguna, opción inválida</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-C o --context).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">31. El comando <code>sed 's/foo/bar/' archivo.txt</code> reemplaza:</p>
+        <ul class="opciones-lista">
+            <li>A) Todas las apariciones de foo por bar en cada línea</li>
+            <li>B) Solo la primera aparición de foo por bar en cada línea</li>
+            <li>C) Solo si foo está al inicio</li>
+            <li>D) Solo si foo está al final</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Sin el flag 'g', <code>sed</code> solo afecta la primera coincidencia por línea).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">32. ¿Cómo se reemplazan **todas** las apariciones de “foo” por “bar”?</p>
+        <ul class="opciones-lista">
+            <li>A) sed 's/foo/bar/g' archivo.txt</li>
+            <li>B) sed 'r/foo/bar/' archivo.txt</li>
+            <li>C) sed 's/foo/bar/a' archivo.txt</li>
+            <li>D) sed 'replace/foo/bar/' archivo.txt</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (El flag 'g' (global) aplica la sustitución a todas las coincidencias en la línea).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">33. En <code>sed</code>, ¿qué significa la <code>-i</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Inserta texto en cada línea</li>
+            <li>B) Realiza el cambio in situ, modificando el archivo original</li>
+            <li>C) Ignora mayúsculas</li>
+            <li>D) Interpreta expresiones extendidas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">34. <code>sed -n '5,10p' archivo.txt</code> muestra:</p>
+        <ul class="opciones-lista">
+            <li>A) Solo líneas 5 a 10</li>
+            <li>B) Todo el archivo menos las líneas 5–10</li>
+            <li>C) Solo la línea 5</li>
+            <li>D) Desde la línea 10 hasta el final</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-n suprime la impresión automática; '5,10p' imprime las líneas 5 a 10).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">35. ¿Cuál comando elimina las líneas vacías de un archivo?</p>
+        <ul class="opciones-lista">
+            <li>A) sed '/^$/d' archivo.txt</li>
+            <li>B) grep -v '^$' archivo.txt</li>
+            <li>C) awk NF archivo.txt</li>
+            <li>D) Todas las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>D</strong>. (Las tres opciones son válidas para eliminar/excluir líneas vacías).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">36. <code>sed '1,3d' archivo.txt</code> hace:</p>
+        <ul class="opciones-lista">
+            <li>A) Elimina las líneas del 1 al 3</li>
+            <li>B) Duplicar líneas 1 a 3</li>
+            <li>C) Muestra solo las líneas 1–3</li>
+            <li>D) Sustituye 1 por 3</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (El comando 'd' en <code>sed</code> es para delete/eliminar).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">37. ¿Cómo eliminar espacios en blanco al final de cada línea con <code>sed</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) sed 's/ *$//' archivo.txt</li>
+            <li>B) sed 's/^ *//' archivo.txt</li>
+            <li>C) sed 's/$ *//' archivo.txt</li>
+            <li>D) sed 's/ $//' archivo.txt</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. ('s/pattern/replace/' con '*' para cero o más espacios y '$' para el final de línea).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">38. En <code>awk</code>, el separador de campos predeterminado es:</p>
+        <ul class="opciones-lista">
+            <li>A) ,</li>
+            <li>B) Espacio o tabulación</li>
+            <li>C) :</li>
+            <li>D) ;</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (Cualquier cantidad de espacios o tabulaciones, por defecto).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">39. El comando <code>awk '{print $1}' archivo.txt</code> muestra:</p>
+        <ul class="opciones-lista">
+            <li>A) El primer campo de cada línea</li>
+            <li>B) La primera línea del archivo</li>
+            <li>C) El número total de campos</li>
+            <li>D) El primer carácter de cada línea</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. ($1 es el primer campo).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">40. ¿Qué hace <code>awk -F: '{print $1,$3}' /etc/passwd</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Usa “:” como delimitador y muestra campo 1 y 3</li>
+            <li>B) Cuenta el número de campos</li>
+            <li>C) Reemplaza “:” por espacio</li>
+            <li>D) Muestra solo líneas con 3 campos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-F define el separador de campo).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">41. En <code>awk</code>, <code>$0</code> representa:</p>
+        <ul class="opciones-lista">
+            <li>A) El último campo</li>
+            <li>B) La línea completa actual</li>
+            <li>C) El número de línea</li>
+            <li>D) El número total de campos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">42. <code>awk 'NR==10' archivo.txt</code> mostrará:</p>
+        <ul class="opciones-lista">
+            <li>A) Las 10 primeras líneas</li>
+            <li>B) Solo la línea 10</li>
+            <li>C) Desde la línea 10 en adelante</li>
+            <li>D) Líneas con 10 campos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (NR es el número de registro/línea; la condición muestra solo la línea donde NR es igual a 10).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">43. ¿Cómo sumar el segundo campo de un archivo numérico con <code>awk</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) awk '{s+=$2} END {print s}' archivo.txt</li>
+            <li>B) awk '{sum=$2} END {print sum}' archivo.txt</li>
+            <li>C) awk 'BEGIN{s=0}{s=$2}END{print s}' archivo.txt</li>
+            <li>D) awk '{print $2+$2}' archivo.txt</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Se acumula el valor en la variable 's' para cada línea, y se imprime el resultado al final con END).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">44. ¿Qué hace <code>awk 'NF > 3' archivo.txt</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra líneas con más de 3 campos</li>
+            <li>B) Elimina líneas con menos de 3 campos</li>
+            <li>C) Cuenta líneas con más de 3 campos</li>
+            <li>D) Solo muestra 3 campos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (NF es el número total de campos; si la condición es verdadera, <code>awk</code> imprime la línea por defecto).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">45. El comando <code>awk 'BEGIN{FS=","} {print $2}' archivo.csv</code> hace:</p>
+        <ul class="opciones-lista">
+            <li>A) Usa coma como separador y muestra el segundo campo</li>
+            <li>B) Elimina comas</li>
+            <li>C) Cuenta comas</li>
+            <li>D) Ignora campos vacíos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (BEGIN se usa para establecer variables antes de procesar el archivo; FS es Field Separator).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">46. <code>tr '[:lower:]' '[:upper:]'</code> convierte:</p>
+        <ul class="opciones-lista">
+            <li>A) Mayúsculas a minúsculas</li>
+            <li>B) Minúsculas a mayúsculas</li>
+            <li>C) Espacios a guiones</li>
+            <li>D) Caracteres numéricos en letras</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">47. ¿Qué hace <code>tr -d '\n'</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Reemplaza saltos de línea por espacios</li>
+            <li>B) Elimina saltos de línea</li>
+            <li>C) Duplica saltos de línea</li>
+            <li>D) Sustituye por tabulaciones</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-d es para delete/eliminar).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">48. Para reemplazar espacios por tabulaciones, ¿cuál comando es correcto?</p>
+        <ul class="opciones-lista">
+            <li>A) tr ' ' '\t'</li>
+            <li>B) tr '\t' ' '</li>
+            <li>C) tr '\n' '\t'</li>
+            <li>D) tr '\t' '\n'</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">49. <code>tr -s ' '</code> tiene como efecto:</p>
+        <ul class="opciones-lista">
+            <li>A) Sustituir espacios por saltos de línea</li>
+            <li>B) Comprimir secuencias de espacios múltiples a uno solo</li>
+            <li>C) Suprimir espacios</li>
+            <li>D) Mostrar solo espacios</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (-s o --squeeze-repeats).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">50. ¿Qué hace <code>tr -cd '0-9\n'</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Elimina todos los caracteres excepto dígitos y saltos de línea</li>
+            <li>B) Sustituye números por texto</li>
+            <li>C) Convierte dígitos a letras</li>
+            <li>D) Reemplaza dígitos por comas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-c invierte el set1, -d elimina el set1 invertido. Es decir, borra todo lo que NO esté en '0-9\n').
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">51. El comando <code>xargs</code> se utiliza para:</p>
+        <ul class="opciones-lista">
+            <li>A) Dividir líneas largas</li>
+            <li>B) Construir y ejecutar comandos a partir de la entrada estándar</li>
+            <li>C) Mostrar argumentos de una función</li>
+            <li>D) Buscar texto dentro de archivos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">52. ¿Qué hace <code>find . -name "*.txt" | xargs rm</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Borra todos los archivos .txt del directorio actual</li>
+            <li>B) Busca archivos .txt y los imprime</li>
+            <li>C) Crea un archivo con lista .txt</li>
+            <li>D) No hace nada sin permisos root</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (Toma la salida de <code>find</code> (lista de archivos) y se la pasa a <code>rm</code> como argumentos).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">53. <code>xargs -n 2 echo</code> hará que:</p>
+        <ul class="opciones-lista">
+            <li>A) Ejecute <code>echo</code> con 2 argumentos por línea</li>
+            <li>B) Divida cada palabra en 2 líneas</li>
+            <li>C) Muestre los dos primeros argumentos solamente</li>
+            <li>D) Ejecute dos veces cada argumento</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-n limita el número de argumentos que se pasan al comando por cada ejecución).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">54. <code>xargs -p</code> sirve para:</p>
+        <ul class="opciones-lista">
+            <li>A) Ejecutar en paralelo</li>
+            <li>B) Pedir confirmación antes de cada ejecución</li>
+            <li>C) Mostrar progreso</li>
+            <li>D) Imprimir sin ejecutar</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">55. ¿Qué hace <code>echo "file1 file2" | xargs -t rm</code>?</p>
+        <ul class="opciones-lista">
+            <li>A) Muestra el comando antes de ejecutarlo</li>
+            <li>B) Borra sin mostrar nada</li>
+            <li>C) Ejecuta en modo silencioso</li>
+            <li>D) No realiza acción alguna</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-t muestra el comando generado en stderr antes de ejecutarlo).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">56. ¿Cómo se combina <code>find</code> con <code>xargs</code> para evitar errores con nombres que contienen espacios?</p>
+        <ul class="opciones-lista">
+            <li>A) find . -print | xargs</li>
+            <li>B) find . -print0 | xargs -0</li>
+            <li>C) find . -iname | xargs -s</li>
+            <li>D) find . -type f | xargs</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>B</strong>. (<code>-print0</code> usa el carácter nulo como delimitador, y <code>xargs -0</code> lo lee correctamente).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">57. <code>xargs -I {} echo Archivo: {}</code> significa:</p>
+        <ul class="opciones-lista">
+            <li>A) Sustituye <code>{}</code> por cada argumento de entrada</li>
+            <li>B) Muestra llaves literales</li>
+            <li>C) Ejecuta múltiples procesos en paralelo</li>
+            <li>D) Ignora los argumentos vacíos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (-I define una cadena de sustitución que permite colocar el argumento en cualquier parte del comando, no solo al final).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">58. ¿Cómo usar <code>grep</code> y <code>xargs</code> juntos para buscar un patrón en múltiples archivos listados en un texto?</p>
+        <ul class="opciones-lista">
+            <li>A) cat lista.txt | xargs grep "patrón"</li>
+            <li>B) grep "patrón" < lista.txt</li>
+            <li>C) grep -f lista.txt patrón</li>
+            <li>D) xargs < grep "patrón" lista.txt</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (La lista de archivos es la entrada estándar de <code>xargs</code>, que luego pasa cada nombre de archivo como argumento a <code>grep</code>).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">59. <code>ls | grep '\.log$' | xargs gzip</code> hará:</p>
+        <ul class="opciones-lista">
+            <li>A) Comprime todos los archivos .log del directorio actual</li>
+            <li>B) Descomprime archivos .log</li>
+            <li>C) Muestra archivos sin comprimir</li>
+            <li>D) Copia los .log</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (La tubería filtra la lista de archivos para quedarse solo con los .log, y <code>xargs</code> los pasa a <code>gzip</code> para comprimirlos).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">60. ¿Cuál de los siguientes comandos cuenta el número total de líneas únicas de un archivo grande, de manera eficiente?</p>
+        <ul class="opciones-lista">
+            <li>A) sort archivo.txt | uniq | wc -l</li>
+            <li>B) uniq archivo.txt | wc -l</li>
+            <li>C) wc -l archivo.txt | uniq</li>
+            <li>D) sort -u archivo.txt | wc -c</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>A</strong>. (<code>uniq</code> solo elimina duplicados si son consecutivos, por lo que es necesario **sort** primero para agruparlos).
+        </div>
+    </div>
+
+    <script>
+        function toggleRespuesta(button) {
+            // Busca el div de respuesta que sigue inmediatamente al botón
+            var respuestaDiv = button.nextElementSibling;
+            
+            // Alterna la visibilidad
+            if (respuestaDiv.style.display === 'none' || respuestaDiv.style.display === '') {
+                respuestaDiv.style.display = 'block';
+                button.textContent = 'Ocultar Respuesta';
+                button.style.backgroundColor = '#dc3545'; // Rojo para "Ocultar"
+            } else {
+                respuestaDiv.style.display = 'none';
+                button.textContent = 'Mostrar Respuesta';
+                button.style.backgroundColor = '#007bff'; // Azul para "Mostrar"
+            }
+        }
+    </script>
+
+</body>
+</html>

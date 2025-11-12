@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen LPIC-1/2 - Práctica 101 Final</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #1a73e8; /* Color azul */
+            border-bottom: 2px solid #5b9ff7;
+            padding-bottom: 10px;
+        }
+        .pregunta-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .pregunta-texto {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opciones-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .opciones-lista li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .boton-mostrar {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #1a73e8; /* Color azul para el botón */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        .boton-mostrar:hover {
+            background-color: #0d47a1;
+        }
+        .respuesta {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e6f0ff; /* Fondo más claro para la respuesta */
+            border-left: 5px solid #1a73e8;
+            border-radius: 5px;
+            display: none; /* ESTO OCULTA LA RESPUESTA POR DEFECTO */
+            color: #1a73e8;
+        }
+        .respuesta strong {
+            color: #0d47a1;
+            font-size: 1.1em;
+        }
+        code {
+            background-color: #eee; 
+            padding: 2px 4px; 
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Examen de Práctica LPIC-1/2 (Test 101) - Final</h1>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">1. ¿Qué opción de <code>grub2-mkconfig</code> se usa para generar un archivo de configuración de GRUB2 en sistemas que almacenan la configuración en <code>/boot/grub2/grub.cfg</code> (distribuciones basadas en RHEL)?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>-o /boot/grub/grub.cfg</code></li>
+            <li>b) <code>-o /boot/grub2/grub.cfg</code></li>
+            <li>c) <code>--generate=/boot/grub2/grub.cfg</code></li>
+            <li>d) <code>--output=/etc/grub2.cfg</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>-o /boot/grub2/grub.cfg</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">2. En <code>systemd</code>, ¿qué objetivo (target) sustituye al antiguo runlevel 3 (multiusuario sin GUI)?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>graphical.target</code></li>
+            <li>b) <code>multi-user.target</code></li>
+            <li>c) <code>runlevel3.target</code></li>
+            <li>d) <code>basic.target</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>multi-user.target</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">3. ¿Cuál es la diferencia principal entre <code>mkinitramfs</code> y <code>dracut</code> al generar initramfs?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>mkinitramfs</code> crea un initrd, <code>dracut</code> crea un kernel empaquetado</li>
+            <li>b) <code>mkinitramfs</code> incluye módulos según scripts, <code>dracut</code> intenta incluir todo lo necesario automáticamente</li>
+            <li>c) <code>dracut</code> sólo funciona en Debian, <code>mkinitramfs</code> sólo en RHEL</li>
+            <li>d) No hay diferencia; son sinónimos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>mkinitramfs</code> incluye módulos según scripts, <code>dracut</code> intenta incluir todo lo necesario automáticamente</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">4. ¿Qué opción de <code>tune2fs</code> permite cambiar el intervalo (en montajes) tras el cual se obliga <code>fsck</code> en ext4?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>-i</code></li>
+            <li>b) <code>-c</code></li>
+            <li>c) <code>-m</code></li>
+            <li>d) <code>-l</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>-i</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">5. Para añadir 2 TB a un <code>logical volume</code> existente sin interrupción, ¿qué procedimiento es correcto?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>lvresize</code> sobre el LV y luego <code>pvresize</code> en el PV</li>
+            <li>b) añadir un nuevo PV al VG, <code>lvextend</code> al LV y redimensionar el filesystem online si es soportado</li>
+            <li>c) crear un snapshot y mover datos al nuevo disco</li>
+            <li>d) borrar y recrear el LV con mayor tamaño</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) añadir un nuevo PV al VG, <code>lvextend</code> al LV y redimensionar el filesystem online si es soportado</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">6. ¿Cuál es la función de <code>pvcreate --uuid</code> al crear un PV LVM?</p>
+        <ul class="opciones-lista">
+            <li>a) Asignar una etiqueta legible al PV</li>
+            <li>b) Forzar un UUID concreto al PV (útil para migraciones/clonar discos)</li>
+            <li>c) Crear un PV sin añadirlo a un VG</li>
+            <li>d) Inicializar PV como inactivo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) Forzar un UUID concreto al PV (útil para migraciones/clonar discos)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">7. En RAID por software (mdadm), ¿qué tipo de RAID proporciona tanto redundancia como striping con tolerancia a fallos de un disco en un arreglo de 3 discos?</p>
+        <ul class="opciones-lista">
+            <li>a) RAID0</li>
+            <li>b) RAID1</li>
+            <li>c) RAID5</li>
+            <li>d) RAID6</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c) RAID5</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">8. Al montar XFS en un sistema con <code>fmask</code> y <code>dmask</code>, ¿qué tipo de sistema de ficheros suele ignorar estas opciones?</p>
+        <ul class="opciones-lista">
+            <li>a) ext4</li>
+            <li>b) xfs</li>
+            <li>c) vfat / FAT32</li>
+            <li>d) btrfs</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) xfs</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">9. ¿Qué herramienta usarías para forzar la relectura de la tabla de particiones de un disco sin reiniciar, asumiendo que ninguna partición está montada?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>partprobe</code> / <code>kpartx</code></li>
+            <li>b) <code>fdisk -r</code></li>
+            <li>c) <code>mount -o reread</code></li>
+            <li>d) <code>blkid --rescan</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>partprobe</code> / <code>kpartx</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">10. ¿Qué parámetro del kernel controla el comportamiento de <code>swappiness</code> en Linux?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>/proc/sys/vm/dirty_ratio</code></li>
+            <li>b) <code>/proc/sys/vm/swappiness</code></li>
+            <li>c) <code>/proc/sys/vm/page-cluster</code></li>
+            <li>d) <code>/proc/sys/vm/vfs_cache_pressure</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>/proc/sys/vm/swappiness</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">11. Para compilar un módulo del kernel fuera del árbol del kernel, ¿qué macro del <code>Makefile</code> es esencial para generar el <code>.ko</code>?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>KERNEL_BUILD</code></li>
+            <li>b) <code>obj-m</code></li>
+            <li>c) <code>module-y</code></li>
+            <li>d) <code>MOD_SRC</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>obj-m</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">12. ¿Qué comando muestra el estado actual de módulos cargados y sus dependencias?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>lsmod</code></li>
+            <li>b) <code>modstat</code></li>
+            <li>c) <code>modinfo --loaded</code></li>
+            <li>d) <code>kernel-mods -l</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>lsmod</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">13. En <code>iproute2</code>, ¿qué comando reemplaza a <code>ifconfig</code> para añadir una dirección IP a <code>eth0</code>?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>ip add eth0 192.0.2.10/24</code></li>
+            <li>b) <code>ip addr add 192.0.2.10/24 dev eth0</code></li>
+            <li>c) <code>ip address eth0 add 192.0.2.10/24</code></li>
+            <li>d) <code>ip link ip add 192.0.2.10 dev eth0</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>ip addr add 192.0.2.10/24 dev eth0</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">14. ¿Cuál es la diferencia entre <code>ip route</code> y <code>route</code> (net-tools)?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>ip route</code> sólo muestra rutas IPv6</li>
+            <li>b) <code>ip route</code> forma parte de iproute2 y soporta políticas avanzadas, <code>route</code> es obsoleto</li>
+            <li>c) <code>route</code> es más reciente y soporta VRF</li>
+            <li>d) Ninguna, son alias exactos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>ip route</code> forma parte de iproute2 y soporta políticas avanzadas, <code>route</code> es obsoleto</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">15. Para aplicar QoS con <code>tc</code>, ¿qué elemento define la disciplina principal aplicada a una interfaz?</p>
+        <ul class="opciones-lista">
+            <li>a) classful qdisc</li>
+            <li>b) ingress filter</li>
+            <li>c) root qdisc</li>
+            <li>d) iptables mangle</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c) root qdisc</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">16. En <code>iptables</code> (legacy), ¿qué módulo permite seguimiento de estados de conexión?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>stat</code></li>
+            <li>b) <code>conntrack</code> / <code>state</code> (dependiendo del kernel)</li>
+            <li>c) <code>trackconn</code></li>
+            <li>d) <code>netfilter_monitor</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>conntrack</code> / <code>state</code> (dependiendo del kernel)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">17. ¿Cuál es el propósito de <code>nftables</code> respecto a <code>iptables</code>?</p>
+        <ul class="opciones-lista">
+            <li>a) Reemplazar iptables con una sola infraestructura y mejor rendimiento/expresividad</li>
+            <li>b) Añadir soporte sólo para IPv6</li>
+            <li>c) Es una GUI para iptables</li>
+            <li>d) Eliminar el filtrado de paquetes</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) Reemplazar iptables con una sola infraestructura y mejor rendimiento/expresividad</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">18. En redes, ¿qué hace <code>arping</code>?</p>
+        <ul class="opciones-lista">
+            <li>a) Escanea puertos ARP en la red</li>
+            <li>b) Envía solicitudes ARP para comprobar la latencia/alcance de una IP MAC en capa 2</li>
+            <li>c) Reresolve nombres DNS a MAC</li>
+            <li>d) Limpia la caché ARP del kernel</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) Envía solicitudes ARP para comprobar la latencia/alcance de una IP MAC en capa 2</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">19. Para compartir un filesystem con NFSv4 y usar delegations, ¿qué configuración es imprescindible en <code>/etc/exports</code>?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>no_subtree_check</code> y <code>fsid=0</code> en la raíz del export NFSv4</li>
+            <li>b) <code>rw,sync</code> sólo</li>
+            <li>c) <code>insecure</code></li>
+            <li>d) <code>anonuid=65534</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>no_subtree_check</code> y <code>fsid=0</code> en la raíz del export NFSv4</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">20. ¿Qué protocolo utiliza Kerberos para la autenticación y qué puerto TCP por defecto usa el KDC para tráfico autenticado?</p>
+        <ul class="opciones-lista">
+            <li>a) LDAP y puerto 389</li>
+            <li>b) Kerberos (ticketing) y puerto 88/tcp</li>
+            <li>c) RADIUS y puerto 1812</li>
+            <li>d) NTLM y puerto 445</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) Kerberos (ticketing) y puerto 88/tcp</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">21. En OpenLDAP, ¿qué archivo suele contener la base de datos <code>slapd</code> en formato BDB/LMDB?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>/etc/openldap/slapd.conf</code></li>
+            <li>b) <code>/var/lib/ldap</code></li>
+            <li>c) <code>/usr/local/ldapdb</code></li>
+            <li>d) <code>/opt/slapd/data</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>/var/lib/ldap</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">22. ¿Cuál es la utilidad para añadir una réplica (consumer) con <code>slapd</code> usando syncrepl?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>ldapmodify</code> (para configurar syncrepl en el provider/consumer)</li>
+            <li>b) <code>slapadd</code></li>
+            <li>c) <code>slapcat</code></li>
+            <li>d) <code>ldapcopy</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>ldapmodify</code> (para configurar syncrepl en el provider/consumer)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">23. En Samba integrado con AD, ¿qué servicio permite la unión de clientes Linux al dominio y la resolución de usuarios de dominio?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>nss_ldap</code></li>
+            <li>b) <code>winbind</code> / <code>sssd</code> (winbind clásico)</li>
+            <li>c) <code>smbclient</code></li>
+            <li>d) <code>smbd</code> exclusivamente</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>winbind</code> / <code>sssd</code> (winbind clásico)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">24. En Postfix, ¿qué parámetro en <code>main.cf</code> define el directorio de cola de mensajes?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>queue_directory</code></li>
+            <li>b) <code>mail_spool</code></li>
+            <li>c) <code>home_mailbox</code></li>
+            <li>d) <code>queue_path</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>queue_directory</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">25. ¿Cuál es la diferencia entre <code>smtpd_recipient_restrictions</code> y <code>smtpd_sender_restrictions</code> en Postfix?</p>
+        <ul class="opciones-lista">
+            <li>a) ninguna, son sinónimos</li>
+            <li>b) recipient controla comprobaciones por destino del correo; sender por remitente — orden afecta el flujo de control y políticas anti-spam</li>
+            <li>c) recipient sólo para entregas locales, sender para remotas</li>
+            <li>d) uno es obsoleto</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) recipient controla comprobaciones por destino del correo; sender por remitente — orden afecta el flujo de control y políticas anti-spam</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">26. En Dovecot, para usar Maildir almacenado en LVM snapshot montado temporalmente, ¿qué opción de entrega suele elegirse?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>deliver</code> (procmail)</li>
+            <li>b) <code>dovecot-lda</code> o LMTP (permite entrega en Maildir)</li>
+            <li>c) <code>mail.local</code></li>
+            <li>d) <code>sendmail -bd</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>dovecot-lda</code> o LMTP (permite entrega en Maildir)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">27. ¿Qué herramienta es más indicada para depurar problemas de autenticación PAM a nivel sistema?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>pamtest</code></li>
+            <li>b) <code>pam_debug</code></li>
+            <li>c) <code>pamtester</code> y/o activar logs verbosos en <code>/var/log/auth.log</code> y usar <code>authconfig / pam-auth-update</code> para ver configuración</li>
+            <li>d) <code>authdbg</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c) <code>pamtester</code> y/o activar logs verbosos en <code>/var/log/auth.log</code> y usar <code>authconfig / pam-auth-update</code> para ver configuración</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">28. En PAM, ¿qué módulo puede usar contraseñas almacenadas en LDAP para autenticar usuarios localmente?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>pam_unix.so</code></li>
+            <li>b) <code>pam_ldap.so</code> / <code>pam_sss.so</code> (SSSD)</li>
+            <li>c) <code>pam_pwdb</code></li>
+            <li>d) <code>pam_files</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>pam_ldap.so</code> / <code>pam_sss.so</code> (SSSD)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">29. ¿Qué comando se utiliza para crear un <code>snapshot</code> LVM nominal y qué efecto tiene en el volumen original?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>lvcreate -s</code> crea un snapshot; el LV original sigue accesible, el snapshot usa copy-on-write para cambios posteriores</li>
+            <li>b) <code>lvcreate --snapshot</code> borra el LV original y crea uno nuevo</li>
+            <li>c) <code>lvconvert --snapshot</code> detiene el LV original</li>
+            <li>d) <code>lvresize -s</code> fusiona el LV con su snapshot</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>lvcreate -s</code> crea un snapshot; el LV original sigue accesible, el snapshot usa copy-on-write para cambios posteriores</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">30. ¿Cuál es la ventaja principal de usar <code>thin provisioning</code> en LVM thin pools frente a LV convencionales?</p>
+        <ul class="opciones-lista">
+            <li>a) Menor latencia de I/O siempre</li>
+            <li>b) Permite asignar espacio lógico mayor que el físico, con sobreprovisionamiento y snapshots eficientes</li>
+            <li>c) Encripta los datos automáticamente</li>
+            <li>d) Evita la fragmentación del filesystem</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) Permite asignar espacio lógico mayor que el físico, con sobreprovisionamiento y snapshots eficientes</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">31. ¿Qué utilidad permite convertir un <code>logical volume</code> con RAID software a un <code>mirror</code> en LVM?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>lvconvert --type raid1</code></li>
+            <li>b) <code>lvconvert --mirror</code> (o <code>--type mirror</code> con versiones antiguas)</li>
+            <li>c) <code>lvcreate --mirror</code></li>
+            <li>d) No es posible con LVM</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>lvconvert --mirror</code> (o <code>--type mirror</code> con versiones antiguas)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">32. En <code>rsync</code>, ¿qué opción preserva todos los atributos (permisos, tiempos, xattrs, ACLs, dispositivos)?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>-a</code></li>
+            <li>b) <code>-A</code></li>
+            <li>c) <code>-X</code></li>
+            <li>d) <code>-aAX</code> (combinación requerida para ACLs y xattrs aparte de -a)</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>d) <code>-aAX</code> (combinación requerida para ACLs y xattrs aparte de -a)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">33. Para cifrar un disco con LUKS y usar un archivo de clave en lugar de una passphrase interactiva, ¿qué comando es apropiado?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>cryptsetup luksFormat --key-file</code> y luego <code>cryptsetup luksOpen --key-file</code></li>
+            <li>b) <code>luksaddkey --file</code></li>
+            <li>c) <code>mount -o luks,keyfile</code></li>
+            <li>d) <code>cryptkeyctl</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>cryptsetup luksFormat --key-file</code> y luego <code>cryptsetup luksOpen --key-file</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">34. En SELinux, ¿qué comando cambia el contexto de SELinux de un archivo permanentemente?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>chcon --permanent</code></li>
+            <li>b) <code>semanage fcontext -a -t <type> '<path>'</code> seguido de <code>restorecon -v <path></code></li>
+            <li>c) <code>setenforce</code></li>
+            <li>d) <code>fixfiles</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>semanage fcontext -a -t <type> '<path>'</code> seguido de <code>restorecon -v <path></code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">35. En AppArmor, ¿dónde se colocan los perfiles y qué utilidad se usa para poner un perfil en modo complain?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>/etc/apparmor.d/</code> y <code>aa-complain /path/to/profile</code></li>
+            <li>b) <code>/etc/apparmor/profiles/</code> y <code>apparmorctl --complain</code></li>
+            <li>c) <code>/usr/lib/apparmor/</code> y <code>aa-disable</code></li>
+            <li>d) <code>/var/apparmor/</code> y <code>aa-logprof</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>/etc/apparmor.d/</code> y <code>aa-complain /path/to/profile</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">36. ¿Qué opción de <code>tcpdump</code> permite capturar paquetes con una expresión Berkeley Packet Filter que incluya solo tráfico TCP hacia puerto 443?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>tcpdump tcp and port 443</code></li>
+            <li>b) <code>tcpdump -p tcp port 443</code></li>
+            <li>c) <code>tcpdump 'tcp[13] & 0x02 != 0 and dst port 443'</code></li>
+            <li>d) <code>tcpdump 'dst port 443 and tcp'</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>d) <code>tcpdump 'dst port 443 and tcp'</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">37. ¿Qué mecanismo de DNS permite distribuir la carga entre varias IPs para un único nombre con balanceo muy básico?</p>
+        <ul class="opciones-lista">
+            <li>a) DNSSEC</li>
+            <li>b) Round-robin A records (múltiples A/AAAA)</li>
+            <li>c) CNAME con proxy</li>
+            <li>d) SRV record únicamente</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) Round-robin A records (múltiples A/AAAA)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">38. En BIND9, ¿qué archivo define zonas esclavas con transferencia de zona desde el master?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>/etc/bind/named.conf.local</code> / <code>named.conf</code> con <code>zone "..." { type slave; masters { IP; }; file "..."; };</code></li>
+            <li>b) <code>/var/named/slaves.conf</code></li>
+            <li>c) <code>/etc/resolv.conf</code></li>
+            <li>d) <code>/etc/bind/slavedefs.conf</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>/etc/bind/named.conf.local</code> / <code>named.conf</code> con <code>zone "..." { type slave; masters { IP; }; file "..."; };</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">39. ¿Cuál es la principal diferencia entre <code>chroot</code> y contenedores (namespaces + cgroups)?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>chroot</code> aísla procesos en un entorno de archivos pero no separa PID, red ni otros namespaces; contenedores usan namespaces para aislamiento más completo</li>
+            <li>b) Ninguna, son equivalentes</li>
+            <li>c) <code>chroot</code> crea un kernel virtualizado</li>
+            <li>d) Contenedores no aíslan el filesystem</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>chroot</code> aísla procesos en un entorno de archivos pero no separa PID, red ni otros namespaces; contenedores usan namespaces para aislamiento más completo</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">40. En KVM/QEMU, ¿qué componente proporciona gestión de máquinas virtuales y gestiona imágenes <code>qcow2</code>?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>qemu-kvm / qemu-system-x86_64</code> para ejecución; <code>libvirt / virsh</code> para gestión; <code>qemu-img</code> para manipular imágenes (qcow2)</li>
+            <li>b) <code>kvmctl</code> exclusivamente</li>
+            <li>c) <code>qm</code> solo en Proxmox</li>
+            <li>d) <code>virt-manager</code> es el único requerido para ejecutar VMs en consola</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>qemu-kvm / qemu-system-x86_64</code> para ejecución; <code>libvirt / virsh</code> para gestión; <code>qemu-img</code> para manipular imágenes (qcow2)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">41. ¿Qué ventaja ofrece <code>qcow2</code> sobre raw para imágenes de disco?</p>
+        <ul class="opciones-lista">
+            <li>a) Mejora el rendimiento en todo caso</li>
+            <li>b) Soporta snapshots internos y compresión/sparse (ahorro de espacio) a costa de algo de sobrecarga</li>
+            <li>c) No puede ser usada con libvirt</li>
+            <li>d) Requiere red para operar</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) Soporta snapshots internos y compresión/sparse (ahorro de espacio) a costa de algo de sobrecarga</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">42. Para asegurar un servidor con SSH, ¿cuál es la configuración más segura en <code>sshd_config</code>?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>PermitRootLogin no</code>, <code>PasswordAuthentication no</code> (usar keys), <code>Protocol 2</code>, <code>AllowUsers</code> según sea necesario</li>
+            <li>b) <code>PermitRootLogin yes</code> y <code>PasswordAuthentication yes</code></li>
+            <li>c) <code>UseDNS yes</code> y <code>PermitRootLogin without-password</code></li>
+            <li>d) <code>ChallengeResponseAuthentication yes</code> y <code>PermitEmptyPasswords yes</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>PermitRootLogin no</code>, <code>PasswordAuthentication no</code> (usar keys), <code>Protocol 2</code>, <code>AllowUsers</code> según sea necesario</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">43. En <code>tcpwrappers</code>, ¿qué archivo controla hosts permitidos para servicios enlazados a <code>libwrap</code>?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>/etc/hosts.allow</code> y <code>/etc/hosts.deny</code></li>
+            <li>b) <code>/etc/tcpwrappers.conf</code></li>
+            <li>c) <code>/etc/hosts</code></li>
+            <li>d) <code>/etc/services.allow</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>/etc/hosts.allow</code> y <code>/etc/hosts.deny</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">44. ¿Cuál es la finalidad de <code>ss</code> comparado con <code>netstat</code>?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>ss</code> muestra información de sockets más rápida y con más detalle (incluye estadísticas de TCP, escucha, etc.), y es parte de <code>iproute2</code></li>
+            <li>b) <code>netstat</code> es la herramienta moderna recomendada</li>
+            <li>c) <code>ss</code> sólo muestra IPv6</li>
+            <li>d) <code>netstat</code> es un wrapper sobre <code>ss</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>ss</code> muestra información de sockets más rápida y con más detalle (incluye estadísticas de TCP, escucha, etc.), y es parte de <code>iproute2</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">45. En OpenVPN, ¿qué modo funciona usando certificados y TLS para autenticar tanto servidor como cliente?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>--dev tap</code></li>
+            <li>b) <code>TLS mode</code> ( <code>tls-auth</code> / <code>tls-crypt</code> ) con certificados (PKI) para autenticación mutua</li>
+            <li>c) <code>pre-shared key</code> sólo</li>
+            <li>d) <code>mode serverless</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>TLS mode</code> ( <code>tls-auth</code> / <code>tls-crypt</code> ) con certificados (PKI) para autenticación mutua</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">46. ¿Cuál es la diferencia entre <code>tls-auth</code> y <code>tls-crypt</code> en OpenVPN?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>tls-auth</code> firma paquetes TLS con una key HMAC y no cifra la handshakes; <code>tls-crypt</code> cifra el control channel además de autenticarlo</li>
+            <li>b) Son exactamente lo mismo con nombres distintos</li>
+            <li>c) <code>tls-crypt</code> sólo para UDP</li>
+            <li>d) <code>tls-auth</code> cifra el payload completo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>tls-auth</code> firma paquetes TLS con una key HMAC y no cifra la handshakes; <code>tls-crypt</code> cifra el control channel además de autenticarlo</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">47. Para auditar accesos a ficheros de alto valor, ¿qué herramienta del kernel puede registrar accesos a syscall <code>open(2)</code> y generar logs auditable?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>auditd</code> / audit subsystem (auditctl/aureport/ausearch)</li>
+            <li>b) <code>syslogd</code> directo</li>
+            <li>c) <code>logwatch</code></li>
+            <li>d) <code>filemon</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>auditd</code> / audit subsystem (auditctl/aureport/ausearch)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">48. En <code>auditd</code>, ¿qué fichero contiene las reglas persistentes que se cargan en arranque?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>/etc/audit/audit.rules</code> (o <code>/etc/audit/rules.d/*.rules</code>)</li>
+            <li>b) <code>/etc/auditd.conf</code></li>
+            <li>c) <code>/etc/rsyslog.d/audit.conf</code></li>
+            <li>d) <code>/var/log/audit/rules</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>/etc/audit/audit.rules</code> (o <code>/etc/audit/rules.d/*.rules</code>)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">49. ¿Qué modo de autenticación de Samba permite que un servidor Samba actúe como un miembro del dominio Active Directory?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>security = user</code></li>
+            <li>b) <code>security = ads</code> (y usar Winbind o SSSD)</li>
+            <li>c) <code>security = domain</code> sólo para NT4 PDCs</li>
+            <li>d) <code>security = share</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>security = ads</code> (y usar Winbind o SSSD)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">50. En Kerberos, ¿qué significa la abreviatura TGT?</p>
+        <ul class="opciones-lista">
+            <li>a) Ticket Granting Ticket — ticket que permite solicitar otros tickets sin reautenticarse al KDC</li>
+            <li>b) Temporary Global Token</li>
+            <li>c) Trusted Gateway Ticket</li>
+            <li>d) Ticket Generated Token</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) Ticket Granting Ticket — ticket que permite solicitar otros tickets sin reautenticarse al KDC</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">51. Para configurar alta disponibilidad con Pacemaker/Corosync, ¿qué recurso es más apropiado para sincronizar un filesystem entre nodos con tolerancia a fallo en bloque?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>DRBD</code> (replicación a nivel de bloque) junto con Pacemaker para promover/master y montar filesystem en el nodo activo</li>
+            <li>b) <code>rsync</code> en cron cada minuto</li>
+            <li>c) SMB con replica nativa</li>
+            <li>d) LVM sin snapshot</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>DRBD</code> (replicación a nivel de bloque) junto con Pacemaker para promover/master y montar filesystem en el nodo activo</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">52. ¿Qué propósito tiene <code>stonith</code> en un cluster de alta disponibilidad?</p>
+        <ul class="opciones-lista">
+            <li>a) Monitorear ancho de banda</li>
+            <li>b) "Shoot The Other Node In The Head": mecanismo de fencing para asegurar que un nodo fallado quede completamente aislado o reiniciado antes de permitir failover, evitando corrupción de datos compartidos</li>
+            <li>c) Balancear CPUs entre nodos</li>
+            <li>d) Crear snapshots LVM automáticos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) "Shoot The Other Node In The Head": mecanismo de fencing para asegurar que un nodo fallado quede completamente aislado o reiniciado antes de permitir failover, evitando corrupción de datos compartidos</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">53. En <code>tcpd /inetd</code> vs <code>xinetd</code>, ¿qué ventaja ofrece <code>xinetd</code>?</p>
+        <ul class="opciones-lista">
+            <li>a) Permite controles de acceso más complejos, límites, logging y configuración por servicio con más opciones que inetd tradicional</li>
+            <li>b) xinetd sólo sirve FTP</li>
+            <li>c) inetd tiene más control granular que xinetd</li>
+            <li>d) xinetd no soporta tcpwrappers</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) Permite controles de acceso más complejos, límites, logging y configuración por servicio con más opciones que inetd tradicional</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">54. ¿Qué herramienta de Linux se usa para forzar una regeneración de la tabla de símbolos del kernel cuando se instala un nuevo módulo y se necesita información sobre dependencias?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>depmod</code></li>
+            <li>b) <code>modprobe --rebuild</code></li>
+            <li>c) <code>insmod -r</code></li>
+            <li>d) <code>kmod-update</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>depmod</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">55. En sistemas que usan <code>systemd</code>, ¿qué comando muestra las dependencias (units requeridas) de <code>sshd.service</code>?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>systemctl deps sshd.service</code></li>
+            <li>b) <code>systemctl list-dependencies sshd.service</code></li>
+            <li>c) <code>systemctl requires sshd.service</code></li>
+            <li>d) <code>systemctl show-deps sshd</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>systemctl list-dependencies sshd.service</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">56. ¿Cuál es el formato y utilidad de <code>tc qdisc htb</code> en control de tráfico?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>htb</code> (Hierarchical Token Bucket) crea clases jerárquicas que permiten compartir y administrar ancho de banda con límites y prioridades — útil para shaping por clase</li>
+            <li>b) <code>htb</code> prioriza sólo por puerto 80</li>
+            <li>c) <code>htb</code> es un módulo de kernel obsoleto</li>
+            <li>d) <code>htb</code> encripta tráfico en túneles</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>htb</code> (Hierarchical Token Bucket) crea clases jerárquicas que permiten compartir y administrar ancho de banda con límites y prioridades — útil para shaping por clase</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">57. En sistemas con <code>nftables</code>, ¿qué construcciones reemplazan a las cadenas y tablas de iptables?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>sets</code>, <code>tables</code>, <code>chains</code> y reglas en <code>nft</code> — con expresividad para maps y concatenaciones; <code>nft</code> usa un lenguaje unificado</li>
+            <li>b) sólo <code>chains</code>, no hay tablas</li>
+            <li>c) <code>ruleset</code> único sin posibilidad de agrupar</li>
+            <li>d) <code>iptables-compat</code> no tiene equivalente</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>sets</code>, <code>tables</code>, <code>chains</code> y reglas en <code>nft</code> — con expresividad para maps y concatenaciones; <code>nft</code> usa un lenguaje unificado</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">58. ¿Qué problema puede producir un <code>inode exhaustion</code> en un sistema de archivos y cómo se soluciona típicamente?</p>
+        <ul class="opciones-lista">
+            <li>a) El disco se queda sin espacio físico; se soluciona con <code>resize2fs</code> siempre</li>
+            <li>b) Se agotan los inodos al crear muchos ficheros pequeños; solución: recrear el filesystem con más inodos ( <code>-N</code> en <code>mkfs.ext4</code> ) o almacenar ficheros en otro FS con más inodos</li>
+            <li>c) Es causado por corrupción de superblock únicamente; se soluciona con <code>fsck</code></li>
+            <li>d) Es imposible agotar inodos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) Se agotan los inodos al crear muchos ficheros pequeños; solución: recrear el filesystem con más inodos ( <code>-N</code> en <code>mkfs.ext4</code> ) o almacenar ficheros en otro FS con más inodos</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">59. En <code>iptables</code> con NAT, ¿por qué es importante la tabla <code>nat</code> en la cadena <code>POSTROUTING</code> para SNAT?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>POSTROUTING</code> en la tabla <code>nat</code> es el punto donde se modifica la dirección de origen al salir por una interfaz (SNAT/MASQUERADE), afectando a conexiones nuevas</li>
+            <li>b) <code>PREROUTING</code> es para SNAT</li>
+            <li>c) <code>OUTPUT</code> nunca se usa con NAT</li>
+            <li>d) No tiene importancia; SNAT se hace en <code>filter</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>POSTROUTING</code> en la tabla <code>nat</code> es el punto donde se modifica la dirección de origen al salir por una interfaz (SNAT/MASQUERADE), afectando a conexiones nuevas</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">60. Para mitigar ataques de fuerza bruta en servicios de red, ¿qué enfoque integrado usando PAM y fail2ban es más efectivo?</p>
+        <ul class="opciones-lista">
+            <li>a) Usar <code>pam_tally2 / pam_faillock</code> para bloquear localmente tras N intentos y complementar con <code>fail2ban</code> que observe logs y aplique reglas de firewall dinámicas — combinación de bloqueo local + bloqueo de red es más robusta</li>
+            <li>b) Sólo cambiar puerto del servicio</li>
+            <li>c) Usar <code>PermitRootLogin yes</code> y confiar en contraseñas fuertes</li>
+            <li>d) Eliminar logs para confundir atacantes</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) Usar <code>pam_tally2 / pam_faillock</code> para bloquear localmente tras N intentos y complementar con <code>fail2ban</code> que observe logs y aplique reglas de firewall dinámicas — combinación de bloqueo local + bloqueo de red es más robusta</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">61. ¿Qué opción de <code>grub2-mkconfig</code> se usa para generar un archivo de configuración de GRUB2 en sistemas que almacenan la configuración en <code>/boot/grub2/grub.cfg</code> (distribuciones basadas en RHEL)?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>-o /boot/grub/grub.cfg</code></li>
+            <li>b) <code>-o /boot/grub2/grub.cfg</code></li>
+            <li>c) <code>--generate=/boot/grub2/grub.cfg</code></li>
+            <li>d) <code>--output=/etc/grub2.cfg</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>-o /boot/grub2/grub.cfg</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">62. En <code>systemd</code>, ¿qué objetivo (target) sustituye al antiguo runlevel 3 (multiusuario sin GUI)?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>graphical.target</code></li>
+            <li>b) <code>multi-user.target</code></li>
+            <li>c) <code>runlevel3.target</code></li>
+            <li>d) <code>basic.target</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>multi-user.target</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">63. ¿Cuál es la diferencia principal entre <code>mkinitramfs</code> y <code>dracut</code> al generar initramfs?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>mkinitramfs</code> crea un initrd, <code>dracut</code> crea un kernel empaquetado</li>
+            <li>b) <code>mkinitramfs</code> incluye módulos según scripts, <code>dracut</code> intenta incluir todo lo necesario automáticamente</li>
+            <li>c) <code>dracut</code> sólo funciona en Debian, <code>mkinitramfs</code> sólo en RHEL</li>
+            <li>d) No hay diferencia; son sinónimos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>mkinitramfs</code> incluye módulos según scripts, <code>dracut</code> intenta incluir todo lo necesario automáticamente</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">64. ¿Qué opción de <code>tune2fs</code> permite cambiar el intervalo (en montajes) tras el cual se obliga <code>fsck</code> en ext4?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>-i</code></li>
+            <li>b) <code>-c</code></li>
+            <li>c) <code>-m</code></li>
+            <li>d) <code>-l</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>-i</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">65. Para añadir 2 TB a un <code>logical volume</code> existente sin interrupción, ¿qué procedimiento es correcto?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>lvresize</code> sobre el LV y luego <code>pvresize</code> en el PV</li>
+            <li>b) añadir un nuevo PV al VG, <code>lvextend</code> al LV y redimensionar el filesystem online si es soportado</li>
+            <li>c) crear un snapshot y mover datos al nuevo disco</li>
+            <li>d) borrar y recrear el LV con mayor tamaño</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) añadir un nuevo PV al VG, <code>lvextend</code> al LV y redimensionar el filesystem online si es soportado</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">66. ¿Cuál es la función de <code>pvcreate --uuid</code> al crear un PV LVM?</p>
+        <ul class="opciones-lista">
+            <li>a) Asignar una etiqueta legible al PV</li>
+            <li>b) Forzar un UUID concreto al PV (útil para migraciones/clonar discos)</li>
+            <li>c) Crear un PV sin añadirlo a un VG</li>
+            <li>d) Inicializar PV como inactivo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) Forzar un UUID concreto al PV (útil para migraciones/clonar discos)</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">67. En RAID por software (mdadm), ¿qué tipo de RAID proporciona tanto redundancia como striping con tolerancia a fallos de un disco en un arreglo de 3 discos?</p>
+        <ul class="opciones-lista">
+            <li>a) RAID0</li>
+            <li>b) RAID1</li>
+            <li>c) RAID5</li>
+            <li>d) RAID6</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c) RAID5</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">68. Al montar XFS en un sistema con <code>fmask</code> y <code>dmask</code>, ¿qué tipo de sistema de ficheros suele ignorar estas opciones?</p>
+        <ul class="opciones-lista">
+            <li>a) ext4</li>
+            <li>b) xfs</li>
+            <li>c) vfat / FAT32</li>
+            <li>d) btrfs</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) xfs</strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">69. ¿Qué herramienta usarías para forzar la relectura de la tabla de particiones de un disco sin reiniciar, asumiendo que ninguna partición está montada?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>partprobe</code> / <code>kpartx</code></li>
+            <li>b) <code>fdisk -r</code></li>
+            <li>c) <code>mount -o reread</code></li>
+            <li>d) <code>blkid --rescan</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>partprobe</code> / <code>kpartx</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">70. ¿Qué parámetro del kernel controla el comportamiento de <code>swappiness</code> en Linux?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>/proc/sys/vm/dirty_ratio</code></li>
+            <li>b) <code>/proc/sys/vm/swappiness</code></li>
+            <li>c) <code>/proc/sys/vm/page-cluster</code></li>
+            <li>d) <code>/proc/sys/vm/vfs_cache_pressure</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>/proc/sys/vm/swappiness</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">71. Para compilar un módulo del kernel fuera del árbol del kernel, ¿qué macro del <code>Makefile</code> es esencial para generar el <code>.ko</code>?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>KERNEL_BUILD</code></li>
+            <li>b) <code>obj-m</code></li>
+            <li>c) <code>module-y</code></li>
+            <li>d) <code>MOD_SRC</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b) <code>obj-m</code></strong>
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">72. ¿Qué comando muestra el estado actual de módulos cargados y sus dependencias?</p>
+        <ul class="opciones-lista">
+            <li>a) <code>lsmod</code></li>
+            <li>b) <code>modstat</code></li>
+            <li>c) <code>modinfo --loaded</code></li>
+            <li>d) <code>kernel-mods -l</code></li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a) <code>lsmod</code></strong>
+        </div>
+    </div>
+
+    <script>
+        function toggleRespuesta(button) {
+            // Busca el div de respuesta que sigue inmediatamente al botón
+            var respuestaDiv = button.nextElementSibling;
+            
+            // Alterna la visibilidad
+            if (respuestaDiv.style.display === 'none' || respuestaDiv.style.display === '') {
+                respuestaDiv.style.display = 'block';
+                button.textContent = 'Ocultar Respuesta';
+                button.style.backgroundColor = '#0d47a1'; // Azul oscuro para "Ocultar"
+            } else {
+                respuestaDiv.style.display = 'none';
+                button.textContent = 'Mostrar Respuesta';
+                button.style.backgroundColor = '#1a73e8'; // Azul original para "Mostrar"
+            }
+        }
+    </script>
+
+</body>
+</html>

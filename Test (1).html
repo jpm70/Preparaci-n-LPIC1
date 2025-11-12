@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen LPIC-1 - Práctica 89 Test1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .pregunta-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .pregunta-texto {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opciones-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .opciones-lista li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .boton-mostrar {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        .boton-mostrar:hover {
+            background-color: #0056b3;
+        }
+        .respuesta {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e9f7e9;
+            border-left: 5px solid #28a745;
+            border-radius: 5px;
+            display: none; /* ESTO OCULTA LA RESPUESTA POR DEFECTO */
+            color: #28a745;
+        }
+        .respuesta strong {
+            color: #1e7e34;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Examen de Práctica LPIC-1 (Test 89)</h1>
+
+    <div class="pregunta-container">
+        <p class="pregunta-texto">1. ¿Cómo podría crear una copia de seguridad del sistema usando el comando "dd"?</p>
+        <ul class="opciones-lista">
+            <li>a) dd if=/dev/sda of=/media/usb_stick bs=4M count=$(blocksize -h) conv=noerror,sync</li>
+            <li>b) dd if=/dev/hdc | gzip > /backup.img.gz</li>
+            <li>c) tar cvfz backup.tar.gz --exclude='/proc' --one-file-system /</li>
+            <li>d) cp -r /etc/. /media/usb_stick</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>a</strong> (para copiar el sistema completo, incluyendo particiones y sistemas de archivos).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">2. ¿Qué comando muestra el espacio libre en los sistemas de archivos montados?</p>
+        <ul class="opciones-lista">
+            <li>a) df -h</li>
+            <li>b) du -a</li>
+            <li>c) lsblk</li>
+            <li>d) mount -l</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>a</strong> (df -h muestra el uso y espacio libre en formato legible).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">3. ¿Qué comando muestra información sobre el hardware detectado en el arranque?</p>
+        <ul class="opciones-lista">
+            <li>a) lspci</li>
+            <li>b) dmesg</li>
+            <li>c) lsusb</li>
+            <li>d) uname -a</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (dmesg muestra los mensajes del kernel, incluyendo detección de hardware).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">4. ¿Qué opción del comando  chmod  asigna permisos recursivamente?</p>
+        <ul class="opciones-lista">
+            <li>a) chmod -a</li>
+            <li>b) chmod -r</li>
+            <li>c) chmod -R</li>
+            <li>d) chmod --all</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>c</strong> (la opción  -R  aplica los permisos recursivamente a subdirectorios y archivos).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">5. ¿Cuál es el archivo de configuración principal de GRUB2?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/grub.conf</li>
+            <li>b) /boot/grub2/grub.cfg</li>
+            <li>c) /etc/default/grub.cfg</li>
+            <li>d) /boot/loader.conf</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (GRUB2 usa /boot/grub2/grub.cfg como archivo principal de configuración).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">6. ¿Qué comando permite cambiar de usuario en una terminal?</p>
+        <ul class="opciones-lista">
+            <li>a) switch</li>
+            <li>b) changeuser</li>
+            <li>c) su</li>
+            <li>d) sudo -s</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>c</strong> (su permite cambiar de usuario, habitualmente a root).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">7. ¿Qué comando permite ver los procesos en ejecución en formato árbol?</p>
+        <ul class="opciones-lista">
+            <li>a) ps aux</li>
+            <li>b) top</li>
+            <li>c) pstree</li>
+            <li>d) jobs</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>c</strong> (pstree muestra la jerarquía de procesos).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">8. ¿Qué comando muestra el UUID de las particiones del sistema?</p>
+        <ul class="opciones-lista">
+            <li>a) blkid</li>
+            <li>b) fdisk -l</li>
+            <li>c) lsblk -f</li>
+            <li>d) mount</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>a</strong> (blkid muestra el UUID y tipo de sistema de archivos de cada partición).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">9. ¿Qué archivo contiene la configuración de red en Debian/Ubuntu tradicionales?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/sysconfig/network-scripts/ifcfg-eth0</li>
+            <li>b) /etc/network/interfaces</li>
+            <li>c) /etc/resolv.conf</li>
+            <li>d) /etc/hostname</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (/etc/network/interfaces define interfaces de red en Debian).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">10. ¿Qué comando se usa para sincronizar los datos pendientes en disco?</p>
+        <ul class="opciones-lista">
+            <li>a) sync</li>
+            <li>b) flush</li>
+            <li>c) write</li>
+            <li>d) mount -f</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>a</strong> (sync fuerza la escritura de datos pendientes en disco).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">11. ¿Qué comando lista los usuarios actualmente conectados?</p>
+        <ul class="opciones-lista">
+            <li>a) who</li>
+            <li>b) users</li>
+            <li>c) w</li>
+            <li>d) todas las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>d</strong> (who, users y w muestran información de usuarios conectados).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">12. ¿Qué comando muestra los módulos del kernel cargados?</p>
+        <ul class="opciones-lista">
+            <li>a) lsmod</li>
+            <li>b) modprobe -l</li>
+            <li>c) insmod</li>
+            <li>d) uname -m</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>a</strong> (lsmod lista los módulos actualmente cargados en el kernel).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">13. ¿Cómo se establece un enlace simbólico en Linux?</p>
+        <ul class="opciones-lista">
+            <li>a) link archivo enlace</li>
+            <li>b) ln archivo enlace</li>
+            <li>c) ln -s archivo enlace</li>
+            <li>d) cp -s archivo enlace</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>c</strong> (ln -s crea un enlace simbólico).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">14. ¿Qué comando muestra el uso de memoria RAM y swap?</p>
+        <ul class="opciones-lista">
+            <li>a) free -h</li>
+            <li>b) top -m</li>
+            <li>c) meminfo</li>
+            <li>d) vmstat</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>a</strong> (free -h muestra memoria total, usada, libre y swap en formato legible).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">15. ¿Qué archivo define los sistemas de archivos a montar al inicio?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/mounts.conf</li>
+            <li>b) /etc/fstab</li>
+            <li>c) /etc/init.d/mount</li>
+            <li>d) /boot/fstab.cfg</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (/etc/fstab contiene las entradas de montaje automático).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">16. ¿Qué comando permite programar una tarea repetitiva?</p>
+        <ul class="opciones-lista">
+            <li>a) at</li>
+            <li>b) cron</li>
+            <li>c) systemctl</li>
+            <li>d) time</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (cron se usa para programar tareas periódicas).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">17. ¿Cómo se recarga la tabla de particiones sin reiniciar?</p>
+        <ul class="opciones-lista">
+            <li>a) partprobe</li>
+            <li>b) fdisk -u</li>
+            <li>c) mount -a</li>
+            <li>d) sync</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>a</strong> (partprobe notifica al kernel los cambios en particiones).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">18. ¿Qué hace el comando  passwd -l usuario ?</p>
+        <ul class="opciones-lista">
+            <li>a) Cambia la contraseña</li>
+            <li>b) Bloquea la cuenta del usuario</li>
+            <li>c) Elimina la contraseña</li>
+            <li>d) Crea un usuario nuevo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (la opción -l bloquea la cuenta del usuario).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">19. ¿Cómo se muestra la dirección IP actual en un sistema moderno?</p>
+        <ul class="opciones-lista">
+            <li>a) ifconfig</li>
+            <li>b) ip addr show</li>
+            <li>c) netstat -i</li>
+            <li>d) route -n</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (ip addr show muestra las direcciones IP de las interfaces).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">20. ¿Qué comando elimina un paquete en sistemas basados en Debian?</p>
+        <ul class="opciones-lista">
+            <li>a) rpm -e paquete</li>
+            <li>b) apt remove paquete</li>
+            <li>c) dpkg -i paquete</li>
+            <li>d) apt-cache purge paquete</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (apt remove elimina el paquete, manteniendo archivos de configuración).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">21. ¿Qué opción de  grep  ignora mayúsculas y minúsculas?</p>
+        <ul class="opciones-lista">
+            <li>a) -r</li>
+            <li>b) -c</li>
+            <li>c) -i</li>
+            <li>d) -v</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>c</strong> (grep -i ignora diferencias de mayúsculas/minúsculas).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">22. ¿Qué archivo contiene las contraseñas cifradas?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/passwd</li>
+            <li>b) /etc/shadow</li>
+            <li>c) /etc/login.defs</li>
+            <li>d) /etc/security/passwd</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (/etc/shadow guarda las contraseñas cifradas).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">23. ¿Qué hace el comando  kill -9 PID ?</p>
+        <ul class="opciones-lista">
+            <li>a) Pausa el proceso</li>
+            <li>b) Finaliza el proceso de forma forzada</li>
+            <li>c) Reinicia el proceso</li>
+            <li>d) Muestra información del proceso</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (envía la señal SIGKILL, finalizando el proceso sin posibilidad de interceptarla).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">24. ¿Qué hace el comando  tar xvf archivo.tar ?</p>
+        <ul class="opciones-lista">
+            <li>a) Crea un archivo tar</li>
+            <li>b) Extrae un archivo tar</li>
+            <li>c) Lista el contenido</li>
+            <li>d) Comprime el archivo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (x extrae, v muestra progreso, f especifica el archivo).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">25. ¿Qué comando muestra la hora del sistema?</p>
+        <ul class="opciones-lista">
+            <li>a) date</li>
+            <li>b) time</li>
+            <li>c) clock</li>
+            <li>d) hwclock</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>a</strong> (date muestra o ajusta la hora del sistema operativo).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">26. ¿Qué archivo contiene la información de grupos de usuarios?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/group</li>
+            <li>b) /etc/shadow</li>
+            <li>c) /etc/login.defs</li>
+            <li>d) /etc/useradd</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>a</strong> (/etc/group define los grupos y sus miembros).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">27. ¿Qué comando muestra los archivos abiertos por un proceso?</p>
+        <ul class="opciones-lista">
+            <li>a) lsof</li>
+            <li>b) ps</li>
+            <li>c) netstat</li>
+            <li>d) strace</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>a</strong> (lsof lista los archivos abiertos por procesos).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">28. ¿Qué comando busca un archivo dentro del sistema de archivos?</p>
+        <ul class="opciones-lista">
+            <li>a) search</li>
+            <li>b) grep</li>
+            <li>c) locate</li>
+            <li>d) find</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>d</strong> (find busca en el sistema de archivos según criterios).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">29. ¿Qué hace  mount -a ?</p>
+        <ul class="opciones-lista">
+            <li>a) Monta todos los discos disponibles</li>
+            <li>b) Monta todas las entradas definidas en /etc/fstab</li>
+            <li>c) Desmonta todos los sistemas de archivos</li>
+            <li>d) Monta particiones externas solamente</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (monta todas las entradas de /etc/fstab que no estén montadas).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">30. ¿Qué comando muestra las últimas líneas de un archivo?</p>
+        <ul class="opciones-lista">
+            <li>a) head</li>
+            <li>b) tail</li>
+            <li>c) cat</li>
+            <li>d) less</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (tail muestra las últimas líneas, útil para logs).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">31. ¿Qué archivo controla el comportamiento del shell Bash?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/bash.conf</li>
+            <li>b) ~/.bashrc</li>
+            <li>c) ~/.profile</li>
+            <li>d) /etc/login.defs</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (~/.bashrc define variables y alias para el shell Bash del usuario).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">32. ¿Qué comando muestra la versión del kernel en ejecución?</p>
+        <ul class="opciones-lista">
+            <li>a) kernelver</li>
+            <li>b) uname -r</li>
+            <li>c) lsb_release -a</li>
+            <li>d) cat /etc/issue</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (uname -r muestra la versión del kernel actual).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">33. ¿Qué comando permite cambiar permisos en formato octal?</p>
+        <ul class="opciones-lista">
+            <li>a) chmod 755 archivo</li>
+            <li>b) chown 755 archivo</li>
+            <li>c) chmod --octal archivo</li>
+            <li>d) chperm archivo 755</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>a</strong> (chmod acepta permisos en formato octal).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">34. ¿Qué comando muestra el uso del disco por directorio?</p>
+        <ul class="opciones-lista">
+            <li>a) df</li>
+            <li>b) du -h</li>
+            <li>c) ls -lh</li>
+            <li>d) find / -size</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (du -h muestra el tamaño de directorios y subdirectorios).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">35. ¿Cómo se reinicia el sistema de forma segura desde la línea de comandos?</p>
+        <ul class="opciones-lista">
+            <li>a) reboot</li>
+            <li>b) poweroff</li>
+            <li>c) shutdown -r now</li>
+            <li>d) init 0</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>c</strong> (shutdown -r now reinicia de forma controlada).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">36. ¿Qué comando muestra las rutas de red y la puerta de enlace?</p>
+        <ul class="opciones-lista">
+            <li>a) route -n</li>
+            <li>b) netstat -r</li>
+            <li>c) ip route show</li>
+            <li>d) Todas las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>d</strong> (todas muestran información de enrutamiento).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">37. ¿Qué comando lista los paquetes instalados en Debian?</p>
+        <ul class="opciones-lista">
+            <li>a) rpm -qa</li>
+            <li>b) dpkg -l</li>
+            <li>c) apt-cache list</li>
+            <li>d) yum list</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (dpkg -l lista los paquetes instalados en sistemas Debian).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">38. ¿Qué hace  history -c ?</p>
+        <ul class="opciones-lista">
+            <li>a) Muestra el historial</li>
+            <li>b) Limpia el historial del shell</li>
+            <li>c) Cierra la sesión</li>
+            <li>d) Cambia el comando anterior</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (borra el historial de comandos del usuario actual).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">39. ¿Qué comando se usa para configurar servicios al inicio con systemd?</p>
+        <ul class="opciones-lista">
+            <li>a) chkconfig</li>
+            <li>b) systemctl enable servicio</li>
+            <li>c) update-rc.d</li>
+            <li>d) initctl add</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (systemctl enable habilita el servicio en el arranque).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">40. ¿Qué comando detiene un servicio en systemd?</p>
+        <ul class="opciones-lista">
+            <li>a) service stop nombre</li>
+            <li>b) systemctl stop nombre</li>
+            <li>c) killall nombre</li>
+            <li>d) disable nombre</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (systemctl stop detiene el servicio especificado).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">41. ¿Qué comando muestra los últimos 100 mensajes del kernel?</p>
+        <ul class="opciones-lista">
+            <li>a) dmesg | tail -100</li>
+            <li>b) journalctl -k -n 100</li>
+            <li>c) cat /var/log/syslog | tail -100</li>
+            <li>d) Todas las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>d</strong> (todas son formas válidas según el sistema de logging).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">42. ¿Cómo se crea un usuario nuevo?</p>
+        <ul class="opciones-lista">
+            <li>a) adduser nombre</li>
+            <li>b) useradd nombre</li>
+            <li>c) mkuser nombre</li>
+            <li>d) a y b</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>d</strong> (adduser y useradd crean usuarios, según la distro).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">43. ¿Qué hace  export PATH=$PATH:/usr/local/bin ?</p>
+        <ul class="opciones-lista">
+            <li>a) Elimina /usr/local/bin del PATH</li>
+            <li>b) Sustituye el PATH actual</li>
+            <li>c) Añade /usr/local/bin al PATH</li>
+            <li>d) No hace nada</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>c</strong> (añade una nueva ruta de búsqueda de comandos).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">44. ¿Qué archivo contiene los DNS configurados?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/hosts</li>
+            <li>b) /etc/resolv.conf</li>
+            <li>c) /etc/network/dns.conf</li>
+            <li>d) /etc/nsswitch.conf</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (/etc/resolv.conf contiene los servidores DNS).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">45. ¿Qué comando comprime con formato gzip?</p>
+        <ul class="opciones-lista">
+            <li>a) tar cvf archivo.gz</li>
+            <li>b) gzip archivo</li>
+            <li>c) compress archivo</li>
+            <li>d) tar zcvf archivo.tar</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (gzip archivo genera archivo.gz).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">46. ¿Qué hace  chmod u+x script.sh ?</p>
+        <ul class="opciones-lista">
+            <li>a) Asigna permiso de lectura al usuario</li>
+            <li>b) Asigna permiso de ejecución al usuario</li>
+            <li>c) Asigna permiso de escritura al usuario</li>
+            <li>d) Elimina permisos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (añade permiso de ejecución al propietario).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">47. ¿Qué comando muestra la tabla de particiones?</p>
+        <ul class="opciones-lista">
+            <li>a) mount</li>
+            <li>b) fdisk -l</li>
+            <li>c) blkid</li>
+            <li>d) parted -l</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (fdisk -l lista las particiones de los discos).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">48. ¿Qué comando muestra los puertos en escucha?</p>
+        <ul class="opciones-lista">
+            <li>a) lsof -i</li>
+            <li>b) ss -tuln</li>
+            <li>c) netstat -tuln</li>
+            <li>d) Todos los anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>d</strong> (todos muestran puertos TCP/UDP en escucha).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">49. ¿Qué hace  alias ll='ls -l' ?</p>
+        <ul class="opciones-lista">
+            <li>a) Crea un enlace simbólico</li>
+            <li>b) Define un alias de comando</li>
+            <li>c) Lista archivos ocultos</li>
+            <li>d) No tiene efecto</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>b</strong> (define un alias de comando dentro del shell).
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">50. ¿Qué comando imprime las variables de entorno?</p>
+        <ul class="opciones-lista">
+            <li>a) export</li>
+            <li>b) printenv</li>
+            <li>c) env</li>
+            <li>d) b y c</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            La respuesta correcta es: <strong>d</strong> (printenv y env muestran variables de entorno).
+        </div>
+    </div>
+
+    <script>
+        function toggleRespuesta(button) {
+            // Busca el div de respuesta que sigue inmediatamente al botón
+            var respuestaDiv = button.nextElementSibling;
+            
+            // Alterna la visibilidad
+            if (respuestaDiv.style.display === 'none' || respuestaDiv.style.display === '') {
+                respuestaDiv.style.display = 'block';
+                button.textContent = 'Ocultar Respuesta';
+                button.style.backgroundColor = '#dc3545'; // Rojo para "Ocultar"
+            } else {
+                respuestaDiv.style.display = 'none';
+                button.textContent = 'Mostrar Respuesta';
+                button.style.backgroundColor = '#007bff'; // Azul para "Mostrar"
+            }
+        }
+    </script>
+
+</body>
+</html>

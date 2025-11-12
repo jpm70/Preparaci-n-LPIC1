@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen LPIC-1 - Práctica 90 Test2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .pregunta-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .pregunta-texto {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opciones-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .opciones-lista li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .boton-mostrar {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        .boton-mostrar:hover {
+            background-color: #0056b3;
+        }
+        .respuesta {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e9f7e9;
+            border-left: 5px solid #28a745;
+            border-radius: 5px;
+            display: none; /* ESTO OCULTA LA RESPUESTA POR DEFECTO */
+            color: #28a745;
+        }
+        .respuesta strong {
+            color: #1e7e34;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Examen de Práctica LPIC-1 (Test 90)</h1>
+
+    <div class="pregunta-container">
+        <p class="pregunta-texto">1. ¿Qué comando se utiliza para mostrar el contenido de un archivo en la terminal?</p>
+        <ul class="opciones-lista">
+            <li>a) ls</li>
+            <li>b) cat</li>
+            <li>c) mv</li>
+            <li>d) touch</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">2. ¿Cuál es el comando para cambiar el propietario de un archivo?</p>
+        <ul class="opciones-lista">
+            <li>a) chmod</li>
+            <li>b) chown</li>
+            <li>c) chgrp</li>
+            <li>d) owner</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">3. ¿Qué comando permite ver el historial de comandos ejecutados?</p>
+        <ul class="opciones-lista">
+            <li>a) history</li>
+            <li>b) log</li>
+            <li>c) bash_history</li>
+            <li>d) commands</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">4. ¿Qué archivo almacena la configuración de sudoers?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/sudo.conf</li>
+            <li>b) /etc/sudoers</li>
+            <li>c) /etc/sudo.d</li>
+            <li>d) /etc/sudo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">5. ¿Qué comando se usa para buscar texto dentro de archivos?</p>
+        <ul class="opciones-lista">
+            <li>a) find</li>
+            <li>b) locate</li>
+            <li>c) grep</li>
+            <li>d) search</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">6. ¿Qué comando muestra la ruta absoluta del directorio actual?</p>
+        <ul class="opciones-lista">
+            <li>a) pwd</li>
+            <li>b) cd</li>
+            <li>c) path</li>
+            <li>d) ls</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">7. ¿Cuál es el archivo de configuración principal de Bash?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/bash profile</li>
+            <li>b) ~/.bashrc</li>
+            <li>c) ~/.bash profile</li>
+            <li>d) /etc/bashrc</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">8. ¿Qué comando se utiliza para cambiar el grupo de un archivo?</p>
+        <ul class="opciones-lista">
+            <li>a) chown</li>
+            <li>b) chmod</li>
+            <li>c) chgrp</li>
+            <li>d) groupmod</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">9. ¿Qué comando permite ver el espacio ocupado por los archivos y directorios?</p>
+        <ul class="opciones-lista">
+            <li>a) df</li>
+            <li>b) du</li>
+            <li>c) ls</li>
+            <li>d) stat</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">10. ¿Qué comando se usa para crear un enlace duro?</p>
+        <ul class="opciones-lista">
+            <li>a) ln</li>
+            <li>b) ln -s</li>
+            <li>c) link -h</li>
+            <li>d) hardlink</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">11. ¿Qué comando muestra los procesos que están usando la red?</p>
+        <ul class="opciones-lista">
+            <li>a) netstat</li>
+            <li>b) ps</li>
+            <li>c) top</li>
+            <li>d) ping</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">12. ¿Qué archivo contiene la configuración de arranque en sistemas basados en SysVinit?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/init.d/</li>
+            <li>b) /etc/rc.local</li>
+            <li>c) /etc/boot.conf</li>
+            <li>d) /etc/grub.cfg</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">13. ¿Qué comando se utiliza para detener un servicio en System V?</p>
+        <ul class="opciones-lista">
+            <li>a) service stop</li>
+            <li>b) systemctl stop</li>
+            <li>c) /etc/init.d/servicio stop</li>
+            <li>d) killall servicio</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">14. ¿Qué comando permite ver la fecha y hora actuales?</p>
+        <ul class="opciones-lista">
+            <li>a) time</li>
+            <li>b) date</li>
+            <li>c) clock</li>
+            <li>d) now</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">15. ¿Qué comando se usa para copiar archivos de manera interactiva y mostrando progreso?</p>
+        <ul class="opciones-lista">
+            <li>a) cp</li>
+            <li>b) rsync</li>
+            <li>c) mv</li>
+            <li>d) scp</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">16. ¿Qué comando permite ver los permisos de los archivos en formato largo?</p>
+        <ul class="opciones-lista">
+            <li>a) ls</li>
+            <li>b) ls -l</li>
+            <li>c) stat</li>
+            <li>d) perms</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">17. ¿Qué comando se utiliza para comprimir archivos en formato tar.bz2?</p>
+        <ul class="opciones-lista">
+            <li>a) tar -czf</li>
+            <li>b) tar -xjf</li>
+            <li>c) tar -cjf</li>
+            <li>d) tar -zxf</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>c</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">18. ¿Qué comando muestra la información de la memoria swap?</p>
+        <ul class="opciones-lista">
+            <li>a) free</li>
+            <li>b) top</li>
+            <li>c) swapinfo</li>
+            <li>d) memstat</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">19. ¿Qué comando se usa para mostrar el árbol de directorios?</p>
+        <ul class="opciones-lista">
+            <li>a) tree</li>
+            <li>b) ls -R</li>
+            <li>c) dir</li>
+            <li>d) find</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">20. ¿Qué comando permite cambiar la contraseña de un usuario?</p>
+        <ul class="opciones-lista">
+            <li>a) passwd</li>
+            <li>b) chpasswd</li>
+            <li>c) usermod</li>
+            <li>d) chuser</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">21. ¿Qué comando se utiliza para mostrar los puertos abiertos en el sistema?</p>
+        <ul class="opciones-lista">
+            <li>a) netstat -tuln</li>
+            <li>b) lsof</li>
+            <li>c) ss</li>
+            <li>d) ports</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">22. ¿Qué comando se usa para mostrar la información de la CPU?</p>
+        <ul class="opciones-lista">
+            <li>a) lscpu</li>
+            <li>b) cpuinfo</li>
+            <li>c) top</li>
+            <li>d) uname -c</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">23. ¿Qué comando permite ver los últimos registros del sistema?</p>
+        <ul class="opciones-lista">
+            <li>a) tail /var/log/syslog</li>
+            <li>b) head /var/log/syslog</li>
+            <li>c) less /var/log/syslog</li>
+            <li>d) cat /var/log/syslog</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">24. ¿Qué comando se utiliza para montar un sistema de archivos NFS?</p>
+        <ul class="opciones-lista">
+            <li>a) mount -t nfs</li>
+            <li>b) nfs-mount</li>
+            <li>c) nfsmount</li>
+            <li>d) mount-nfs</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">25. ¿Qué comando muestra la versión de Bash instalada?</p>
+        <ul class="opciones-lista">
+            <li>a) bash --version</li>
+            <li>b) bash -v</li>
+            <li>c) version bash</li>
+            <li>d) bash -version</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">26. ¿Qué comando se usa para mostrar la configuración de red actual?</p>
+        <ul class="opciones-lista">
+            <li>a) ifconfig</li>
+            <li>b) ip addr</li>
+            <li>c) netstat</li>
+            <li>d) route</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">27. ¿Qué comando permite ver los archivos ocultos en un directorio?</p>
+        <ul class="opciones-lista">
+            <li>a) ls</li>
+            <li>b) ls -a</li>
+            <li>c) ls -l</li>
+            <li>d) showhidden</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">28. ¿Qué comando se utiliza para crear un usuario nuevo?</p>
+        <ul class="opciones-lista">
+            <li>a) useradd</li>
+            <li>b) adduser</li>
+            <li>c) mkuser</li>
+            <li>d) newuser</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">29. ¿Qué comando permite ver el uso de disco por partición?</p>
+        <ul class="opciones-lista">
+            <li>a) df -h</li>
+            <li>b) du -h</li>
+            <li>c) lsblk</li>
+            <li>d) parted</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">30. ¿Qué comando se utiliza para eliminar un grupo?</p>
+        <ul class="opciones-lista">
+            <li>a) groupdel</li>
+            <li>b) delgroup</li>
+            <li>c) rmgroup</li>
+            <li>d) groupremove</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">31. ¿Qué comando permite ver la configuración de los discos?</p>
+        <ul class="opciones-lista">
+            <li>a) fdisk -l</li>
+            <li>b) lsblk</li>
+            <li>c) blkid</li>
+            <li>d) parted -l</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">32. ¿Qué comando se usa para buscar archivos por nombre?</p>
+        <ul class="opciones-lista">
+            <li>a) find</li>
+            <li>b) locate</li>
+            <li>c) grep</li>
+            <li>d) search</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">33. ¿Qué comando permite ver los servicios activos en systemd?</p>
+        <ul class="opciones-lista">
+            <li>a) systemctl list-units --type=service</li>
+            <li>b) service --status-all</li>
+            <li>c) systemctl status</li>
+            <li>d) systemctl active</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">34. ¿Qué comando se utiliza para editar el archivo de configuración de red en Ubuntu?</p>
+        <ul class="opciones-lista">
+            <li>a) nano /etc/network/interfaces</li>
+            <li>b) vi /etc/network/interfaces</li>
+            <li>c) edit /etc/network/interfaces</li>
+            <li>d) config /etc/network/interfaces</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">35. ¿Qué comando muestra la información de los módulos del kernel?</p>
+        <ul class="opciones-lista">
+            <li>a) lsmod</li>
+            <li>b) modinfo</li>
+            <li>c) insmod</li>
+            <li>d) kernelmod</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">36. ¿Qué comando se utiliza para reiniciar el sistema?</p>
+        <ul class="opciones-lista">
+            <li>a) reboot</li>
+            <li>b) shutdown -r now</li>
+            <li>c) init 6</li>
+            <li>d) restart</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">37. ¿Qué comando permite ver la configuración de los usuarios?</p>
+        <ul class="opciones-lista">
+            <li>a) cat /etc/passwd</li>
+            <li>b) cat /etc/shadow</li>
+            <li>c) cat /etc/group</li>
+            <li>d) cat /etc/login.defs</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">38. ¿Qué comando se usa para cambiar el shell de un usuario?</p>
+        <ul class="opciones-lista">
+            <li>a) chsh</li>
+            <li>b) chshell</li>
+            <li>c) usermod -s</li>
+            <li>d) shellchange</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">39. ¿Qué comando permite ver la información de la versión del sistema operativo?</p>
+        <ul class="opciones-lista">
+            <li>a) lsb_release -a</li>
+            <li>b) uname -a</li>
+            <li>c) cat /etc/os-release</li>
+            <li>d) version</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">40. ¿Qué comando se utiliza para mostrar los procesos en ejecución?</p>
+        <ul class="opciones-lista">
+            <li>a) ps aux</li>
+            <li>b) top</li>
+            <li>c) htop</li>
+            <li>d) jobs</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">41. ¿Qué comando permite ver la configuración de los grupos?</p>
+        <ul class="opciones-lista">
+            <li>a) cat /etc/group</li>
+            <li>b) groupinfo</li>
+            <li>c) groups</li>
+            <li>d) showgroups</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">42. ¿Qué comando se usa para mostrar la información de la memoria RAM?</p>
+        <ul class="opciones-lista">
+            <li>a) free -m</li>
+            <li>b) meminfo</li>
+            <li>c) top</li>
+            <li>d) ramstat</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">43. ¿Qué comando permite ver la configuración de los servicios en System V?</p>
+        <ul class="opciones-lista">
+            <li>a) service --status-all</li>
+            <li>b) chkconfig --list</li>
+            <li>c) systemctl list-units</li>
+            <li>d) initctl list</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">44. ¿Qué comando se utiliza para mostrar la configuración de la red en CentOS?</p>
+        <ul class="opciones-lista">
+            <li>a) nmcli</li>
+            <li>b) ifconfig</li>
+            <li>c) ip addr</li>
+            <li>d) netstat</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">45. ¿Qué comando permite ver la información de los dispositivos USB?</p>
+        <ul class="opciones-lista">
+            <li>a) lsusb</li>
+            <li>b) usbinfo</li>
+            <li>c) usb-devices</li>
+            <li>d) showusb</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">46. ¿Qué comando se usa para mostrar la configuración de los discos duros?</p>
+        <ul class="opciones-lista">
+            <li>a) lsblk</li>
+            <li>b) fdisk -l</li>
+            <li>c) blkid</li>
+            <li>d) parted -l</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">47. ¿Qué comando permite ver la configuración de los archivos de inicio?</p>
+        <ul class="opciones-lista">
+            <li>a) cat /etc/profile</li>
+            <li>b) cat ~/.bash_profile</li>
+            <li>c) cat ~/.bashrc</li>
+            <li>d) cat /etc/bashrc</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">48. ¿Qué comando se utiliza para mostrar la información de los procesos en segundo plano?</p>
+        <ul class="opciones-lista">
+            <li>a) jobs</li>
+            <li>b) bg</li>
+            <li>c) ps</li>
+            <li>d) top</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">49. ¿Qué comando permite ver la configuración de los permisos de archivos?</p>
+        <ul class="opciones-lista">
+            <li>a) ls -l</li>
+            <li>b) perms</li>
+            <li>c) chmod</li>
+            <li>d) chown</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">50. ¿Qué comando se usa para mostrar la información de los archivos abiertos por procesos?</p>
+        <ul class="opciones-lista">
+            <li>a) lsof</li>
+            <li>b) openfiles</li>
+            <li>c) ps</li>
+            <li>d) netstat</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+
+    <script>
+        function toggleRespuesta(button) {
+            // Busca el div de respuesta que sigue inmediatamente al botón
+            var respuestaDiv = button.nextElementSibling;
+            
+            // Alterna la visibilidad
+            if (respuestaDiv.style.display === 'none' || respuestaDiv.style.display === '') {
+                respuestaDiv.style.display = 'block';
+                button.textContent = 'Ocultar Respuesta';
+                button.style.backgroundColor = '#dc3545'; // Rojo para "Ocultar"
+            } else {
+                respuestaDiv.style.display = 'none';
+                button.textContent = 'Mostrar Respuesta';
+                button.style.backgroundColor = '#007bff'; // Azul para "Mostrar"
+            }
+        }
+    </script>
+
+</body>
+</html>

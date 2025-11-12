@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen LPIC-1 - Práctica 91 Test3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .pregunta-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .pregunta-texto {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opciones-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .opciones-lista li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .boton-mostrar {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        .boton-mostrar:hover {
+            background-color: #0056b3;
+        }
+        .respuesta {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e9f7e9;
+            border-left: 5px solid #28a745;
+            border-radius: 5px;
+            display: none; /* ESTO OCULTA LA RESPUESTA POR DEFECTO */
+            color: #28a745;
+        }
+        .respuesta strong {
+            color: #1e7e34;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Examen de Práctica LPIC-1 (Test 91)</h1>
+
+    <div class="pregunta-container">
+        <p class="pregunta-texto">1. ¿Qué comando muestra solo los procesos que pertenecen al usuario “juan” y contienen la palabra “sshd”?</p>
+        <ul class="opciones-lista">
+            <li>a) ps aux | grep juan | grep sshd</li>
+            <li>b) ps -u juan | grep sshd</li>
+            <li>c) ps -ef | grep juan | grep sshd</li>
+            <li>d) ps -U juan -u juan -o pid,cmd | grep sshd</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>d</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">2. ¿Cuál es el propósito de la opción “-P” en el comando tar?</p>
+        <ul class="opciones-lista">
+            <li>a) Preserva los permisos</li>
+            <li>b) Preserva los nombres absolutos de ruta</li>
+            <li>c) Preserva los propietarios</li>
+            <li>d) Preserva los enlaces duros</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">3. ¿Qué comando muestra el identificador de grupo efectivo de un usuario?</p>
+        <ul class="opciones-lista">
+            <li>a) id -g</li>
+            <li>b) id -G</li>
+            <li>c) groups</li>
+            <li>d) whoami</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">4. ¿Qué hace el siguiente comando?  <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">find /var -type f -size +10M -exec rm {} \;</code></p>
+        <ul class="opciones-lista">
+            <li>a) Busca archivos mayores de 10MB en /var y los elimina</li>
+            <li>b) Busca directorios mayores de 10MB en /var y los elimina</li>
+            <li>c) Busca archivos menores de 10MB en /var y los elimina</li>
+            <li>d) Busca archivos mayores de 10MB en /var y los mueve</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">5. ¿Cuál es el resultado de ejecutar <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">chmod 2750 directorio</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Permisos rwxr-x---</li>
+            <li>b) Permisos rwxr-s---</li>
+            <li>c) Permisos rwxrwx---</li>
+            <li>d) Permisos rwxrws---</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">6. ¿Qué comando muestra el espacio ocupado por cada sistema de archivos montado en bloques de 1K?</p>
+        <ul class="opciones-lista">
+            <li>a) df -h</li>
+            <li>b) df -k</li>
+            <li>c) du -k</li>
+            <li>d) df -B1</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">7. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">ln archivo1 archivo2</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Crea un enlace simbólico</li>
+            <li>b) Crea un enlace duro</li>
+            <li>c) Copia archivo1 en archivo2</li>
+            <li>d) Renombra archivo1 a archivo2</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">8. ¿Qué archivo contiene la configuración de los límites de recursos para los usuarios?</p>
+        <ul class="opciones-lista">
+            <li>a) /etc/security/limits.conf</li>
+            <li>b) /etc/login.defs</li>
+            <li>c) /etc/shadow</li>
+            <li>d) /etc/pam.d/limits</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">9. ¿Qué comando muestra los archivos abiertos por el proceso con PID 1234?</p>
+        <ul class="opciones-lista">
+            <li>a) lsof -p 1234</li>
+            <li>b) ps -p 1234</li>
+            <li>c) fuser 1234</li>
+            <li>d) openfiles 1234</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">10. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">useradd -m -s /bin/bash juan</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Crea el usuario juan sin directorio home</li>
+            <li>b) Crea el usuario juan con directorio home y shell bash</li>
+            <li>c) Crea el usuario juan con shell por defecto /bin/sh</li>
+            <li>d) Crea el usuario juan y lo añade al grupo bash</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">11. ¿Qué comando muestra las variables de entorno exportadas en el shell actual?</p>
+        <ul class="opciones-lista">
+            <li>a) env</li>
+            <li>b) set</li>
+            <li>c) export</li>
+            <li>d) printenv</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">12. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">crontab -e</code> ejecutado como usuario root?</p>
+        <ul class="opciones-lista">
+            <li>a) Edita el cron del usuario root</li>
+            <li>b) Edita el cron global del sistema</li>
+            <li>c) Edita el cron de todos los usuarios</li>
+            <li>d) Edita el cron de root y de todos los usuarios</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">13. ¿Qué comando muestra los últimos 50 mensajes del registro del kernel usando systemd?</p>
+        <ul class="opciones-lista">
+            <li>a) dmesg | tail -50</li>
+            <li>b) journalctl -k -n 50</li>
+            <li>c) tail -50 /var/log/messages</li>
+            <li>d) journalctl -n 50</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">14. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">umask 027</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Los nuevos archivos tendrán permisos 750</li>
+            <li>b) Los nuevos archivos tendrán permisos 640</li>
+            <li>c) Los nuevos archivos tendrán permisos 720</li>
+            <li>d) Los nuevos archivos tendrán permisos 750 para directorios y 640 para archivos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>d</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">15. ¿Qué comando muestra el uso de espacio de disco de todos los subdirectorios del directorio actual, ordenados de mayor a menor?</p>
+        <ul class="opciones-lista">
+            <li>a) du -sh * | sort -hr</li>
+            <li>b) df -h | sort -hr</li>
+            <li>c) du -h | sort -n</li>
+            <li>d) ls -lh | sort -hr</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">16. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">passwd -e juan</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Elimina la contraseña de juan</li>
+            <li>b) Expira la contraseña de juan</li>
+            <li>c) Cambia la contraseña de juan</li>
+            <li>d) Bloquea la cuenta de juan</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">17. ¿Qué comando muestra los servicios que fallaron al iniciar en systemd?</p>
+        <ul class="opciones-lista">
+            <li>a) systemctl --failed</li>
+            <li>b) systemctl list-units --failed</li>
+            <li>c) systemctl status failed</li>
+            <li>d) systemctl list-failed</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">18. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">tar --append -f backup.tar nuevo.txt</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Añade nuevo.txt al archivo backup.tar</li>
+            <li>b) Extrae nuevo.txt de backup.tar</li>
+            <li>c) Elimina nuevo.txt de backup.tar</li>
+            <li>d) Crea backup.tar con nuevo.txt</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">19. ¿Qué comando muestra el identificador de usuario efectivo?</p>
+        <ul class="opciones-lista">
+            <li>a) id -u</li>
+            <li>b) id -g</li>
+            <li>c) whoami</li>
+            <li>d) users</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">20. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">mount -o remount,rw /</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Remonta la raíz en solo lectura</li>
+            <li>b) Remonta la raíz en lectura y escritura</li>
+            <li>c) Monta la raíz en modo seguro</li>
+            <li>d) Desmonta la raíz</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">21. ¿Qué comando muestra los archivos modificados en los últimos 2 días en /etc?</p>
+        <ul class="opciones-lista">
+            <li>a) find /etc -mtime -2</li>
+            <li>b) find /etc -ctime -2</li>
+            <li>c) find /etc -atime -2</li>
+            <li>d) find /etc -mmin -2</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">22. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">chage -l juan</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Lista la información de expiración de la cuenta juan</li>
+            <li>b) Cambia la contraseña de juan</li>
+            <li>c) Cambia el shell de juan</li>
+            <li>d) Lista los grupos de juan</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">23. ¿Qué comando muestra los sockets de red abiertos en el sistema?</p>
+        <ul class="opciones-lista">
+            <li>a) ss -tuln</li>
+            <li>b) netstat -an</li>
+            <li>c) lsof -i</li>
+            <li>d) Todas las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>d</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">24. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">dd if=/dev/zero of=/tmp/test bs=1M count=10</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Crea un archivo de 10MB lleno de ceros</li>
+            <li>b) Borra el archivo /tmp/test</li>
+            <li>c) Copia /dev/zero en /tmp/test sin límite</li>
+            <li>d) Crea un archivo de 1MB lleno de ceros</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">25. ¿Qué comando muestra los usuarios conectados y desde qué terminal?</p>
+        <ul class="opciones-lista">
+            <li>a) who</li>
+            <li>b) w</li>
+            <li>c) users</li>
+            <li>d) finger</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">26. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">grep -E '^[0-9]{3,}' archivo.txt</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Busca líneas que empiezan por 3 o más dígitos</li>
+            <li>b) Busca líneas que contienen exactamente 3 dígitos</li>
+            <li>c) Busca líneas que terminan en 3 dígitos</li>
+            <li>d) Busca líneas que contienen letras y números</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">27. ¿Qué comando muestra el espacio libre en el sistema de archivos raíz en bloques de 512 bytes?</p>
+        <ul class="opciones-lista">
+            <li>a) df -h /</li>
+            <li>b) df -k /</li>
+            <li>c) df -P /</li>
+            <li>d) df -B512 /</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>d</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">28. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">ls -l | grep '^d'</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Muestra solo los directorios</li>
+            <li>b) Muestra solo los archivos</li>
+            <li>c) Muestra solo los enlaces simbólicos</li>
+            <li>d) Muestra solo los archivos ocultos</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">29. ¿Qué comando muestra los procesos hijos de un proceso con PID 1000?</p>
+        <ul class="opciones-lista">
+            <li>a) pstree -p 1000</li>
+            <li>b) ps --ppid 1000</li>
+            <li>c) ps --pid 1000</li>
+            <li>d) ps -p 1000</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>b</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">30. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">awk -F: '{print $1}' /etc/passwd</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Muestra los nombres de usuario del sistema</li>
+            <li>b) Muestra los nombres de grupo</li>
+            <li>c) Muestra los shells de los usuarios</li>
+            <li>d) Muestra las contraseñas cifradas</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">31. ¿Qué comando muestra los archivos de más de 100MB en /var/log?</p>
+        <ul class="opciones-lista">
+            <li>a) find /var/log -type f -size +100M</li>
+            <li>b) du -h /var/log | grep 100M</li>
+            <li>c) ls -lh /var/log | grep 100M</li>
+            <li>d) find /var/log -size 100M</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">32. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">chmod g+s directorio</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Activa el bit setgid en el directorio</li>
+            <li>b) Activa el bit setuid en el directorio</li>
+            <li>c) Da permisos de escritura al grupo</li>
+            <li>d) Da permisos de ejecución al grupo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">33. ¿Qué comando muestra los archivos que han sido accedidos en las últimas 24 horas en /tmp?</p>
+        <ul class="opciones-lista">
+            <li>a) find /tmp -atime -1</li>
+            <li>b) find /tmp -mtime -1</li>
+            <li>c) find /tmp -ctime -1</li>
+            <li>d) find /tmp -amin -1</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">34. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">tar -tzf backup.tar.gz etc/hosts</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Lista el archivo etc/hosts dentro del tar.gz</li>
+            <li>b) Extrae el archivo etc/hosts</li>
+            <li>c) Añade el archivo etc/hosts</li>
+            <li>d) Elimina el archivo etc/hosts</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">35. ¿Qué comando muestra los procesos que están usando más CPU en tiempo real?</p>
+        <ul class="opciones-lista">
+            <li>a) top</li>
+            <li>b) ps aux --sort=-%cpu</li>
+            <li>c) htop</li>
+            <li>d) Todas las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>d</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">36. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">mount -a</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Monta todos los sistemas de archivos definidos en /etc/fstab</li>
+            <li>b) Desmonta todos los sistemas de archivos</li>
+            <li>c) Monta todos los dispositivos USB</li>
+            <li>d) Monta solo el sistema raíz</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">37. ¿Qué comando muestra los archivos con permisos SUID en /usr/bin?</p>
+        <ul class="opciones-lista">
+            <li>a) find /usr/bin -perm -4000</li>
+            <li>b) find /usr/bin -perm /4000</li>
+            <li>c) find /usr/bin -suid</li>
+            <li>d) find /usr/bin -perm 4000</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">38. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">echo $</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Muestra el PID del shell actual</li>
+            <li>b) Muestra el valor de la variable $</li>
+            <li>c) Muestra el último código de salida</li>
+            <li>d) Muestra el PID del proceso padre</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">39. ¿Qué comando muestra los archivos de configuración de red en sistemas basados en systemd-networkd?</p>
+        <ul class="opciones-lista">
+            <li>a) ls /etc/systemd/network/</li>
+            <li>b) cat /etc/network/interfaces</li>
+            <li>c) nmcli connection show</li>
+            <li>d) ifconfig</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">40. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">journalctl --disk-usage</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Muestra el espacio ocupado por los logs de systemd</li>
+            <li>b) Muestra el uso de disco del sistema</li>
+            <li>c) Muestra los logs del disco</li>
+            <li>d) Muestra el uso de disco de todos los usuarios</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">41. ¿Qué comando muestra los archivos que contienen la palabra “error” en /var/log?</p>
+        <ul class="opciones-lista">
+            <li>a) grep -r error /var/log</li>
+            <li>b) find /var/log -name ' error '</li>
+            <li>c) grep error /var/log/*</li>
+            <li>d) Todas las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">42. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">passwd -l juan</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Bloquea la cuenta de juan</li>
+            <li>b) Elimina la cuenta de juan</li>
+            <li>c) Cambia la contraseña de juan</li>
+            <li>d) Lista la información de juan</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">43. ¿Qué comando muestra los archivos que ocupan más de 1GB en /home?</p>
+        <ul class="opciones-lista">
+            <li>a) find /home -type f -size +1G</li>
+            <li>b) du -h /home | grep G</li>
+            <li>c) ls -lh /home | grep G</li>
+            <li>d) find /home -size 1G</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">44. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">systemctl mask servicio</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Impide que el servicio se inicie manual o automáticamente</li>
+            <li>b) Elimina el servicio</li>
+            <li>c) Reinicia el servicio</li>
+            <li>d) Habilita el servicio</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">45. ¿Qué comando muestra los archivos con permisos 777 en /tmp?</p>
+        <ul class="opciones-lista">
+            <li>a) find /tmp -perm 0777</li>
+            <li>b) find /tmp -perm -777</li>
+            <li>c) find /tmp -perm /777</li>
+            <li>d) Todas las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">46. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">ls -l /dev/null</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Muestra los permisos y propietario de /dev/null</li>
+            <li>b) Elimina /dev/null</li>
+            <li>c) Redirige la salida a /dev/null</li>
+            <li>d) Crea /dev/null</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">47. ¿Qué comando muestra los archivos modificados exactamente hace 7 días en /etc?</p>
+        <ul class="opciones-lista">
+            <li>a) find /etc -mtime 7</li>
+            <li>b) find /etc -ctime 7</li>
+            <li>c) find /etc -atime 7</li>
+            <li>d) find /etc -mmin 7</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">48. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">sudo !!</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Repite el último comando con sudo</li>
+            <li>b) Repite el último comando</li>
+            <li>c) Ejecuta sudo sin argumentos</li>
+            <li>d) Muestra el historial</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">49. ¿Qué comando muestra los archivos de más de 500 líneas en /var/log?</p>
+        <ul class="opciones-lista">
+            <li>a) find /var/log -type f -exec wc -l {} \; | awk '$1 > 500'</li>
+            <li>b) grep -c '' /var/log/* | awk '$1 > 500'</li>
+            <li>c) wc -l /var/log/* | awk '$1 > 500'</li>
+            <li>d) Todas las anteriores</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+    
+    <div class="pregunta-container">
+        <p class="pregunta-texto">50. ¿Qué hace el comando <code style="background-color: #eee; padding: 2px 4px; border-radius: 3px;">export VAR=valor</code> ?</p>
+        <ul class="opciones-lista">
+            <li>a) Crea una variable de entorno llamada VAR</li>
+            <li>b) Elimina la variable VAR</li>
+            <li>c) Muestra el valor de VAR</li>
+            <li>d) Exporta el valor de VAR a un archivo</li>
+        </ul>
+        <button class="boton-mostrar" onclick="toggleRespuesta(this)">Mostrar Respuesta</button>
+        <div class="respuesta">
+            Respuesta correcta: <strong>a</strong>.
+        </div>
+    </div>
+
+    <script>
+        function toggleRespuesta(button) {
+            // Busca el div de respuesta que sigue inmediatamente al botón
+            var respuestaDiv = button.nextElementSibling;
+            
+            // Alterna la visibilidad
+            if (respuestaDiv.style.display === 'none' || respuestaDiv.style.display === '') {
+                respuestaDiv.style.display = 'block';
+                button.textContent = 'Ocultar Respuesta';
+                button.style.backgroundColor = '#dc3545'; // Rojo para "Ocultar"
+            } else {
+                respuestaDiv.style.display = 'none';
+                button.textContent = 'Mostrar Respuesta';
+                button.style.backgroundColor = '#007bff'; // Azul para "Mostrar"
+            }
+        }
+    </script>
+
+</body>
+</html>
