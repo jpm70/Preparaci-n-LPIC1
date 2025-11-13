@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas de Examen LPIC-1 (1-105)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #1a73e8;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .pregunta-contenedor {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .pregunta {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opcion {
+            margin-left: 20px;
+            padding: 5px 0;
+            color: #555;
+        }
+        .respuesta-boton {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .respuesta-boton:hover {
+            background-color: #0056b3;
+        }
+        .respuesta-contenido {
+            margin-top: 15px;
+            padding: 10px;
+            border-left: 5px solid #28a745;
+            background-color: #e2f9e6;
+            display: none; /* Oculto por defecto */
+        }
+        .respuesta-correcta {
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Preguntas de Examen LPIC-1 (1 a 105)</h1>
+    <hr>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">1.- ¿Qué significa CLI?</div>
+        <div class="opcion">Command Line Interface (Interfaz de Línea de Comandos)</div>
+        <div class="opcion">Command Learning Interface (Interfaz de Aprendizaje de Comandos)</div>
+        <div class="opcion">Core Line Interface (Interfaz de Línea Esencial)</div>
+        <div class="opcion">Core Learning Interface (Interfaz de Aprendizaje Esencial)</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Command Line Interface (Interfaz de Línea de Comandos)</p>
+            <p><strong>Explicación:</strong> **CLI** significa **Command Line Interface**, que es una interfaz de texto utilizada para operar software y sistemas operativos.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">2.- Los comandos distinguen entre mayúsculas y minúsculas. ¿Verdadero o Falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El sistema operativo Linux es **sensible a mayúsculas y minúsculas** (case-sensitive).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">3.- De las siguientes opciones, ¿Cuál NO es una manera correcta de combinar las opciones?</div>
+        <div class="opcion">-I-r</div>
+        <div class="opcion">-rl</div>
+        <div class="opcion">-rl</div>
+        <div class="opcion">-Ir</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> -I-r</p>
+            <p><strong>Explicación:</strong> La forma estándar es agrupar opciones después de un solo guion (ej: `-rl` o `-Ir`). Usar un segundo guion como en **`-I-r`** es incorrecto.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">4.- ¿Qué comando te permite cambiar de directorio?</div>
+        <div class="opcion">chdir</div>
+        <div class="opcion">ch</div>
+        <div class="opcion">Is</div>
+        <div class="opcion">cd</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> cd</p>
+            <p><strong>Explicación:</strong> El comando **`cd`** (change directory) se utiliza para cambiar el directorio de trabajo actual.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">5.- El carácter ~ (tilde) se usa para representar:</div>
+        <div class="opcion">El directorio de inicio de un usuario</div>
+        <div class="opcion">Nada, no tiene un significado especial</div>
+        <div class="opcion">El directorio actual</div>
+        <div class="opcion">El directorio sobre el directorio actual</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> El directorio de inicio de un usuario</p>
+            <p><strong>Explicación:</strong> El carácter **`~`** (tilde) es un acceso directo al directorio **home** del usuario logueado.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">6.- ¿Qué opción para Is ordenará la salida por tamaño de archivo?</div>
+        <div class="opcion">-Z</div>
+        <div class="opcion">-r</div>
+        <div class="opcion">-S</div>
+        <div class="opcion">-s</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> -S</p>
+            <p><strong>Explicación:</strong> La opción **`-S`** del comando `ls` ordena la lista de archivos por **tamaño** de archivo (Size), de mayor a menor.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">7.- Los caracteres .. (doble punto) se usan para representar:</div>
+        <div class="opcion">Nada, no tiene un significado especial</div>
+        <div class="opcion">El directorio actual</div>
+        <div class="opcion">El directorio "home" de un usuario</div>
+        <div class="opcion">El directorio arriba del directorio actual</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> El directorio arriba del directorio actual</p>
+            <p><strong>Explicación:</strong> Los caracteres **`..`** representan el **directorio padre** o el directorio inmediatamente superior.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">8.- El carácter . (punto) se usa para representar:</div>
+        <div class="opcion">Nada, no tiene un significado especial</div>
+        <div class="opcion">El directorio actual</div>
+        <div class="opcion">El directorio arriba del directorio actual</div>
+        <div class="opcion">El directorio "home" de un usuario</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> El directorio actual</p>
+            <p><strong>Explicación:</strong> El carácter **`.`** (punto) representa el **directorio de trabajo actual**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">9.- El primer carácter en una lista larga, resultado de ls -l indica:</div>
+        <div class="opcion">Permisos</div>
+        <div class="opcion">Recuento de Enlaces Físicos</div>
+        <div class="opcion">Tipo de Archivo</div>
+        <div class="opcion">Tamaño de Archivo</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Tipo de Archivo</p>
+            <p><strong>Explicación:</strong> En la salida de `ls -l`, el primer carácter (ej: `d` para directorio, `-` para archivo) indica el **tipo de archivo**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">10.- ¿Cuál de los siguientes comandos creará un nuevo shell conectado como el usuario root?</div>
+        <div class="opcion">sudo</div>
+        <div class="opcion">su</div>
+        <div class="opcion">cp</div>
+        <div class="opcion">dd</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> su</p>
+            <p><strong>Explicación:</strong> El comando **`su`** (substitute user), ejecutado sin argumentos, cambia al usuario **root** e inicia un nuevo shell interactivo.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">11.- ¿Qué comando se usa para copiar archivos a nivel de bit?</div>
+        <div class="opcion">cp</div>
+        <div class="opcion">dd</div>
+        <div class="opcion">...</div>
+        <div class="opcion">...</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> dd</p>
+            <p><strong>Explicación:</strong> El comando **`dd`** se utiliza para copiar datos sin procesar, como particiones de disco o información a nivel de bloque/bit.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">12.- ¿Qué comando le permite al usuario cambiar los permisos de un archivo?</div>
+        <div class="opcion">perm</div>
+        <div class="opcion">chperm</div>
+        <div class="opcion">chmod</div>
+        <div class="opcion">chown</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> chmod</p>
+            <p><strong>Explicación:</strong> El comando **`chmod`** (change mode) se usa para cambiar los **permisos** de acceso a archivos y directorios.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">13.- ¿Cuál de los siguientes comandos regresará solo líneas que comiencen con test?</div>
+        <div class="opcion">grep '^test' file.txt</div>
+        <div class="opcion">grep 'test' file.txt</div>
+        <div class="opcion">grep 'test\$' file.txt</div>
+        <div class="opcion">grep '\$test' file.txt</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> grep '^test' file.txt</p>
+            <p><strong>Explicación:</strong> En `grep`, el carácter **`^`** (circunflejo) ancla el patrón al **inicio de la línea**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">14.- ¿Cuál de los siguientes comandos se usa para cambiar la propiedad de un archivo?</div>
+        <div class="opcion">chperm</div>
+        <div class="opcion">chown</div>
+        <div class="opcion">chmod</div>
+        <div class="opcion">chow</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> chown</p>
+            <p><strong>Explicación:</strong> El comando **`chown`** (change owner) se usa para cambiar el **propietario** (usuario) y/o el grupo de un archivo.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">15.- Cambiar el usuario propietario de un archivo requiere acceso administrativo. ¿Verdadero o Falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Solo el usuario **root** (o un usuario con privilegios `sudo`) puede cambiar la propiedad de un archivo a **otro usuario**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">16.- ¿Cuál de los siguientes comandos puede usarse para renombrar un archivo?</div>
+        <div class="opcion">name</div>
+        <div class="opcion">cp</div>
+        <div class="opcion">rn</div>
+        <div class="opcion">mv</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> mv</p>
+            <p><strong>Explicación:</strong> El comando **`mv`** (move) se utiliza para **mover** un archivo o para **renombrarlo**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">17.- El comando mv requiere al menos dos argumentos. ¿Verdadero o Falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> `mv` requiere al menos el **origen** (archivo a mover) y el **destino** (nuevo nombre o ubicación).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">18.- ¿Qué comando se puede utilizar para copiar un archivo?</div>
+        <div class="opcion">mv</div>
+        <div class="opcion">cp</div>
+        <div class="opcion">cy</div>
+        <div class="opcion">rm</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> cp</p>
+            <p><strong>Explicación:</strong> El comando **`cp`** (copy) se utiliza para hacer copias de archivos y directorios.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">19.- El comando cp requiere al menos dos argumentos. ¿Verdadero o Falso?</div>
+        <div class="opcion">Falso</div>
+        <div class="opcion">Verdadero</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> `cp` requiere el **origen** (archivo a copiar) y el **destino** (ubicación de la copia).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">20.- ¿Qué opción del comando rm permitirá a los usuarios borrar directorios?</div>
+        <div class="opcion">-1</div>
+        <div class="opcion">-r</div>
+        <div class="opcion">-a</div>
+        <div class="opcion">-d</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> -r</p>
+            <p><strong>Explicación:</strong> La opción **`-r`** (recursive) es necesaria para eliminar **directorios** y su contenido con `rm`.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">21.- ¿Cuál de los siguientes comandos se utiliza para filtrar texto?</div>
+        <div class="opcion">dd</div>
+        <div class="opcion">regex</div>
+        <div class="opcion">grep</div>
+        <div class="opcion">text</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> grep</p>
+            <p><strong>Explicación:</strong> El comando **`grep`** (Global Regular Expression Print) se utiliza para buscar líneas de texto que coincidan con un patrón.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">22.- ¿Cuál de los siguientes comandos regresará solo líneas que terminan con test?</div>
+        <div class="opcion">grep 'test' file.txt</div>
+        <div class="opcion">grep 'test' file.txt</div>
+        <div class="opcion">grep 'test\$' file.txt</div>
+        <div class="opcion">grep '\$test' file.txt</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> grep 'test\$' file.txt</p>
+            <p><strong>Explicación:</strong> En `grep`, el carácter **`$`** (dólar) ancla el patrón al **final de la línea**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">23.- ¿Cuál de las siguientes líneas no sera devuelta por el comando grep '^0-9' file.txt?</div>
+        <div class="opcion">3121991</div>
+        <div class="opcion">My favorite food is avocados.</div>
+        <div class="opcion">Hello my name is Joe.</div>
+        <div class="opcion">I am 37 years old.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> 3121991</p>
+            <p><strong>Explicación:</strong> Asumiendo el patrón literal, `grep '^0-9'` busca líneas que comiencen con "0-9". La línea **`3121991`** comienza con "3", por lo que no coincide y no sería devuelta.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">24.- ¿Cuál de las siguientes líneas será entregada por el comando grep 'b[oe]t' file.txt?</div>
+        <div class="opcion">beet</div>
+        <div class="opcion">bet</div>
+        <div class="opcion">boet</div>
+        <div class="opcion">boot</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> bet</p>
+            <p><strong>Explicación:</strong> El patrón **`b[oe]t`** coincide con `b` seguido de una `o` **o** una `e`, seguido de `t`. Las coincidencias válidas son `bot` y **`bet`**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">25.- ¿Cuál de los siguientes comandos puede ser usado para mostrar la información de configuración de red?</div>
+        <div class="opcion">ifconfig</div>
+        <div class="opcion">netconfig</div>
+        <div class="opcion">pwd</div>
+        <div class="opcion">net</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ifconfig</p>
+            <p><strong>Explicación:</strong> El comando **`ifconfig`** (interface configuration) se utiliza tradicionalmente para ver y configurar las interfaces de red del sistema.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">26.- ¿Cuál de los sigueintes comandos muestra todos los procesos?</div>
+        <div class="opcion">ps</div>
+        <div class="opcion">ps --all</div>
+        <div class="opcion">ps-a</div>
+        <div class="opcion">ps -e</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ps -e</p>
+            <p><strong>Explicación:</strong> La opción **`-e`** (o `-a` en algunos sistemas) del comando `ps` muestra **todos** los procesos en ejecución en el sistema.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">27.- ¿Cuál de los siguientes comandos borrará todos los archivos de un paquete?</div>
+        <div class="opcion">apt-get delete</div>
+        <div class="opcion">apt-get trash</div>
+        <div class="opcion">apt-get remove</div>
+        <div class="opcion">apt-get purge</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> apt-get purge</p>
+            <p><strong>Explicación:</strong> **`apt-get purge`** elimina el paquete *y* sus archivos de configuración. `remove` solo elimina el paquete, manteniendo la configuración.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">28.- Los usuarios pueden actualizar sus propias contraseñas. ¿Verdadero o Falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Cualquier usuario puede cambiar su propia contraseña usando el comando **`passwd`**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">29.- El usuario root puede cambiar la contraseña de cualquier usuario. ¿Verdadero o Falso?</div>
+        <div class="opcion">Falso</div>
+        <div class="opcion">Verdadero</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El usuario **root** tiene privilegios para cambiar la contraseña de cualquier usuario sin conocer la original.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">30.- ¿Qué opción se puede utilizar para ver información sobre el estado de la contraseña del usuario actual?</div>
+        <div class="opcion">-S</div>
+        <div class="opcion">|-</div>
+        <div class="opcion">-i</div>
+        <div class="opcion">-s</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> -S</p>
+            <p><strong>Explicación:</strong> El comando `passwd` con la opción **`-S`** (status) muestra el estado de la contraseña (caducidad, bloqueo, etc.).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">31.- ¿Cuál de los siguientes comandos NO apagará el sistema inmediatamente?</div>
+        <div class="opcion">shutdown</div>
+        <div class="opcion">shutdown now</div>
+        <div class="opcion">shutdown now 'Goodbye World!'</div>
+        <div class="opcion">shutdown +0</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> shutdown</p>
+            <p><strong>Explicación:</strong> El comando **`shutdown`** sin argumentos por defecto programa el apagado para dentro de un minuto.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">32.- ¿Cuál de los siguientes comandos mostrará cada proceso?</div>
+        <div class="opcion">ps --all</div>
+        <div class="opcion">ps-e</div>
+        <div class="opcion">ps</div>
+        <div class="opcion">ps -a</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ps --all / ps -e</p>
+            <p><strong>Explicación:</strong> La opción **`ps -e`** o **`ps --all`** (dependiendo de la sintaxis del sistema) se utilizan para listar todos los procesos.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">33.- ¿Cuál de los siguientes comandos actualizará todos los paquetes?</div>
+        <div class="opcion">apt-get upgrade</div>
+        <div class="opcion">apt-get update</div>
+        <div class="opcion">apt-get install</div>
+        <div class="opcion">apt-get search</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> apt-get upgrade</p>
+            <p><strong>Explicación:</strong> **`apt-get upgrade`** instala las versiones más nuevas de todos los paquetes instalados en el sistema.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">34.- ¿Cuál de los siguientes comandos debe ejecutarse antes de instalar un paquete?</div>
+        <div class="opcion">apt-get upgrade</div>
+        <div class="opcion">apt-get update</div>
+        <div class="opcion">apt-get install</div>
+        <div class="opcion">apt-get search</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> apt-get update</p>
+            <p><strong>Explicación:</strong> **`apt-get update`** descarga la información más reciente de los repositorios para que el sistema sepa qué paquetes están disponibles.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">35.- El usuario root puede cambiar la contraseña de cualquier usuario. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El usuario **root** tiene privilegios para cambiar la contraseña de cualquier usuario. (Repetida de la Q29)</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">36.- ¿Qué comando imprimirá su ubicación actual en el sistema de archivos?</div>
+        <div class="opcion">pcl</div>
+        <div class="opcion">pwd</div>
+        <div class="opcion">pd</div>
+        <div class="opcion">cd</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> pwd</p>
+            <p><strong>Explicación:</strong> El comando **`pwd`** (Print Working Directory) muestra la ruta absoluta del directorio actual.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">37.- Al ingresar un comando, ¿los argumentos u opciones suelen ser lo primero?</div>
+        <div class="opcion">Opciones</div>
+        <div class="opcion">Argumentos</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Opciones</p>
+            <p><strong>Explicación:</strong> La sintaxis de comandos estándar en Linux es `comando [OPCIONES] [ARGUMENTOS]`, por lo que las opciones van primero.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">38.- Los comandos distinguen entre mayúsculas y minúsculas. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Linux es **case-sensitive**. (Repetida de la Q2)</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">39.- Uno de los trabajos del kernel es:</div>
+        <div class="opcion">Transferir correo de una máquina a otra</div>
+        <div class="opcion">Administrar los recursos del sistema.</div>
+        <div class="opcion">Convierta el código fuente en código de máquina</div>
+        <div class="opcion">Cargue el sistema operativo después de encender la computadora</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Administrar los recursos del sistema.</p>
+            <p><strong>Explicación:</strong> El **kernel** es el núcleo del sistema operativo y su principal función es gestionar los recursos de hardware (CPU, memoria, dispositivos) para los procesos de las aplicaciones.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">40.- Linux está escrito en:</div>
+        <div class="opcion">C++</div>
+        <div class="opcion">Java</div>
+        <div class="opcion">.NET</div>
+        <div class="opcion">Perl</div>
+        <div class="opcion">C</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> C</p>
+            <p><strong>Explicación:</strong> El núcleo (kernel) de Linux está escrito principalmente en el lenguaje de programación **C**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">41.- El código fuente se refiere a:</div>
+        <div class="opcion">Una versión legible para humanos de software de computadora</div>
+        <div class="opcion">La versión de un programa que la computadora ejecuta en la CPU</div>
+        <div class="opcion">La interfaz que usa el software para hablar con el núcleo</div>
+        <div class="opcion">La licencia que dicta cómo puede usar y compartir el software</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Una versión legible para humanos de software de computadora</p>
+            <p><strong>Explicación:</strong> El **código fuente** es el código de programación escrito por el desarrollador, que es legible y editable por humanos, antes de ser compilado a código de máquina.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">42.- La mayoría de las herramientas que forman parte de los sistemas Linux provienen de:</div>
+        <div class="opcion">Red Hat y Debian</div>
+        <div class="opcion">La iniciativa de código abierto</div>
+        <div class="opcion">El proyecto GNU</div>
+        <div class="opcion">La base de Linux</div>
+        <div class="opcion">Google</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> El proyecto GNU</p>
+            <p><strong>Explicación:</strong> El sistema operativo es a menudo llamado **GNU/Linux**, ya que la mayoría de las herramientas y utilidades de la línea de comandos (como `bash`, `ls`, `grep`, etc.) provienen del **Proyecto GNU**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">43.- La plataforma Linux que se ejecuta en teléfonos móviles se llama:</div>
+        <div class="opcion">LinuxMobile</div>
+        <div class="opcion">IOS</div>
+        <div class="opcion">MicroLinux</div>
+        <div class="opcion">Android</div>
+        <div class="opcion">Teldroid</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Android</p>
+            <p><strong>Explicación:</strong> **Android** es un sistema operativo móvil que utiliza el núcleo (kernel) de Linux.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">44.- ¿Qué proporciona una distribución para agregar y eliminar software del sistema?</div>
+        <div class="opcion">Bash</div>
+        <div class="opcion">Partitioning tool</div>
+        <div class="opcion">Package manager</div>
+        <div class="opcion">Compiler</div>
+        <div class="opcion">Application Programming Interface (API)</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Package manager</p>
+            <p><strong>Explicación:</strong> El **administrador de paquetes** (`apt-get`, `yum`, `dnf`) es la herramienta utilizada para instalar, actualizar, configurar y eliminar software.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">45.- UNIX se inventó originalmente en:</div>
+        <div class="opcion">AT&T Bell Labs</div>
+        <div class="opcion">Xerox PARC</div>
+        <div class="opcion">Universidad de Berkeley</div>
+        <div class="opcion">Universidad Stanford</div>
+        <div class="opcion">Universidad de Bangalore</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> AT&T Bell Labs</p>
+            <p><strong>Explicación:</strong> **UNIX** fue desarrollado por Ken Thompson, Dennis Ritchie y otros en los Laboratorios Bell de AT&T a finales de los años 60 y principios de los 70.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">46.- Una licencia donde no tiene acceso al código fuente se llama:</div>
+        <div class="opcion">Sin fuente</div>
+        <div class="opcion">Fuente abierta</div>
+        <div class="opcion">Fuente cerrada</div>
+        <div class="opcion">Fuente deteriorada</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Fuente cerrada</p>
+            <p><strong>Explicación:</strong> El software de **código cerrado** o propietario no otorga acceso al código fuente.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">47.- ¿De qué distribución se deriva Ubuntu?</div>
+        <div class="opcion">Slackware</div>
+        <div class="opcion">Scientific Linux</div>
+        <div class="opcion">Red Hat Enterprise Linux</div>
+        <div class="opcion">Debian</div>
+        <div class="opcion">Fedora</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Debian</p>
+            <p><strong>Explicación:</strong> **Ubuntu** es una distribución popular que se basa en **Debian** GNU/Linux.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">48.- Las aplicaciones realizan solicitudes al núcleo y reciben recursos, como memoria, CPU y disco a cambio. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El **kernel** es el intermediario entre las aplicaciones y el hardware, administrando y asignando recursos a través de llamadas al sistema.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">49.- Linux no es Unix porque:</div>
+        <div class="opcion">No ha sido certificado</div>
+        <div class="opcion">No está hecho por Open Group</div>
+        <div class="opcion">No es lo suficientemente bueno</div>
+        <div class="opcion">Es gratis</div>
+        <div class="opcion">Hay demasiadas distribuciones</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> No ha sido certificado</p>
+            <p><strong>Explicación:</strong> Linux no es UNIX en el sentido legal, ya que no ha obtenido la certificación de la marca registrada UNIX de **The Open Group**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">50.- Un ciclo de lanzamiento:</div>
+        <div class="opcion">Siempre es 6 meses</div>
+        <div class="opcion">No importa en un entorno de código abierto</div>
+        <div class="opcion">Solo se aplica al software que paga</div>
+        <div class="opcion">Describe con qué frecuencia salen actualizaciones al software.</div>
+        <div class="opcion">Describe durante cuánto tiempo tendrá soporte el software.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Describe con qué frecuencia salen actualizaciones al software.</p>
+            <p><strong>Explicación:</strong> El **ciclo de lanzamiento** (release cycle) define la **frecuencia** con la que se publican las nuevas versiones principales de un software o distribución.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">51.- Un ciclo de mantenimiento:</div>
+        <div class="opcion">Debe ser corto para que siempre tenga los lanzamientos más frescos</div>
+        <div class="opcion">Debe ser largo para que tenga tiempo antes de que necesite actualizar</div>
+        <div class="opcion">Solo tiene significado para el software pago</div>
+        <div class="opcion">Describe con qué frecuencia salen actualizaciones para el software</div>
+        <div class="opcion">Describe durante cuánto tiempo tendrá soporte el software.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Describe durante cuánto tiempo tendrá soporte el software.</p>
+            <p><strong>Explicación:</strong> El **ciclo de mantenimiento** (especialmente para versiones de soporte a largo plazo o LTS) describe la **duración del soporte** que recibirá la versión (parches de seguridad y corrección de errores).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">52.- Si una versión de software se encuentra en un estado en el que tiene muchas características nuevas que no se han probado rigurosamente, generalmente se conoce como software beta. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El software **beta** es una versión casi final que se lanza a un público más amplio para la detección de errores y pruebas antes de la versión estable final.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">53.- La aplicación Samba es un:</div>
+        <div class="opcion">File Server</div>
+        <div class="opcion">Mail Server</div>
+        <div class="opcion">Security Server</div>
+        <div class="opcion">Web Server</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> File Server</p>
+            <p><strong>Explicación:</strong> **Samba** implementa el protocolo SMB/CIFS de Microsoft para permitir compartir archivos e impresoras con clientes Windows.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">54.- POP e IMAP están relacionados con:</div>
+        <div class="opcion">Permitir que los usuarios inicien sesión en varios servidores con 1 conjunto de credenciales</div>
+        <div class="opcion">Correo electrónico</div>
+        <div class="opcion">Leer y escribir música</div>
+        <div class="opcion">Compartir archivos</div>
+        <div class="opcion">Servidor de páginas web</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Correo electrónico</p>
+            <p><strong>Explicación:</strong> **POP3** (Post Office Protocol) e **IMAP** (Internet Message Access Protocol) son protocolos utilizados por los clientes para recibir y acceder al **correo electrónico** desde un servidor.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">55.- Cuando una computadora se inicia, puede obtener su información de red a través de:</div>
+        <div class="opcion">SMTP</div>
+        <div class="opcion">LDAP</div>
+        <div class="opcion">DHCP</div>
+        <div class="opcion">X11</div>
+        <div class="opcion">DNS</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> DHCP</p>
+            <p><strong>Explicación:</strong> **DHCP** (Dynamic Host Configuration Protocol) es el protocolo que permite a un host obtener automáticamente su configuración de red (dirección IP, máscara de subred, etc.).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">56.- ¿Cuál de los siguientes es cierto acerca de los lenguajes de programación compilados?</div>
+        <div class="opcion">Ruby es un lenguaje compilado</div>
+        <div class="opcion">Los lenguajes compilados son excelentes para tareas de administración del sistema, como secuencias de comandos</div>
+        <div class="opcion">Perl es un lenguaje compilado</div>
+        <div class="opcion">C es un lenguaje compilado</div>
+        <div class="opcion">Un programador suele ser más productivo cuando usa un lenguaje compilado</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> C es un lenguaje compilado</p>
+            <p><strong>Explicación:</strong> Los lenguajes como **C** o C++ requieren que el código fuente sea traducido (compilado) a código de máquina antes de la ejecución.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">57.- ¿Qué administrador de paquetes se usa en Fedora, un sistema derivado de Red Hat?</div>
+        <div class="opcion">apt-get</div>
+        <div class="opcion">vim</div>
+        <div class="opcion">tar</div>
+        <div class="opcion">bash</div>
+        <div class="opcion">yum</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> yum</p>
+            <p><strong>Explicación:</strong> **`yum`** (o su sucesor `dnf`) es el administrador de paquetes estándar para distribuciones basadas en Red Hat, como Fedora y CentOS.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">58.- ¿Qué software de servidor usaría para crear un directorio de la empresa en el que podría buscar y autenticar?</div>
+        <div class="opcion">Netatalk</div>
+        <div class="opcion">OpenLDAP</div>
+        <div class="opcion">bind</div>
+        <div class="opcion">ISC DHCP</div>
+        <div class="opcion">Samba</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> OpenLDAP</p>
+            <p><strong>Explicación:</strong> **LDAP** (Lightweight Directory Access Protocol), implementado por **OpenLDAP**, es el protocolo estándar para acceder y mantener servicios de información de directorio distribuido, esencial para la autenticación centralizada.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">59.- ¿Cuáles de los siguientes son ejemplos de un servidor web? (escoge dos)</div>
+        <div class="opcion">postfix</div>
+        <div class="opcion">Apache</div>
+        <div class="opcion">WordPress</div>
+        <div class="opcion">NFS</div>
+        <div class="opcion">Nginx</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuestas Correctas:</span> Apache, Nginx</p>
+            <p><strong>Explicación:</strong> **Apache HTTP Server** (o simplemente Apache) y **Nginx** son los dos servidores web más populares utilizados para entregar contenido a los clientes a través del protocolo HTTP.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">60.- Si desea que una máquina Linux comparta archivos con clientes y servidores de Windows, debe usar:</div>
+        <div class="opcion">NFS</div>
+        <div class="opcion">Samba</div>
+        <div class="opcion">Netatalk</div>
+        <div class="opcion">DNS</div>
+        <div class="opcion">bind</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Samba</p>
+            <p><strong>Explicación:</strong> **Samba** es un conjunto de programas que permite a los sistemas Linux interoperar con el entorno de redes de Microsoft Windows (usando el protocolo SMB/CIFS).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">61.- La Free Software Foundation cree que: (escoge dos)</div>
+        <div class="opcion">La gente debería escribir software sin esperar ganar dinero</div>
+        <div class="opcion">El software debe ser libre de compartir</div>
+        <div class="opcion">Ningún dinero debería cambiar de manos</div>
+        <div class="opcion">El software debe ser libre de modificar</div>
+        <div class="opcion">El software no debe tener derechos de autor</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuestas Correctas:</span> El software debe ser libre de compartir, El software debe ser libre de modificar</p>
+            <p><strong>Explicación:</strong> Las cuatro libertades del Software Libre (FSF) incluyen la libertad de **redistribuir** (compartir) y la libertad de **modificar** (estudiar y cambiar) el software.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">62.- Si un podcast tiene licencia bajo la licencia CC BY-ND, puede: (escoge dos)</div>
+        <div class="opcion">Agregue anuncios y publíquelo en su sitio web.</div>
+        <div class="opcion">Véndelo como parte de una compilación</div>
+        <div class="opcion">Compártelo siempre que le des crédito al autor</div>
+        <div class="opcion">Use una entrevista o canción para su propio podcast</div>
+        <div class="opcion">Publícalo en tu sitio web</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuestas Correctas:</span> Compártelo siempre que le des crédito al autor, Publícalo en tu sitio web</p>
+            <p><strong>Explicación:</strong> La licencia **CC BY-ND** (Attribution-NoDerivatives) permite la **redistribución** (copiar y publicar) de la obra, incluso comercialmente, siempre que se dé **crédito** al autor y se mantenga **sin modificaciones**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">63.- ¿Cómo se puede ganar dinero con el software de código abierto? (elige tres)</div>
+        <div class="opcion">Cobrar una tarifa anual por el derecho a usar el software</div>
+        <div class="opcion">Venda hardware creado para funcionar con el software</div>
+        <div class="opcion">Proporcionar servicios de consultoría pagados a los usuarios.</div>
+        <div class="opcion">Desbloquee funciones premium para personas que pagan</div>
+        <div class="opcion">Tomar pagos para corregir errores</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuestas Correctas:</span> Venda hardware creado para funcionar con el software, Proporcionar servicios de consultoría pagados a los usuarios., Tomar pagos para corregir errores</p>
+            <p><strong>Explicación:</strong> Los modelos de negocio de código abierto se centran en el valor añadido, como la **venta de hardware**, la **consultoría** (servicios de pago) o el **soporte** (pagos por corrección de errores).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">64.- Su empresa crea un firewall de hardware que ejecuta un kernel de Linux personalizado. ¿Cuáles son sus obligaciones bajo GPLv2?</div>
+        <div class="opcion">Debe poner a disposición la fuente de su interfaz web personalizada</div>
+        <div class="opcion">Debe hacer que sus diseños de hardware estén disponibles</div>
+        <div class="opcion">Debe hacer que la fuente de su núcleo esté disponible</div>
+        <div class="opcion">Debe asegurarse de que su núcleo personalizado se ejecute en una máquina Intel normal</div>
+        <div class="opcion">No hay requisitos</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Debe hacer que la fuente de su núcleo esté disponible</p>
+            <p><strong>Explicación:</strong> La **GPLv2** (la licencia del kernel de Linux) exige que la empresa proporcione el código fuente completo, incluyendo cualquier modificación, si distribuye el software binario.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">65.- La virtualización significa:</div>
+        <div class="opcion">Un solo host se puede dividir en varios invitados</div>
+        <div class="opcion">Un usuario puede conectarse a un servidor a través de la red y usar una consola virtual</div>
+        <div class="opcion">Una máquina puede intercambiar memoria a disco</div>
+        <div class="opcion">Muchos usuarios pueden compartir un disco duro</div>
+        <div class="opcion">Dos usuarios obtienen diferentes espacios de memoria en la misma máquina</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Un solo host se puede dividir en varios invitados</p>
+            <p><strong>Explicación:</strong> La **virtualización** es la tecnología que permite ejecutar múltiples sistemas operativos aislados (invitados) en un único sistema físico (host).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">66.- Los dos componentes que brindan la capacidad de implementar un firewall incluyen: (escoge dos)</div>
+        <div class="opcion">iptables</div>
+        <div class="opcion">Cortafuegos sin complicaciones</div>
+        <div class="opcion">ipfw</div>
+        <div class="opcion">gufw</div>
+        <div class="opcion">Cerbero</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuestas Correctas:</span> iptables, Cortafuegos sin complicaciones (UFW)</p>
+            <p><strong>Explicación:</strong> **iptables** es la utilidad de línea de comandos para configurar el subsistema de filtrado de paquetes del kernel de Linux. **UFW** (Cortafuegos sin complicaciones) es una interfaz más sencilla para gestionar iptables.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">67.- ¿Qué variable de entorno contiene una lista de directorios en los que se buscan comandos para ejecutar?</div>
+        <div class="opcion">EXEC</div>
+        <div class="opcion">PATH</div>
+        <div class="opcion">PS2</div>
+        <div class="opcion">PS1</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> PATH</p>
+            <p><strong>Explicación:</strong> La variable de entorno **`$PATH`** contiene una lista separada por dos puntos de directorios donde el shell busca comandos ejecutables.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">68.- Seleccione el comando que puede informar la ubicación de un comando:</div>
+        <div class="opcion">where</div>
+        <div class="opcion">which</div>
+        <div class="opcion">what</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> which</p>
+            <p><strong>Explicación:</strong> El comando **`which`** busca en los directorios listados en `$PATH` y muestra la ruta completa al comando que se ejecutará.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">69.- Un par de comillas simples (') evitará que el shell interprete cualquier metacarácter. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Las comillas **simples (`'`)** en el shell se utilizan para la **cita fuerte**, lo que significa que eliminan el significado especial de todos los metacaracteres.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">70.- Un par de comillas dobles (") evitará que el shell interprete cualquier metacarácter. Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> Las comillas **dobles (`"`)** permiten la **expansión de variables** (ej. `$VAR`) y la **sustitución de comandos** (ej. `` o `$(...)`), por lo que no evitan la interpretación de *todos* los metacaracteres.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">71.- El uso de un par de comillas inversas () hará que un shell ejecute el texto entrecomillado como un comando y sustituya la salida de nuevo en el comando original. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Esto se conoce como **sustitución de comandos** (Command Substitution), y la salida del comando entre comillas invertidas se usa como argumento en el comando original (ej. `echo Hoy es `date``).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">72.- El punto y coma ';' se puede usar para separar múltiples comandos que se ejecutarán en orden. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El **punto y coma (`;`)** es un terminador de comando que permite ejecutar comandos secuencialmente en la misma línea, sin importar el éxito o fracaso del anterior.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">73.- Los caracteres de doble signo (&&) se usan para separar los comandos que se ejecutarán condicionalmente, donde si falla el comando a la izquierda de los símbolos, se ejecutará el comando a la derecha de los símbolos. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> La condición descrita es para el operador **`||`** (OR lógico). El operador **`&&`** (AND lógico) ejecuta el segundo comando **solo si el primero tiene éxito**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">74.- Para poder enviar mensajes a la pantalla, use el comando</div>
+        <div class="opcion">display</div>
+        <div class="opcion">type</div>
+        <div class="opcion">print</div>
+        <div class="opcion">echo</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> echo</p>
+            <p><strong>Explicación:</strong> El comando **`echo`** se utiliza para mostrar una línea de texto en la salida estándar (pantalla).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">75.- El comando _____ imprimirá una lista de los comandos que ha ejecutado anteriormente.</div>
+        <div class="opcion">list</div>
+        <div class="opcion">history</div>
+        <div class="opcion">exec</div>
+        <div class="opcion">eval</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> history</p>
+            <p><strong>Explicación:</strong> El comando **`history`** muestra el historial de comandos ejecutados en el shell actual.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">76.- Para ejecutar el mismo comando que hace cinco comandos ejecutados anteriormente, debe escribir:</div>
+        <div class="opcion">&5</div>
+        <div class="opcion">@-5</div>
+        <div class="opcion">!-5</div>
+        <div class="opcion">!5</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> !-5</p>
+            <p><strong>Explicación:</strong> La sintaxis `!-n` repite el comando que se ejecutó **n** veces antes. `!n` repite el comando con el número de historial `n`.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">77.- Los archivos ocultos son archivos que comienzan con qué carácter.</div>
+        <div class="opcion">Un guión (-)</div>
+        <div class="opcion">Un más (+)</div>
+        <div class="opcion">Un punto (.)</div>
+        <div class="opcion">Un asterisco (*)</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Un punto (.)</p>
+            <p><strong>Explicación:</strong> Los archivos que comienzan con un **punto** (`.`) se consideran archivos ocultos ("dotfiles") en Linux.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">78.- ¿Qué opción para el comando ls mostrará todos los archivos, incluidos los archivos ocultos?</div>
+        <div class="opcion">-L</div>
+        <div class="opcion">-H</div>
+        <div class="opcion">-w</div>
+        <div class="opcion">-a</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> -a</p>
+            <p><strong>Explicación:</strong> La opción **`-a`** (all) del comando `ls` muestra todos los archivos, incluidos aquellos que comienzan con un punto.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">79.- ¿La ruta siguiente es absoluta o relativa? <code>/etc/ppp</code></div>
+        <div class="opcion">Absoluta</div>
+        <div class="opcion">Relativa</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Absoluta</p>
+            <p><strong>Explicación:</strong> Una ruta **absoluta** comienza con la barra inclinada inicial (`/`), indicando la raíz del sistema de archivos.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">80.- ¿La ruta siguiente es absoluta o relativa? <code>sysadmin/Documentos</code></div>
+        <div class="opcion">Relativa</div>
+        <div class="opcion">Absoluta</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Relativa</p>
+            <p><strong>Explicación:</strong> Una ruta **relativa** no comienza con la barra inclinada (`/`) y se interpreta a partir del directorio de trabajo actual.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">81.- La tilde (~) se usa para representar:</div>
+        <div class="opcion">El directorio de inicio de un usuario</div>
+        <div class="opcion">Dos caracteres individuales</div>
+        <div class="opcion">El directorio sobre el directorio de trabajo actual</div>
+        <div class="opcion">Nada; no tiene un significado especial</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> El directorio de inicio de un usuario</p>
+            <p><strong>Explicación:</strong> La tilde **`~`** es un atajo para el directorio **home** del usuario.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">82.- El comando cd solo lo llevará a qué directorio.</div>
+        <div class="opcion">El directorio raíz del sistema</div>
+        <div class="opcion">Ninguna; no es un comando valido</div>
+        <div class="opcion">El directorio sobre el directorio de trabajo actual</div>
+        <div class="opcion">Su directorio personal</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Su directorio personal</p>
+            <p><strong>Explicación:</strong> Ejecutar **`cd`** sin argumentos es equivalente a ejecutar `cd ~`, lo que cambia al directorio personal (**home**) del usuario.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">83.- ¿Qué comando le permitirá cambiar su directorio de trabajo actual?</div>
+        <div class="opcion">chdir</div>
+        <div class="opcion">list</div>
+        <div class="opcion">cd</div>
+        <div class="opcion">ls</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> cd</p>
+            <p><strong>Explicación:</strong> El comando **`cd`** (change directory) cambia el directorio actual. (Repetida de la Q4)</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">84.- El primer carácter en una lista larga (ls -l) indica:</div>
+        <div class="opcion">Los permisos</div>
+        <div class="opcion">Si algo es un archivo, directorio o enlace simbólico</div>
+        <div class="opcion">El propietario</div>
+        <div class="opcion">El tamaño</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Si algo es un archivo, directorio o enlace simbólico</p>
+            <p><strong>Explicación:</strong> El primer carácter indica el **tipo de archivo** (`-` para archivo regular, `d` para directorio, `l` para enlace simbólico). (Repetida de la Q9)</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">85.- ¿Qué opción para el comando ls, cuando se usa junto con la opción -l, mostrará tamaños legibles por humanos?</div>
+        <div class="opcion">-M</div>
+        <div class="opcion">-S</div>
+        <div class="opcion">-H</div>
+        <div class="opcion">-h</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> -h</p>
+            <p><strong>Explicación:</strong> La opción **`-h`** (human-readable) muestra los tamaños de los archivos con unidades como K, M o G.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">86.- El comando ls -S ordenará los archivos:</div>
+        <div class="opcion">Por tamaño, de menor a mayor</div>
+        <div class="opcion">Por número de enlaces simbólicos, de mayor a menor</div>
+        <div class="opcion">Por fecha de modificación, la más nueva a la más antigua</div>
+        <div class="opcion">Por tamaño, de mayor a menor</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Por tamaño, de mayor a menor</p>
+            <p><strong>Explicación:</strong> La opción **`-S`** (Size) ordena la lista de archivos por tamaño, con los más grandes primero. (Repetida de la Q6)</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">87.- Cuando utilice el comando cp, debe proporcionar tanto un origen como un destino. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El comando **`cp`** requiere al menos dos argumentos: el archivo o directorio **origen** y el archivo o directorio **destino**. (Repetida de la Q19)</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">88.- ¿Qué opciones se pueden usar para evitar que cp sobrescriba un archivo existente? (escoge dos)</div>
+        <div class="opcion">-n</div>
+        <div class="opcion">-N</div>
+        <div class="opcion">-z</div>
+        <div class="opcion">-i</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuestas Correctas:</span> -n, -i</p>
+            <p><strong>Explicación:</strong> La opción **`-i`** (interactive) pide confirmación, y **`-n`** (no-clobber) evita sobrescribir archivos existentes.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">89.- El comando rm -r</div>
+        <div class="opcion">elimina un directorio junto con cualquier archivo o subdirectorio.</div>
+        <div class="opcion">solicita cada confirmación antes de eliminar cada archivo en un directorio.</div>
+        <div class="opcion">elimina solo directorios vacíos.</div>
+        <div class="opcion">genera un error; -r no es una opción válida.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> elimina un directorio junto con cualquier archivo o subdirectorio.</p>
+            <p><strong>Explicación:</strong> La opción **`-r`** (recursive) le indica a `rm` que elimine recursivamente los directorios y todo su contenido.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">90.- ¿Qué opción se puede usar con el comando rm para preguntar antes de eliminar?</div>
+        <div class="opcion">-i</div>
+        <div class="opcion">I</div>
+        <div class="opcion">-P</div>
+        <div class="opcion">A</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> -i</p>
+            <p><strong>Explicación:</strong> La opción **`-i`** (interactive) hace que el comando `rm` pida confirmación antes de cada eliminación. (Repetida de la Q60)</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">91.- ¿Cuál de los siguientes comandos se puede usar para cambiar el nombre de un archivo?</div>
+        <div class="opcion">name</div>
+        <div class="opcion">mv</div>
+        <div class="opcion">rn</div>
+        <div class="opcion">cp</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> mv</p>
+            <p><strong>Explicación:</strong> El comando **`mv`** se utiliza para mover archivos o para renombrarlos al moverlos a la misma ubicación con un nombre diferente. (Repetida de la Q16)</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">92.- El comando Touch se puede usar para: (escoge dos)</div>
+        <div class="opcion">Crea nuevos archivos</div>
+        <div class="opcion">Cambiar el nombre de un archivo</div>
+        <div class="opcion">Actualizar la marca de tiempo de los archivos existentes</div>
+        <div class="opcion">Cambiar la propiedad de un archivo</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuestas Correctas:</span> Crea nuevos archivos, Actualizar la marca de tiempo de los archivos existentes</p>
+            <p><strong>Explicación:</strong> El comando **`touch`** se utiliza principalmente para cambiar las marcas de tiempo de acceso/modificación, o para crear un archivo vacío si no existe.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">93.- La compresión en un archivo funciona por:</div>
+        <div class="opcion">Eliminar información redundante</div>
+        <div class="opcion">Eliminar espacios en el archivo</div>
+        <div class="opcion">Almacenar la mayoría de los datos en medios extraíbles y solo dejar un puntero</div>
+        <div class="opcion">Consolidando múltiples archivos en uno</div>
+        <div class="opcion">Eliminar el bit de orden superior de cada byte</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Eliminar información redundante</p>
+            <p><strong>Explicación:</strong> Los algoritmos de compresión (como Lempel-Ziv) buscan y reemplazan patrones o información **redundante** con referencias más cortas para reducir el tamaño del archivo.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">94.- Escribe <code>gzip myfile.tar</code>. ¿Lo que pasa?. (escoge dos)</div>
+        <div class="opcion">myfile.tar se elimina</div>
+        <div class="opcion">myfile.tar.gz contiene una versión comprimida de myfile.tar</div>
+        <div class="opcion">Un error; olvidó especificar el archivo con –f</div>
+        <div class="opcion">myfile.tar no está archivado en el directorio actual</div>
+        <div class="opcion">Un error; olvidó pasar el nombre del archivo de salida</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuestas Correctas:</span> myfile.tar se elimina, myfile.tar.gz contiene una versión comprimida de myfile.tar</p>
+            <p><strong>Explicación:</strong> Por defecto, el comando **`gzip`** comprime el archivo de entrada, le agrega la extensión `.gz` (creando `myfile.tar.gz`) y **elimina** el archivo original (`myfile.tar`).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">95.- ¿Qué comando usarías para archivar el directorio Documentos y comprimirlo con la compresión bzip2?</div>
+        <div class="opcion">tar –czf documents.tbz Documents</div>
+        <div class="opcion">tar –cjf Documents</div>
+        <div class="opcion">tar –fzc Documents documents.tbz</div>
+        <div class="opcion">tar –cjf documents.tbz Documents</div>
+        <div class="opcion">tar –cf Documents documents.tbz</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> tar –cjf documents.tbz Documents</p>
+            <p><strong>Explicación:</strong> Se necesitan las opciones: **`-c`** (create), **`-j`** (usa bzip2 para la compresión), y **`-f`** (especifica el nombre de archivo). La convención sugiere usar `.tbz` o `.tar.bz2`.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">96.- ¿Qué comando mostrará lo que hay dentro del tarball comprimido con un nombre de <code>foo.tar.gz</code>?</div>
+        <div class="opcion">tar –tjf foo.tar.gz</div>
+        <div class="opcion">tar –tzf foo.tar.gz</div>
+        <div class="opcion">tar –lf foo.tar.gz</div>
+        <div class="opcion">tar –xf foo.tar.gz</div>
+        <div class="opcion">tar –tf foo.tar.gz</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> tar –tzf foo.tar.gz</p>
+            <p><strong>Explicación:</strong> La opción **`-t`** (list/table) muestra el contenido, **`-z`** indica que está comprimido con gzip, y **`-f`** especifica el archivo.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">97.- En el comando <code>tar –cvjf foo.tbz a b c</code>, ¿qué son a, b y c?</div>
+        <div class="opcion">Nombres de archivo para agregar al archivo</div>
+        <div class="opcion">Operadores coincidentes; se agregará todo lo que comience con a, b o c</div>
+        <div class="opcion">a es el directorio que se antepondrá a los archivos; b y c son archivos dentro de él</div>
+        <div class="opcion">Banderas adicionales pasadas al tar</div>
+        <div class="opcion">Nada; -cvjf solo espera un parámetro</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Nombres de archivo para agregar al archivo</p>
+            <p><strong>Explicación:</strong> Los argumentos después de la opción `-f` (el nombre del archivo tar) son los archivos y directorios **de entrada** que se archivan.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">98.- Archivó los directorios de sus usuarios en un archivo llamado <code>backup.tar.gz</code>. Luego verá el archivo y verá los nombres de archivo siguiendo esta convención: inicio / nombre de usuario / algún archivo ¿Cómo extraerá solo los archivos para el usuario llamado fred?</div>
+        <div class="opcion">tar –tzf /home/fred < backup.tar.gz</div>
+        <div class="opcion">tar –tjf backup.tar.gz /home/fred</div>
+        <div class="opcion">tar –xjf backup.tar.gz home/fred/</div>
+        <div class="opcion">tar –xzf backup.tar.gz home/fred/</div>
+        <div class="opcion">tar –xzf backup.tar.gz fred</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> tar –xzf backup.tar.gz home/fred/</p>
+            <p><strong>Explicación:</strong> Se usan las opciones **`-x`** (extract), **`-z`** (gzip) y **`-f`** (file), y se le indica a `tar` la ruta **relativa** del directorio dentro del archivo que se desea extraer.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">99.- ¿Cuál de los siguientes comandos creará un archivo zip con el contenido de su directorio de Documentos?</div>
+        <div class="opcion">zip –cf mydocs.zip Documents</div>
+        <div class="opcion">zip –c mydocs.zip Documents</div>
+        <div class="opcion">zip -r mydocs.zip Documents</div>
+        <div class="opcion">zip mydocs.zip Documents</div>
+        <div class="opcion">zip –f mydocs.zip Documents</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> zip -r mydocs.zip Documents</p>
+            <p><strong>Explicación:</strong> La opción **`-r`** (recursive) es esencial para incluir el contenido de un directorio (Documents) en el archivo zip.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">100.- Dado un archivo llamado <code>documentos.zip</code>, ¿cómo puede ver lo que contiene sin extraer los archivos?</div>
+        <div class="opcion">showzip documents.zip</div>
+        <div class="opcion">zip –lf documents.zip</div>
+        <div class="opcion">zip –l documents.zip</div>
+        <div class="opcion">unzip –l documents.zip</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> unzip –l documents.zip</p>
+            <p><strong>Explicación:</strong> El comando **`unzip`** con la opción **`-l`** (list) muestra una lista detallada de los archivos dentro del zip sin extraerlos.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">101.- Dado un archivo llamado <code>documents.zip</code>, ¿cómo puede extraer solo los archivos de ProjectX?</div>
+        <div class="opcion">zip –x documents.zip ProjectX</div>
+        <div class="opcion">unzip documents.zip | grep ProjectX</div>
+        <div class="opcion">unzip –t documents.zip ProjectX</div>
+        <div class="opcion">unzip documents.zip ProjectX</div>
+        <div class="opcion">unzip documents.zip ProjectX/*</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> unzip documents.zip ProjectX/*</p>
+            <p><strong>Explicación:</strong> Para extraer archivos específicos dentro de una carpeta, se usa `unzip` seguido del nombre del archivo y un patrón que coincida con la ruta deseada dentro del zip (en este caso, todos los archivos dentro de la carpeta ProjectX).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">102.- Intenta comprimir un archivo que ya está comprimido. ¿Cuál de las siguientes afirmaciones es verdadera?</div>
+        <div class="opcion">El archivo no se comprimirá más de lo que ya estaba</div>
+        <div class="opcion">El algoritmo de compresión debe establecerse en el modo 'actualmente comprimido' para que pueda comprimirse aún más</div>
+        <div class="opcion">El archivo en realidad será descomprimido</div>
+        <div class="opcion">El archivo será eliminado</div>
+        <div class="opcion">El archivo cambió mientras lo comprimías</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> El archivo no se comprimirá más de lo que ya estaba</p>
+            <p><strong>Explicación:</strong> La mayoría de los algoritmos de compresión modernos no pueden reducir significativamente el tamaño de archivos que ya están comprimidos, ya que la redundancia ya ha sido eliminada.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">103.- El comando _____ normalmente se ejecuta diariamente para actualizar la base de datos de todos los archivos que están en el sistema.</div>
+        <div class="opcion">updatedb</div>
+        <div class="opcion">search</div>
+        <div class="opcion">locate</div>
+        <div class="opcion">find</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> updatedb</p>
+            <p><strong>Explicación:</strong> El comando **`updatedb`** reconstruye la base de datos de archivos que utiliza el comando **`locate`** para realizar búsquedas rápidas.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">104.- En el comando <code>tar –czf foo.tar.gz bar</code>, ¿cuál es el propósito de la bandera f?</div>
+        <div class="opcion">Le dice a tar que lea del archivo que sigue a la bandera</div>
+        <div class="opcion">Le dice a tar que imprima el nombre de cada archivo a medida que se procesa</div>
+        <div class="opcion">Le dice a tar que copie solo archivos, y no directorios</div>
+        <div class="opcion">Especifica que se utilizará compresión adicional</div>
+        <div class="opcion">Le dice a tar que escriba en el archivo que sigue a la bandera</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Le dice a tar que escriba en el archivo que sigue a la bandera</p>
+            <p><strong>Explicación:</strong> La opción **`-f`** (file) especifica el nombre del archivo de archivo (tarball) que se está creando (`-c`) o leyendo (`-x`, `-t`).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">105.- ¿Cuál de los siguientes comandos se puede usar para comprimir un archivo? (elige tres)</div>
+        <div class="opcion">bunzip2</div>
+        <div class="opcion">bzip2</div>
+        <div class="opcion">gzip</div>
+        <div class="opcion">cat</div>
+        <div class="opcion">zip</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuestas Correctas:</span> bzip2, gzip, zip</p>
+            <p><strong>Explicación:</strong> **`bzip2`**, **`gzip`** y **`zip`** son utilidades estándar de Linux para la compresión de archivos. `bunzip2` es para descomprimir.</p>
+        </div>
+    </div>
+
+    <script>
+        // Esta función es esencial para el botón desplegable
+        function toggleRespuesta(button) {
+            // El contenido de la respuesta es el siguiente elemento hermano del botón
+            var respuestaContenido = button.nextElementSibling;
+            
+            if (respuestaContenido.style.display === "block") {
+                respuestaContenido.style.display = "none";
+                button.textContent = "Mostrar Respuesta y Explicación";
+            } else {
+                // Oculta todas las otras respuestas abiertas (opcional, pero mejora la UX)
+                var abiertas = document.querySelectorAll('.respuesta-contenido');
+                abiertas.forEach(function(r) {
+                    if (r !== respuestaContenido && r.style.display === "block") {
+                        r.style.display = "none";
+                        r.previousElementSibling.textContent = "Mostrar Respuesta y Explicación";
+                    }
+                });
+                
+                respuestaContenido.style.display = "block";
+                button.textContent = "Ocultar Respuesta y Explicación";
+            }
+        }
+    </script>
+
+</body>
+</html>

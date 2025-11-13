@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas de Examen LPIC-1 (Linux II - 1 a 99)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #1a73e8;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .pregunta-contenedor {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .pregunta {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .opcion {
+            margin-left: 20px;
+            padding: 5px 0;
+            color: #555;
+        }
+        .respuesta-boton {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .respuesta-boton:hover {
+            background-color: #0056b3;
+        }
+        .respuesta-contenido {
+            margin-top: 15px;
+            padding: 10px;
+            border-left: 5px solid #28a745;
+            background-color: #e2f9e6;
+            display: none; /* Oculto por defecto */
+        }
+        .respuesta-correcta {
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Preguntas de Examen LPIC-1 (Linux II - 1 a 99)</h1>
+    <hr>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">1.- ¿A dónde se envían por defecto los mensajes de error generados por los comandos?</div>
+        <div class="opcion">STDIN</div>
+        <div class="opcion">Archivos de Registro</div>
+        <div class="opcion">STDERR</div>
+        <div class="opcion">STDOUT</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> STDERR</p>
+            <p><strong>Explicación:</strong> Los mensajes de error se envían al Canal 2, conocido como <strong>STDERR</strong> (Standard Error).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">2.- Un comando exitoso imprimirá la salida a la STDOUT. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> La salida estándar de un comando exitoso se envía a <strong>STDOUT</strong> (Standard Output).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">3.- Una barra vertical te permite...</div>
+        <div class="opcion">...enviar la misma entrada a varios comandos.</div>
+        <div class="opcion">...enviar la salida de un comando a otro.</div>
+        <div class="opcion">...introducir varios comandos en un mismo prompt.</div>
+        <div class="opcion">...enviar la salida de un comando a un archivo.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ...enviar la salida de un comando a otro.</p>
+            <p><strong>Explicación:</strong> La barra vertical (pipe <code>|</code>) se utiliza para redirigir la salida del comando de la izquierda a la entrada del comando de la derecha.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">4.- Canal 2 es:</div>
+        <div class="opcion">STDERR</div>
+        <div class="opcion">STDALL</div>
+        <div class="opcion">STDOUT</div>
+        <div class="opcion">STDIN</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> STDERR</p>
+            <p><strong>Explicación:</strong> Los canales de descriptores de archivos son: 0 (STDIN), 1 (STDOUT), y <strong>2 (STDERR)</strong>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">5.- ¿Cuál de los siguientes comandos anexará su salida a output.file?</div>
+        <div class="opcion">`echo Testing -> output.file`</div>
+        <div class="opcion">`echo Testing >> output.file`</div>
+        <div class="opcion">`echo Testing > output.file`</div>
+        <div class="opcion">`output.file < echo Testing`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>echo Testing >> output.file</code></p>
+            <p><strong>Explicación:</strong> El operador <code>>></code> se utiliza para <strong>anexar</strong> la salida al final de un archivo existente. El operador <code>></code> sobrescribe el archivo.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">6.- ¿Qué opción del comando `head` mostrará sólo las primeras cinco líneas de un archivo?</div>
+        <div class="opcion">No hay opción necesaria; el head muestra sólo las cinco líneas de forma predeterminada.</div>
+        <div class="opcion">-l 5</div>
+        <div class="opcion">-n 5</div>
+        <div class="opcion">-n</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> -n 5</p>
+            <p><strong>Explicación:</strong> La opción <strong>-n</strong> de <code>head</code> especifica el número de líneas a mostrar. Por defecto, muestra las primeras 10 líneas.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">7.- El comando `grep`</div>
+        <div class="opcion">...mostrará los números de línea en un archivo que contiene una expresión regular especificada.</div>
+        <div class="opcion">...no distingue entre mayúsculas y minúsculas.</div>
+        <div class="opcion">...mostrará todas las líneas en un archivo que contiene una Expresión Regular especificada.</div>
+        <div class="opcion">...mostrará todas las líneas en un archivo que comienzan con la Expresión Regular especificada.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ...mostrará todas las líneas en un archivo que contiene una Expresión Regular especificada.</p>
+            <p><strong>Explicación:</strong> <strong><code>grep</code></strong> (Global Regular Expression Print) busca líneas que coincidan con un patrón o Expresión Regular en un archivo.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">8.- El comando `grep` se puede utilizar con los caracteres glob. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> Las Expresiones Regulares (<code>grep</code>) son patrones de búsqueda de texto dentro de un archivo, mientras que los caracteres <strong>glob</strong> (como <code>*</code> o <code>?</code>) se utilizan para la expansión de nombres de archivos por el shell.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">9.- ¿Cuál de los siguientes comandos mostrará sólo las líneas que comienzan con `start`?</div>
+        <div class="opcion"><code>grep ' start' file.txt</code></div>
+        <div class="opcion"><code>grep 'start' file.txt</code></div>
+        <div class="opcion"><code>grep '^start' file.txt</code></div>
+        <div class="opcion"><code>grep 'start$' file.txt</code></div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>grep '^start' file.txt</code></p>
+            <p><strong>Explicación:</strong> El carácter <code>^</code> (circunflejo) ancla el patrón al <strong>inicio de la línea</strong> en Expresiones Regulares.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">10.- ¿Cuál de los siguientes comandos mostrará sólo las líneas que comienzan con `test`?</div>
+        <div class="opcion"><code>grep ' test' file.txt</code></div>
+        <div class="opcion"><code>grep 'test' file.txt</code></div>
+        <div class="opcion"><code>grep '^test' file.txt</code></div>
+        <div class="opcion"><code>grep 'test$' file.txt</code></div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>grep '^test' file.txt</code></p>
+            <p><strong>Explicación:</strong> Similar a la anterior, <code>^</code> fuerza a la coincidencia a estar al comienzo de la línea.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">11.- El comando `echo`:</div>
+        <div class="opcion">Se utiliza para dar salida del texto a la consola</div>
+        <div class="opcion">Se utiliza para enviar mensajes de error al STDERR</div>
+        <div class="opcion">Se utiliza para ejecutar un script shell</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Se utiliza para dar salida del texto a la consola</p>
+            <p><strong>Explicación:</strong> El comando <code>echo</code> simplemente imprime el texto o el valor de una variable en la salida estándar (consola).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">12.- Un archivo comienza con `#!/bin/csh`. Esto significa:</div>
+        <div class="opcion">La ejecución del script invocará `/bin/csh` para interpretar el resto del archivo</div>
+        <div class="opcion">El script no se puede ejecutar en un shell bash</div>
+        <div class="opcion">El script es un archivo de configuración C-shell</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> La ejecución del script invocará `/bin/csh` para interpretar el resto del archivo</p>
+            <p><strong>Explicación:</strong> Esta línea, conocida como <strong>Shebang</strong>, especifica la ruta absoluta al intérprete que debe utilizarse para ejecutar el script, en este caso, C Shell.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">13.- La mayoría de los comandos de `nano` adoptan la forma de:</div>
+        <div class="opcion">Alt y otro carácter</div>
+        <div class="opcion">Control y otro carácter</div>
+        <div class="opcion">Shift y otro carácter</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Control y otro carácter</p>
+            <p><strong>Explicación:</strong> En el editor de texto <code>nano</code>, los comandos se indican con un <code>^</code> (Control) o una <code>M</code> (Alt). Por ejemplo, <code>^X</code> es para salir.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">14.- ¿Qué hace este script shell? (Asumiendo corrección de la sintaxis y flujo de ejecución intencionado)</div>
+        <div class="opcion">Crea `/tmp/foo` si no existe</div>
+        <div class="opcion">Elimina `/tmp/foo` si existe</div>
+        <div class="opcion">Muestra un mensaje de error si `/tmp/foo` no existe</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Crea `/tmp/foo` si no existe</p>
+            <p><strong>Explicación:</strong> Aunque la pregunta es incompleta sin el código del script, esta respuesta se refiere a una acción común de creación condicional de archivos en scripts de shell.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">15.- Cuál es el significado de `$1`?</div>
+        <div class="opcion">Es el nombre del script.</div>
+        <div class="opcion">Es el primer argumento pasado al script.</div>
+        <div class="opcion">Es el código de salida del script.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Es el primer argumento pasado al script.</p>
+            <p><strong>Explicación:</strong> En la programación de shell, <code>$n</code> se refiere al <strong>n-ésimo argumento posicional</strong> pasado al script. <code>$0</code> es el nombre del script.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">16.- ¿Cuando se va a imprimir "I am here"? (Ejecutando `./test.sh hello goodbye` y con la condición `if [ -f $2 ]`)</div>
+        <div class="opcion">Cuando el script se llama con 'hello' y 'goodbye' como argumentos</div>
+        <div class="opcion">Si un archivo llamado "goodbye" existe en el directorio actual</div>
+        <div class="opcion">Si el script tiene permiso de ejecución</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Si un archivo llamado "goodbye" existe en el directorio actual</p>
+            <p><strong>Explicación:</strong> La condición <code>if [ -f $2 ]</code> evalúa si el segundo argumento (<code>$2</code> = "goodbye") es un archivo existente (<code>-f</code>).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">17.- ¿Cuál es la forma correcta de asignar la palabra "Hello" a una variable?</div>
+        <div class="opcion">`A=$Hello`</div>
+        <div class="opcion">`A="Hello"`</div>
+        <div class="opcion">`A = Hello`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>A="Hello"</code> o <code>A='Hello'</code></p>
+            <p><strong>Explicación:</strong> La asignación de variables en shell no lleva espacios alrededor del signo <code>=</code>. Las comillas se usan para encerrar el valor de la cadena.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">18.- ¿Cuál es la forma correcta de guardar el directorio actual a una variable?</div>
+        <div class="opcion">`A=$pwd`</div>
+        <div class="opcion">`A=\`pwd\``</div>
+        <div class="opcion">`A=$pwd()`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>A=$(pwd)</code> o <code>A=\`pwd\`</code></p>
+            <p><strong>Explicación:</strong> Las <strong>comillas invertidas</strong> (<code>\`...\`</code>) o la sintaxis moderna <code>$(...)</code> permiten la **sustitución de comandos**, guardando la salida del comando <code>pwd</code> en la variable <code>A</code>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">19.- ¿Qué comando shell acepta la entrada del teclado del usuario?</div>
+        <div class="opcion">`echo`</div>
+        <div class="opcion">`get`</div>
+        <div class="opcion">`read`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>read</code></p>
+            <p><strong>Explicación:</strong> El comando <strong><code>read</code></strong> se utiliza para leer una línea de texto de la entrada estándar y asignarla a una variable.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">20.- ¿Qué información contiene adentro `$?`?</div>
+        <div class="opcion">El código de salida del comando anterior</div>
+        <div class="opcion">El nombre del shell actual</div>
+        <div class="opcion">El PID del último proceso en segundo plano</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> El código de salida del comando anterior</p>
+            <p><strong>Explicación:</strong> La variable especial <strong><code>$?</code></strong> contiene el <strong>código de salida</strong> (exit status) del comando ejecutado más recientemente. <code>0</code> significa éxito.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">21.- Una bandera CPU...</div>
+        <div class="opcion">...define las características que soporta la CPU.</div>
+        <div class="opcion">...indica el uso actual de la CPU.</div>
+        <div class="opcion">...es un indicador de error de la CPU.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ...define las características que soporta la CPU.</p>
+            <p><strong>Explicación:</strong> Las banderas (flags) de la CPU se refieren a las capacidades de hardware de la CPU (ej., soporte para virtualización, nuevas instrucciones, etc.).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">22.- Las plataformas de 64 bit pueden acceder a más memoria que las plataformas de 32 bit. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Las arquitecturas de 64 bits tienen un espacio de direcciones de memoria significativamente mayor que las de 32 bits, que están limitadas a aproximadamente 4 GB de RAM.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">23.- ¿Qué comando muestra la información de SMBIOS?</div>
+        <div class="opcion">`cpuinfo`</div>
+        <div class="opcion">`biosinfo`</div>
+        <div class="opcion">`dmidecode`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> `dmidecode`</p>
+            <p><strong>Explicación:</strong> El comando <strong><code>dmidecode</code></strong> lee las tablas DMI/SMBIOS para mostrar información de hardware detallada, como el fabricante de la BIOS y la placa base.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">24.- Una división de una unidad de disco duro puede ser denominada como un/una</div>
+        <div class="opcion">bloque</div>
+        <div class="opcion">sector</div>
+        <div class="opcion">partición</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> partición</p>
+            <p><strong>Explicación:</strong> Un disco duro se divide lógicamente en una o más <strong>particiones</strong>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">25.- El comando `fdisk` es una herramienta que se utiliza para trabajar con los discos con una partición MBR.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El comando <strong><code>fdisk</code></strong> es la utilidad clásica en Linux para manipular **particiones MBR** (Master Boot Record).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">26.- ¿Cuál de los siguientes es el nombre del archivo de dispositivo válido para el primer disco duro IDE en el sistema?</div>
+        <div class="opcion">`/dev/sda`</div>
+        <div class="opcion">`/dev/hda`</div>
+        <div class="opcion">`/dev/disk0`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> `/dev/hda`</p>
+            <p><strong>Explicación:</strong> Tradicionalmente, los discos IDE eran nombrados <code>/dev/hd[a-z]</code>. Los discos SATA/SCSI/USB usan <code>/dev/sd[a-z]</code>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">27.- ¿Qué significa el acrónimo RPM?</div>
+        <div class="opcion">Redistributable Package Manager</div>
+        <div class="opcion">RPM Package Management</div>
+        <div class="opcion">Resource Partitioning Manager</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> RPM Package Management</p>
+            <p><strong>Explicación:</strong> <strong>RPM</strong> (RPM Package Manager) es el formato de paquete estándar utilizado por distribuciones basadas en Red Hat.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">28.- Una forma de instalar el nuevo software en un sistema Linux es utilizar un sistema de administración de paquetes.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Los administradores de paquetes (como APT o YUM/DNF) son la forma más común y segura de instalar software en Linux.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">29.- Cuando ejecutas el comando `dmesg`, el sistema muestra los mensajes que se generan por el kernel.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> <strong><code>dmesg</code></strong> (diagnose message) muestra el búfer de mensajes del anillo del kernel, que contiene mensajes de arranque y de diagnóstico de controladores.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">30.- El directorio `/proc` contiene un subdirectorio para cada proceso presente en el sistema.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El directorio <code>/proc</code> es un sistema de archivos virtual donde cada subdirectorio con nombre numérico es el <strong>PID</strong> (ID de proceso) de un proceso en ejecución.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">31.- El identificador de proceso (PID) del proceso `init` es</div>
+        <div class="opcion">0</div>
+        <div class="opcion">1</div>
+        <div class="opcion">1000</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> 1</p>
+            <p><strong>Explicación:</strong> El proceso <strong><code>init</code></strong> (o <code>systemd</code>/<code>upstart</code> en sistemas modernos) es el primer proceso ejecutado al arrancar el kernel y tiene el <strong>PID 1</strong>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">32.- El comando `free` muestra la estadística sobre:</div>
+        <div class="opcion">El uso de disco duro</div>
+        <div class="opcion">El uso de CPU</div>
+        <div class="opcion">El uso de memoria</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> El uso de memoria</p>
+            <p><strong>Explicación:</strong> El comando <strong><code>free</code></strong> se utiliza para mostrar la cantidad total de memoria física y swap libre y usada en el sistema.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">33.- El comando del proceso (`ps`) muestra sólo los procesos que se ejecutan en el shell actual por defecto.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Por defecto, <strong><code>ps</code></strong> (process status) muestra solo los procesos asociados con la terminal actual (TTY). Se necesitan opciones como <code>ps -ef</code> para ver todos.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">34.- ¿Qué archivo de registro contiene los mensajes en relación con la autenticación y autorización?</div>
+        <div class="opcion">`messages`</div>
+        <div class="opcion">`kern.log`</div>
+        <div class="opcion">`secure` o `auth.log`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> `secure` o `auth.log`</p>
+            <p><strong>Explicación:</strong> Este archivo (`/var/log/secure` o `/var/log/auth.log`) registra inicios de sesión, uso de <code>sudo</code>, y otra información de autenticación y autorización.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">35.- Todos los archivos de registro sólo contienen datos de texto. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> Aunque la mayoría son texto plano (ej., `/var/log/syslog`), algunos registros (ej., los de <code>systemd</code> o logs binarios) pueden contener datos binarios.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">36.- Cuál de los siguientes sería considerado un host?</div>
+        <div class="opcion">Un cable de red</div>
+        <div class="opcion">Una dirección IP</div>
+        <div class="opcion">Una impresora conectada a la red a través de una dirección IP</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Una impresora conectada a la red a través de una dirección IP</p>
+            <p><strong>Explicación:</strong> Un <strong>host</strong> es cualquier dispositivo que se comunica en una red utilizando el protocolo TCP/IP, generalmente con su propia dirección IP.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">37.- Un servicio es</div>
+        <div class="opcion">...una característica proporcionada por una computadora a otra.</div>
+        <div class="opcion">...un comando que se ejecuta en el fondo.</div>
+        <div class="opcion">...un protocolo de red.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ...una característica proporcionada por una computadora a otra.</p>
+            <p><strong>Explicación:</strong> Un <strong>servicio</strong> es un programa o funcionalidad que ofrece recursos o capacidades a otros sistemas (clientes) a través de la red (ej., servicio web, servicio de correo).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">38.- Sólo los servidores tienen nombres de host. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> Cualquier computadora o dispositivo en red tiene un <strong>nombre de host</strong> (<code>hostname</code>), que es su identificador legible por humanos.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">39.- ¿Cuál de los siguientes protocolos define cómo funciona la comunicación de red?</div>
+        <div class="opcion">HTTP</div>
+        <div class="opcion">DNS</div>
+        <div class="opcion">TCP/IP</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> TCP/IP</p>
+            <p><strong>Explicación:</strong> <strong>TCP/IP</strong> (Transmission Control Protocol/Internet Protocol) es el conjunto de protocolos fundamental para la comunicación en Internet y la mayoría de las redes modernas.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">40.- El nombre de los dispositivos de red con cables primarios es `ether0`. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> Los nombres tradicionales eran <code>eth0</code>, <code>eth1</code>, etc. Los sistemas modernos usan nombres predecibles como <code>enp0s3</code>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">41.- ¿Cuál de los siguientes comandos mostrará la dirección ID de tu máquina?</div>
+        <div class="opcion">`ip`</div>
+        <div class="opcion">`netstat`</div>
+        <div class="opcion">`ifconfig`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> `ifconfig` o `ip addr`</p>
+            <p><strong>Explicación:</strong> El comando <strong><code>ifconfig</code></strong> (o su reemplazo moderno <code>ip addr</code>) muestra la configuración de las interfaces de red, incluida la dirección IP.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">42.- ¿Cuál de los siguientes comandos te permitirá iniciar sesión en una máquina remota?</div>
+        <div class="opcion">`ftp`</div>
+        <div class="opcion">`ping`</div>
+        <div class="opcion">`ssh`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> `ssh`</p>
+            <p><strong>Explicación:</strong> <strong><code>ssh</code></strong> (Secure Shell) es el protocolo estándar para la administración remota segura de sistemas Linux/Unix.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">43.- ¿Qué opción del comando `netstat` contiene la información mostrada como números en lugar de nombres?</div>
+        <div class="opcion">-t</div>
+        <div class="opcion">-l</div>
+        <div class="opcion">-n</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> -n</p>
+            <p><strong>Explicación:</strong> La opción <strong>-n</strong> (numeric) de <code>netstat</code> (o <code>ss</code>) evita la resolución de nombres de host, puertos y usuarios, mostrando solo valores numéricos.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">44.- ¿Cuál de los siguientes comandos te permitirá iniciar sesión en la máquina `server1` con el nombre de cuenta `nick`?</div>
+        <div class="opcion">`ssh nick server1`</div>
+        <div class="opcion">`ssh server1 as nick`</div>
+        <div class="opcion">`ssh nick@server1`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>ssh nick@server1</code></p>
+            <p><strong>Explicación:</strong> La sintaxis estándar para especificar el usuario es <code>ssh [usuario]@[host]</code>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">45.- La clave de huellas dactilares RSA permite que el comando `dig` se conecte a los sistemas remotos.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> La <strong>huella digital RSA</strong> se utiliza en <strong>SSH</strong> para verificar la identidad del servidor. <code>dig</code> es una herramienta de consulta DNS.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">46.- Cual de los usuarios puede ver el archivo `/etc/shadow`?</div>
+        <div class="opcion">Todos los usuarios</div>
+        <div class="opcion">Solo los miembros del grupo `shadow`</div>
+        <div class="opcion">El usuario root</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> El usuario root</p>
+            <p><strong>Explicación:</strong> El archivo <code>/etc/shadow</code> contiene las contraseñas cifradas y solo es legible por el <strong>usuario root</strong> por motivos de seguridad.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">47.- ¿Qué comando mostrará los UID, GID y los grupos a los que pertenece tu usuario actual?</div>
+        <div class="opcion">`whoami`</div>
+        <div class="opcion">`id`</div>
+        <div class="opcion">`groups`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> `id`</p>
+            <p><strong>Explicación:</strong> El comando <strong><code>id</code></strong> imprime el UID (User ID), el GID (Group ID) principal y la lista de todos los grupos a los que pertenece el usuario.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">48.- Cada usuario pertenece al menos a un grupo.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Cada cuenta de usuario debe tener un <strong>grupo principal</strong> (Primary Group), lo que significa que siempre pertenece al menos a un grupo.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">49.- ¿Qué comando se mostrará a los usuarios que han iniciado la sesión en el sistema?</div>
+        <div class="opcion">`last`</div>
+        <div class="opcion">`whoami`</div>
+        <div class="opcion">`who`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> `who` o `w`</p>
+            <p><strong>Explicación:</strong> El comando <strong><code>who</code></strong> (o <code>w</code>) muestra una lista de usuarios actualmente conectados al sistema.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">50.- El comando `sudo` permite a los usuarios regulares a...</div>
+        <div class="opcion">...ejecutar ciertos comandos como usuario root.</div>
+        <div class="opcion">...crear nuevos usuarios.</div>
+        <div class="opcion">...cambiar la contraseña de cualquier usuario.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ...ejecutar ciertos comandos como usuario root.</p>
+            <p><strong>Explicación:</strong> <strong><code>sudo</code></strong> (substitute user do) permite a un usuario ejecutar un comando con los privilegios de otro usuario (generalmente root) si está configurado en <code>/etc/sudoers</code>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">51.- El archivo `/etc/sudoers` debe ser editado directamente por root con el comando `visudo`.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El comando <strong><code>visudo</code></strong> es crucial porque verifica la sintaxis del archivo <code>/etc/sudoers</code> antes de guardarlo, evitando un error que pueda bloquear el acceso <code>sudo</code>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">52.- ¿Qué editor predeterminado utiliza el comando `visudo`?</div>
+        <div class="opcion">`nano`</div>
+        <div class="opcion">`emacs`</div>
+        <div class="opcion">`vi`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> `vi`</p>
+            <p><strong>Explicación:</strong> Por defecto, <strong><code>visudo</code></strong> invoca el editor <strong><code>vi</code></strong> (o <code>vim</code>). Esto se puede cambiar con variables de entorno.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">53.- ¿Cuál de los siguientes comandos mostrará el/los grupo/grupos, al/a los que pertenece el usuario?</div>
+        <div class="opcion">`user`</div>
+        <div class="opcion">`group`</div>
+        <div class="opcion">`id` o `groups`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> `id` o `groups`</p>
+            <p><strong>Explicación:</strong> Ambos comandos, <code>id</code> y <strong><code>groups</code></strong>, listan los grupos a los que pertenece un usuario.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">54.- ¿Qué estructura sigue el archivo `/etc/group`?</div>
+        <div class="opcion">`group_name:password_placeholder: GID:user_list`</div>
+        <div class="opcion">`group_name:GID:password_placeholder:user_list`</div>
+        <div class="opcion">`GID:group_name:user_list:password_placeholder`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> `group_name:password_placeholder: GID:user_list`</p>
+            <p><strong>Explicación:</strong> La estructura es: nombre_del_grupo, contraseña (generalmente 'x'), ID de grupo (GID) y miembros.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">55.- Un GID se asocia con un nombre de grupo.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El <strong>GID</strong> (Group ID) es el identificador numérico único para un grupo, asociado a un nombre de grupo legible por humanos.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">56.- Para qué tipo de usuarios están generalmente reservados los UID 1-500?</div>
+        <div class="opcion">Usuarios regulares</div>
+        <div class="opcion">Administradores de red</div>
+        <div class="opcion">Cuentas del sistema, tales como los procesos del servidor</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Cuentas del sistema, tales como los procesos del servidor</p>
+            <p><strong>Explicación:</strong> Los UID bajos (generalmente 1 a 999, o 1 a 500 en sistemas antiguos) están reservados para cuentas del sistema utilizadas por servicios (ej., <code>www-data</code>, <code>daemon</code>).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">57.- Si se elimina un usuario, los archivos y directorios que el usuario pertenece...</div>
+        <div class="opcion">...se eliminan del sistema.</div>
+        <div class="opcion">...se transfieren al usuario root.</div>
+        <div class="opcion">...va a mostrar un UID como un propietario, pero no el nombre de usuario.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ...va a mostrar un UID como un propietario, pero no el nombre de usuario.</p>
+            <p><strong>Explicación:</strong> Si el usuario es eliminado, el sistema ya no puede resolver el UID al nombre, por lo que muestra el <strong>número UID</strong> en la salida de <code>ls -l</code>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">58.- ¿Cuál de las siguientes opciones para el comando `useradd` permiten al root a especificar el UID para que se asocie a la cuenta?</div>
+        <div class="opcion">-i</div>
+        <div class="opcion">-d</div>
+        <div class="opcion">-u</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> -u</p>
+            <p><strong>Explicación:</strong> La opción <strong>-u</strong> de <code>useradd</code> permite al administrador especificar el <strong>UID</strong> (User ID) numérico.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">59.- ¿Cuál de las siguientes opciones para el comando `useradd` permiten al root a especificar los grupos suplementarios?</div>
+        <div class="opcion">-A</div>
+        <div class="opcion">-S</div>
+        <div class="opcion">-G</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> -G</p>
+            <p><strong>Explicación:</strong> La opción <strong>-G</strong> especifica una lista de **grupos suplementarios** (secundarios) a los que el nuevo usuario pertenecerá.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">60.- En un sistema que no utiliza UPG, el comando `useradd` también creará un grupo de usuarios. ¿Verdadero o falso?</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Bajo el esquema UPG (User Private Group, que es el predeterminado en la mayoría de los Linux modernos), cada usuario obtiene un grupo privado con el mismo nombre.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">61.- El comando `useradd` creará un directorio principal de forma predeterminada para un usuario.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> El comando <strong><code>useradd</code></strong> por sí mismo no crea el directorio home por defecto; se requiere la opción <strong>-m</strong> (create home directory) para hacerlo.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">62.- El comando `usermod` se puede utilizar para hacer todo lo siguiente, excepto</div>
+        <div class="opcion">...cambiar el UID del usuario.</div>
+        <div class="opcion">...cambiar el directorio principal del usuario.</div>
+        <div class="opcion">...cambiar las configuraciones de contraseña MAX y MIN del usuario.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ...cambiar las configuraciones de contraseña MAX y MIN del usuario.</p>
+            <p><strong>Explicación:</strong> Para cambiar las políticas de contraseña (días MAX/MIN), se utiliza el comando <strong><code>chage</code></strong>, no <code>usermod</code>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">63.- ¿Cuál de los siguientes comandos agregará el grupo `extra` a los grupos del usuario `bob` además de los grupos secundarios actuales de `bob`?</div>
+        <div class="opcion">`usermod -G extra bob`</div>
+        <div class="opcion">`usermod -aG extra bob`</div>
+        <div class="opcion">`usermod +G extra bob`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>usermod -aG extra bob</code></p>
+            <p><strong>Explicación:</strong> La opción <strong>-a</strong> (append) junto con <strong>-G</strong> (groups) es crucial para <strong>agregar</strong> un grupo sin eliminar los grupos secundarios existentes del usuario.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">64.- Para los usuarios que no sean root, el comando `passwd` sólo se puede utilizar para cambiar la contraseña del usuario que ejecuta el comando.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Solo el usuario root puede cambiar la contraseña de otro usuario. Los usuarios normales solo pueden usar <strong><code>passwd</code></strong> para su propia cuenta.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">65.- El comando `userdel`</div>
+        <div class="opcion">...eliminará la cuenta de usuario y todos sus archivos.</div>
+        <div class="opcion">...eliminará la cuenta de usuario, pero deja los archivos del usuario por defecto.</div>
+        <div class="opcion">...no es un comando válido.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ...eliminará la cuenta de usuario, pero deja los archivos del usuario por defecto.</p>
+            <p><strong>Explicación:</strong> El comando <strong><code>userdel</code></strong> elimina la cuenta. Se necesita la opción <strong>-r</strong> para eliminar también el directorio home y el buzón de correo.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">66.- ¿Cuál de los siguientes comandos establece los "otros" los permisos para el archivo a `r-x`?</div>
+        <div class="opcion">`chmod 050 file`</div>
+        <div class="opcion">`chmod o=rx file`</div>
+        <div class="opcion">`chmod o+r-w+x file`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>chmod o=rx file</code></p>
+            <p><strong>Explicación:</strong> En la notación simbólica de <code>chmod</code>, <strong>o</strong> (others) seguido de <strong>=</strong> (set exactly) establece los permisos de lectura (<code>r</code>) y ejecución (<code>x</code>).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">67.- ¿Cuál de los siguientes comandos establece para los "otros" los permisos para el archivo a `r-x` (numérico: 5)?</div>
+        <div class="opcion">`chmod 005 file`</div>
+        <div class="opcion">`chmod 775 file`</div>
+        <div class="opcion">`chmod 555 file`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>chmod 775 file</code></p>
+            <p><strong>Explicación:</strong> El permiso `r-x` (lectura y ejecución) corresponde al valor octal <strong>5</strong> (4+1). Si se asume el patrón `rwxrwxr-x`, el valor completo es `775`.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">68.- Sólo un conjunto (usuario, grupo, otros) de permisos se puede cambiar a la vez utilizando el método simbólico.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> Se pueden cambiar múltiples conjuntos a la vez, separándolos por comas (ej., <code>chmod u+w,g-w,o=r file</code>).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">69.- El comando `chown` se puede utilizar para cambiar el propietario y el grupo de un archivo.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> La sintaxis <code>chown user:group file</code> permite cambiar tanto el propietario (<code>user</code>) como el grupo (<code>group</code>) en una sola operación.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">70.- El usuario `sysadmin` podrá leer el archivo (Permisos: `----r--r--`).</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> En este escenario (asumiendo que los permisos son <code>-rwxr-xr-x</code>, y la pregunta se refiere a un caso específico), solo el propietario o root pueden leerlo si los permisos son muy restrictivos para otros.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">71.- El usuario `sysadmin` podrá cambiar los permisos del archivo. (Permisos: `----r--r--`).</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El cambio de permisos de un archivo (con <code>chmod</code>) lo puede realizar únicamente el <strong>propietario</strong> del archivo o el <strong>usuario root</strong>, independientemente de los permisos actuales.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">72.- La notación octal utiliza los siguientes valores para los permisos concedidos:</div>
+        <div class="opcion">`r=1`, `w=2`, `x=3`</div>
+        <div class="opcion">`r=4`, `w=2`, `x=1`</div>
+        <div class="opcion">`r=1`, `w=4`, `x=2`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> `r=4`, `w=2`, `x=1`</p>
+            <p><strong>Explicación:</strong> Los valores octales de los permisos son: <strong>Lectura (r) = 4</strong>, <strong>Escritura (w) = 2</strong>, y <strong>Ejecución (x) = 1</strong>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">73.- ¿Cuál de los siguientes permisos permitiría a todos los usuarios añadir, ver y eliminar los archivos en un directorio?</div>
+        <div class="opcion">644</div>
+        <div class="opcion">755</div>
+        <div class="opcion">777</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> 777</p>
+            <p><strong>Explicación:</strong> El permiso <strong>777</strong> (<code>rwxrwxrwx</code>) otorga permisos de lectura, escritura y ejecución a todos, lo cual es necesario para crear, modificar y **eliminar** archivos en un directorio (la capacidad de eliminar viene del permiso de escritura en el directorio).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">74.- Un usuario no puede borrar un archivo si no es su propietario.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> Un usuario puede borrar un archivo si tiene permiso de **escritura** (<code>w</code>) y **ejecución** (<code>x</code>) en el **directorio contenedor**.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">75.- El permiso "ejecutar" en un archivo te permite:</div>
+        <div class="opcion">Leer el contenido del archivo</div>
+        <div class="opcion">Modificar el contenido del archivo</div>
+        <div class="opcion">Ejecutar el archivo como un script o programa</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Ejecutar el archivo como un script o programa</p>
+            <p><strong>Explicación:</strong> El permiso de **ejecución** (<code>x</code>) es necesario para que el kernel pueda ejecutar un archivo binario o interpretador de un script.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">76.- El directorio `/tmp` es un directorio temporal y no va a existir en un sistema en todo momento.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> El directorio <code>/tmp</code> **siempre existe** en un sistema Linux estándar, aunque su contenido puede ser borrado durante el reinicio o periódicamente.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">77.- El directorio `/var` tiene los archivos que cambian con el tiempo.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> El directorio <code>/var</code> (variable) contiene datos de estado en constante cambio, como archivos de registro (<code>/var/log</code>), spool de correo, datos de caché, etc.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">78.- El permiso "sticky bit"...</div>
+        <div class="opcion">...establece el permiso de solo lectura para todos.</div>
+        <div class="opcion">...los demás no pueden eliminar los archivos de los que no son propietarios de un directorio común.</div>
+        <div class="opcion">...establece el permiso de ejecución para todos.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ...los demás no pueden eliminar los archivos de los que no son propietarios de un directorio común.</p>
+            <p><strong>Explicación:</strong> El <strong>Sticky Bit</strong> (valor octal 1000) asegura que solo el propietario (o root) pueda eliminar o renombrar un archivo dentro de ese directorio.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">79.- ¿Cuál de los siguientes comandos establecerá "sticky bit" en el directorio `/shared`?</div>
+        <div class="opcion">`chmod 7771 /shared`</div>
+        <div class="opcion">`chmod 1777 /shared`</div>
+        <div class="opcion">`chmod +t /shared`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>chmod 1777 /shared</code></p>
+            <p><strong>Explicación:</strong> El Sticky Bit corresponde al valor octal <strong>1</strong> en el cuarto dígito. <code>1777</code> aplica el sticky bit y permite todos los permisos a todos los usuarios.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">80.- El permiso "setuid"...</div>
+        <div class="opcion">...permite que un comando se ejecute como el propietario del archivo.</div>
+        <div class="opcion">...permite que un comando se ejecute como el grupo del archivo.</div>
+        <div class="opcion">...fuerza que el comando se ejecute como root.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ...permite que un comando se ejecute como el propietario del archivo.</p>
+            <p><strong>Explicación:</strong> El <strong>SetUID</strong> (valor octal 4000) permite que un programa ejecutable se ejecute con los permisos del <strong>propietario</strong> del archivo (ej., el comando <code>passwd</code> se ejecuta como root).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">81.- ¿Cuál de los siguientes comandos establecerá `setuid` en el directorio `/usr/bin/program`?</div>
+        <div class="opcion">`chmod 4755 /usr/bin/program`</div>
+        <div class="opcion">`chmod u+s /usr/bin/program`</div>
+        <div class="opcion">`chmod 755 /usr/bin/program`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>chmod 4755 /usr/bin/program</code></p>
+            <p><strong>Explicación:</strong> El SetUID corresponde al valor octal <strong>4</strong> en el cuarto dígito. <code>4755</code> establece setuid y permisos <code>rwxr-xr-x</code>.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">82.- ¿Cuál de los siguientes comandos establecerá `setgid` en el directorio `/shared`?</div>
+        <div class="opcion">`chmod 4777 /shared`</div>
+        <div class="opcion">`chmod g+s /shared`</div>
+        <div class="opcion">`chmod 2777 /shared`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> <code>chmod 2777 /shared</code></p>
+            <p><strong>Explicación:</strong> El <strong>SetGID</strong> (valor octal 2000) permite que los archivos creados en el directorio hereden el grupo del directorio. <code>2777</code> establece setgid y todos los permisos.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">83.- Eliminando un archivo de origen romperá un vínculo físico asociado.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> Un <strong>vínculo físico</strong> (Hard Link) es simplemente otro nombre para el mismo inodo y datos. El archivo solo se elimina del disco cuando el **último** vínculo físico es eliminado.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">84.- Un origen y un vínculo físico deben ser parte del mismo sistema de archivos.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Los vínculos físicos están limitados a un solo sistema de archivos porque hacen referencia directamente al **inodo**, que es un identificador único solo dentro de su sistema de archivos.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">85.- Eliminando un archivo de origen romperá un vínculo simbólico asociado.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Un **vínculo simbólico** (Soft Link) es un puntero al nombre del archivo de origen. Si se elimina el origen, el vínculo simbólico apunta a un archivo que ya no existe (vínculo roto).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">86.- Unix es</div>
+        <div class="opcion">Un editor de texto</div>
+        <div class="opcion">Un lenguaje de programación</div>
+        <div class="opcion">Un sistema operativo</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Un sistema operativo</p>
+            <p><strong>Explicación:</strong> <strong>UNIX</strong> es una familia de sistemas operativos multiusuario y multitarea, desarrollado originalmente en Bell Labs.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">87.- El fin de bootloader es:</div>
+        <div class="opcion">Iniciar la interfaz gráfica</div>
+        <div class="opcion">Cargar el kernel al encender la computadora</div>
+        <div class="opcion">Ejecutar la BIOS</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Cargar el kernel al encender la computadora</p>
+            <p><strong>Explicación:</strong> El **bootloader** (ej., GRUB, LILO) es el programa encargado de cargar el núcleo (kernel) del sistema operativo en la memoria para que comience a ejecutarse.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">88.- Apple OS X no es:</div>
+        <div class="opcion">Basado en Unix</div>
+        <div class="opcion">Un sistema operativo</div>
+        <div class="opcion">Derivado de Linux</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Derivado de Linux</p>
+            <p><strong>Explicación:</strong> <strong>macOS</strong> (anteriormente OS X) está basado en el sistema operativo <strong>Darwin</strong>, que es un derivado de BSD (un tipo de Unix), no de Linux.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">89.- Microsoft Windows no:</div>
+        <div class="opcion">Tiene un modo de compatibilidad de Linux (WSL)</div>
+        <div class="opcion">Utiliza el kernel de Linux</div>
+        <div class="opcion">Soporta TCP/IP</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Utiliza el kernel de Linux</p>
+            <p><strong>Explicación:</strong> Windows utiliza su propio kernel (NT), a diferencia de Linux. (Aunque con WSL se puede ejecutar un kernel de Linux, Windows como tal no lo usa nativamente).</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">90.- ¿Qué aplicación usarías para editar y reconstruir los archivos de sonido para crear un podcast?</div>
+        <div class="opcion">GIMP</div>
+        <div class="opcion">Blender</div>
+        <div class="opcion">Audacity</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Audacity</p>
+            <p><strong>Explicación:</strong> <strong>Audacity</strong> es un editor de audio digital y software de grabación de código abierto, ideal para la edición de podcasts.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">91.- Un servidor probablemente se ejecute en modo gráfico.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Falso</p>
+            <p><strong>Explicación:</strong> La mayoría de los servidores se ejecutan en modo de **línea de comandos (CLI)** para ahorrar recursos y reducir la superficie de ataque.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">92.- Si quieres escribir un informe que tuvieras que imprimir, es probable que utilices:</div>
+        <div class="opcion">`vi`</div>
+        <div class="opcion">AbiWord</div>
+        <div class="opcion">LibreOffice Writer</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> LibreOffice (Writer)</p>
+            <p><strong>Explicación:</strong> <strong>LibreOffice</strong> (específicamente Writer) es la suite ofimática de código abierto más utilizada para documentos y la impresión de informes.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">93.- Los botones "me gusta" de las redes sociales pueden realizar un seguimiento de tu actividad a través de Internet.</div>
+        <div class="opcion">Verdadero</div>
+        <div class="opcion">Falso</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Verdadero</p>
+            <p><strong>Explicación:</strong> Los *widgets* de redes sociales incrustados en sitios web utilizan *tracking cookies* y otros mecanismos para seguir la actividad del usuario a través de múltiples sitios.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">94.- ¿Qué se puede hacer para evitar que las personas remotas ejecuten los programas en tu computadora?</div>
+        <div class="opcion">No utilizar las redes inalámbricas - sólo cableadas</div>
+        <div class="opcion">Encender un firewall</div>
+        <div class="opcion">Bloquear todas las cookies</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Encender un firewall</p>
+            <p><strong>Explicación:</strong> Un **firewall** bloquea las conexiones entrantes no deseadas, impidiendo que usuarios remotos maliciosos accedan y ejecuten servicios o programas.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">95.- En general, ¿para cuál de los siguientes querrías utilizar la compresión sin pérdidas?</div>
+        <div class="opcion">Un correo electrónico encriptado</div>
+        <div class="opcion">Un archivo de audio mp3</div>
+        <div class="opcion">Un archivo de registro</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Un archivo de registro</p>
+            <p><strong>Explicación:</strong> La **compresión sin pérdidas** (Lossless) es esencial para archivos donde se requiere una réplica perfecta de los datos, como **archivos de registro** o binarios.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">96.- Una barra vertical te permite...</div>
+        <div class="opcion">...enviar la misma entrada a varios comandos.</div>
+        <div class="opcion">...enviar la salida de un comando a otro.</div>
+        <div class="opcion">...introducir varios comandos en un mismo prompt.</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> ...enviar la salida de un comando a otro.</p>
+            <p><strong>Explicación:</strong> La barra vertical (pipe <code>|</code>) es el operador de **tubería (pipe)**, que conecta la STDOUT del primer comando con la STDIN del segundo.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">97.- El propósito principal de un agente de transferencia de correo es:</div>
+        <div class="opcion">Entregar el correo entre los servidores</div>
+        <div class="opcion">Servir el correo electrónico a los clientes finales</div>
+        <div class="opcion">Actuar como una puerta de enlace entre el fax y correo electrónico</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> Entregar el correo entre los servidores</p>
+            <p><strong>Explicación:</strong> Un **MTA** (Mail Transfer Agent, ej., Postfix) es responsable de transferir el correo entre **servidores** usando SMTP.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">98.- La diferencia entre la GPL y LGPL son:</div>
+        <div class="opcion">LGPL se aplica a los servicios web</div>
+        <div class="opcion">LGPL permite la conexión del software sin GPL</div>
+        <div class="opcion">LGPL te permite distribuir el software sólo en forma binaria</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> LGPL permite la conexión del software sin GPL</p>
+            <p><strong>Explicación:</strong> La **LGPL** (Lesser General Public License) es menos restrictiva que la GPL, permitiendo que el software propietario pueda **enlazar** (link) dinámicamente con la biblioteca LGPL sin tener que liberar su propio código fuente.</p>
+        </div>
+    </div>
+
+    <div class="pregunta-contenedor">
+        <div class="pregunta">99.- ¿Qué directorio contiene los archivos de registro normalmente?</div>
+        <div class="opcion">El directorio `/var/log`</div>
+        <div class="opcion">El directorio `/log`</div>
+        <div class="opcion">El directorio `/proc/log`</div>
+        <button class="respuesta-boton" onclick="toggleRespuesta(this)">Mostrar Respuesta y Explicación</button>
+        <div class="respuesta-contenido">
+            <p><span class="respuesta-correcta">Respuesta Correcta:</span> El directorio `/var/log`</p>
+            <p><strong>Explicación:</strong> Según el FHS (Filesystem Hierarchy Standard), todos los archivos de registro del sistema y de las aplicaciones se almacenan en el directorio **`/var/log`**.</p>
+        </div>
+    </div>
+
+    <script>
+        // Función para mostrar/ocultar la respuesta
+        function toggleRespuesta(button) {
+            var respuestaContenido = button.nextElementSibling;
+            
+            if (respuestaContenido.style.display === "block") {
+                respuestaContenido.style.display = "none";
+                button.textContent = "Mostrar Respuesta y Explicación";
+            } else {
+                // Oculta todas las otras respuestas abiertas (mejora la UX)
+                var abiertas = document.querySelectorAll('.respuesta-contenedor .respuesta-contenido');
+                abiertas.forEach(function(r) {
+                    if (r !== respuestaContenido && r.style.display === "block") {
+                        r.style.display = "none";
+                        r.previousElementSibling.textContent = "Mostrar Respuesta y Explicación";
+                    }
+                });
+                
+                respuestaContenido.style.display = "block";
+                button.textContent = "Ocultar Respuesta y Explicación";
+            }
+        }
+    </script>
+
+</body>
+</html>
